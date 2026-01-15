@@ -32,7 +32,8 @@ body {
 :root {
   /* colores */
   --fondo-prim: #F7F7F7;
-  --color-prim: #FF9021;
+  --color-prim: #830007;
+  --color-hover: #A30008;
   --fondo-inputs: #E8E8E8;
 
   /* texto */
@@ -98,6 +99,10 @@ body {
   text-decoration: none;
   border: none;
   cursor: pointer;
+}
+
+.button-def:hover {
+  background-color: var(--color-hover);
 }
 
 /* SEPARADOR NAV */
