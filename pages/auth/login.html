@@ -31,13 +31,13 @@
                 <!-- EMAIL -->
                 <div class="input-group">
                     <span class="icon">📧</span>
-                    <input type="email" placeholder="Correo electrónico">
+                    <input type="email" id="email" placeholder="Correo electrónico">
                 </div>
 
                 <!-- PASSWORD -->
                 <div class="input-group">
                     <span class="icon">🔒</span>
-                    <input type="password" placeholder="Contraseña">
+                    <input type="password" id="password" placeholder="Contraseña">
                     <span class="icon eye">👁️</span>
                 </div>
 
@@ -48,7 +48,7 @@
                 </div>
 
                 <!-- BOTÓN PRINCIPAL (YA EXISTENTE) -->
-                <button class="button-def btn-login">Iniciar Sesión</button>
+                <button id="login-btn" class="button-def btn-login">Iniciar Sesión</button>
 
                 <!-- SEPARADOR -->
                 <div class="separator"></div>
@@ -70,13 +70,19 @@
 
     </div>
     <!-- CARGA DEL HEADER -->
-    <script>
-        fetch("../../componentes/header/header.html")
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById("header").innerHTML = html;
-            });
-    </script>
+     
+<script src="../../javascript/login.js"></script>
+<script src="../../javascript/cambio_headers.js"></script>
+<script>
+  fetch("../../componentes/header/header.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("header").innerHTML = html;
+      cargarHeaderSegunUsuario(); // 👈 AQUÍ
+    });
+</script>
+
+
 
 </body>
 

@@ -1,26 +1,22 @@
-const headerContainer = document.getElementById("header");
+function cargarHeaderSegunUsuario() {
+  const userType = localStorage.getItem("userType");
 
-// Leer estado
-const isLoggedIn = localStorage.getItem("isLoggedIn");
-const userType = localStorage.getItem("userType");
+  const headers = {
+    publico: document.getElementById("header-publico"),
+    comprador: document.getElementById("header-comprador"),
+    disenador: document.getElementById("header-disenador"),
+  };
 
-// Header por defecto (NO logueado)
-let headerPath = "../componentes/header/header.html";
+  Object.values(headers).forEach(h => h.hidden = true);
 
-// Elegir header según estado
-if (isLoggedIn === "true") {
-  if (userType === "comprador") {
-    headerPath = "../componentes/header/header_sesion.html";
-  }
-
-  if (userType === "disenador") {
-    headerPath = "../componentes/header/header_diseñador.html";
+  if (userType && headers[userType]) {
+    headers[userType].hidden = false;
+  } else {
+    headers.publico.hidden = false;
   }
 }
 
-// Cargar el header correcto
-fetch(headerPath)
-  .then(res => res.text())
-  .then(html => {
-    headerContainer.innerHTML = html;
-  });
+function logout() {
+  localStorage.removeItem("userType");
+  window.location.href = "../pages/index.html";
+}
