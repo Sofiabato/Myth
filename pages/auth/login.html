@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Login | Myth</title>
+    <title>Myth - Inciar sesión</title>
 
     <!-- FUENTE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -70,17 +70,17 @@
 
     </div>
     <!-- CARGA DEL HEADER -->
-     
-<script src="../../javascript/login.js"></script>
-<script src="../../javascript/cambio_headers.js"></script>
-<script>
-  fetch("../../componentes/header/header.html")
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById("header").innerHTML = html;
-      cargarHeaderSegunUsuario(); // 👈 AQUÍ
-    });
-</script>
+
+    <script src="../../javascript/login.js"></script>
+    <script src="../../javascript/cambio_headers.js"></script>
+    <script>
+        fetch("../../componentes/header/header.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("header").innerHTML = html;
+                cargarHeaderSegunUsuario(); // 👈 AQUÍ
+            });
+    </script>
 
 
 
