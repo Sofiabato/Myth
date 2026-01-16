@@ -18,6 +18,8 @@ body {
   overflow-x: hidden;
 }
 
+html { overflow-y: scroll; }
+
 /* ===================== */
 /* CONTENEDOR GENERAL */
 /* ===================== */
@@ -257,35 +259,6 @@ body {
 /* COLECCION*/
 /* ===================== */
 
-/* ===================== */
-/* RESET + VARIABLES     */
-/* ===================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-:root {
-    --fondo-prim: #F7F7F7;
-    --color-prim: #FF9021;
-    --fondo-inputs: #E8E8E8;
-    --texto-prim: #0F0F0F;
-    --texto-secun: #F7F7F7;
-    --texto-inputs: #6D6D6D;
-    --barritas: #999999;
-}
-
-html { overflow-y: scroll; }
-body { min-height: 100vh; overflow-x: hidden; }
-
-/* Contenedor con tus márgenes de 150px */
-.page {
-    padding-left: 150px;
-    padding-right: 150px;
-    padding-bottom: 60px;
-}
 
 /* ===================== */
 /* DISEÑO COLECCIÓN      */
