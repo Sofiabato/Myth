@@ -252,3 +252,103 @@ body {
     justify-content: center;
   }
 }
+
+/* ===================== */
+/* DISEÑADORES */
+/* ===================== */
+.designers-section {
+  padding: 60px 0;
+}
+
+.designers-section h2 {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+.center {
+  text-align: center;
+}
+
+/* GRID CARDS */
+.designers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.designer-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+}
+
+.designer-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.designer-card h3 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.designer-card p {
+  font-size: 12px;
+  color: var(--texto-inputs);
+}
+
+.designer-card span {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* ALFABETO */
+.alphabet {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 50px;
+  font-size: 13px;
+}
+
+.alphabet span {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.alphabet span:hover {
+  color: var(--color-prim);
+}
+
+/* LISTADO A-Z */
+.designer-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 60px;
+}
+
+.letter-group h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.letter-group ul {
+  list-style: none;
+}
+
+.letter-group li {
+  font-size: 13px;
+  color: var(--texto-prim);
+  margin-bottom: 8px;
+  padding: 6px 0;
+  line-height: 1.4;
+}
+
+.letter-group li:hover {
+  color: var(--color-prim);
+  cursor: pointer;
+}
