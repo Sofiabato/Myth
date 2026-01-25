@@ -1,11 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Myth - Crear cuenta</title>
 </head>
-<body>
-    
+
+<body class="login-page">
+
+    <!-- HEADER -->
+    <div id="header"></div>
+
+    <!-- LOGIN -->
+    <div class="page">
+        <main class="login">
+
+            <div class="login-form">
+
+                <h1>Inicio de sesión</h1>
+
+                <!-- EMAIL -->
+                <div class="input-group">
+                    <span class="icon">📧</span>
+                    <input type="email" id="email" placeholder="Correo electrónico">
+                </div>
+
+                <!-- PASSWORD -->
+                <div class="input-group">
+                    <span class="icon">🔒</span>
+                    <input type="password" id="password" placeholder="Contraseña">
+                    <span class="icon eye">👁️</span>
+                </div>
+
+                <!-- LINKS -->
+                <div class="login-links">
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                    <a href="#">¿No tienes cuenta? Crear una</a>
+                </div>
+
+                <!-- BOTÓN PRINCIPAL (YA EXISTENTE) -->
+                <button id="login-btn" class="button-def btn-login">Iniciar Sesión</button>
+
+                <!-- SEPARADOR -->
+                <div class="separator"></div>
+
+                <!-- GOOGLE -->
+                <button class="btn-secondary google">
+                    <span>G</span>
+                    Inicia sesión con Google
+                </button>
+
+                <!-- APPLE -->
+                <button class="btn-secondary apple">
+                    <span></span>
+                    Inicia sesión con Apple
+                </button>
+
+            </div>
+        </main>
+
+    </div>
+    <!-- CARGA DEL HEADER -->
+
+    <script src="../../javascript/login.js"></script>
+    <script src="../../javascript/cambio_headers.js"></script>
+    <script>
+        fetch("../../componentes/header/header.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("header").innerHTML = html;
+                cargarHeaderSegunUsuario(); // 👈 AQUÍ
+            });
+    </script>
+
+
+
 </body>
+
 </html>
