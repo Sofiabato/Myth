@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>MYTH | Búsqueda</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../styles/barra_de_busqueda/barra_de_busqueda.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div id="header"></div>
+
+<!-- BARRA DE BÚSQUEDA -->
+<section class="search-bar">
+    <div class="search-container">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input id="searchInput" type="text" placeholder="Buscar prenda, diseñador o categoría...">
+    </div>
+</section>
+
+<main class="catalog">
+
+    <!-- FILTROS -->
+    <aside class="filters">
+
+        <div class="filter">
+            <button class="filter-header">
+                <span>Color</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="filter-content colors" data-filter="color">
+                <span data-value="black" class="c black"></span>
+                <span data-value="white" class="c white"></span>
+                <span data-value="red" class="c red"></span>
+            </div>
+        </div>
+
+        <div class="filter">
+            <button class="filter-header">
+                <span>Talla</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="filter-content tags" data-filter="size">
+                <span data-value="s">S</span>
+                <span data-value="m">M</span>
+                <span data-value="l">L</span>
+            </div>
+        </div>
+
+        <div class="filter">
+            <button class="filter-header">
+                <span>Tipo de prenda</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="filter-content tags" data-filter="type">
+                <span data-value="sudadera">Sudaderas</span>
+                <span data-value="camiseta">Camisetas</span>
+                <span data-value="pantalon">Pantalones</span>
+            </div>
+        </div>
+
+    </aside>
+
+    <!-- PRODUCTOS -->
+    <section class="products">
+        <div class="products-grid">
+
+            <div class="product-card"
+                 data-name="sudadera negra"
+                 data-color="black"
+                 data-size="m"
+                 data-type="sudadera">
+                <img src="../../images/sudadera.png">
+                <h3>Marca X</h3>
+                <p>Sudadera negra</p>
+                <span>90,00€</span>
+            </div>
+
+            <div class="product-card"
+                 data-name="camiseta blanca"
+                 data-color="white"
+                 data-size="s"
+                 data-type="camiseta">
+                <img src="../../images/camiseta.png">
+                <h3>Marca Y</h3>
+                <p>Camiseta blanca</p>
+                <span>75,00€</span>
+            </div>
+
+            <div class="product-card"
+                 data-name="pantalon rojo"
+                 data-color="red"
+                 data-size="l"
+                 data-type="pantalon">
+                <img src="../../images/pantalones.png">
+                <h3>Marca Z</h3>
+                <p>Pantalón rojo</p>
+                <span>120,00€</span>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-col">
+            <h3>MYTH</h3>
+            <p>Eslogan</p>
+        </div>
+    </div>
+</footer>
+
+<script src="../../javascript/login.js"></script>
+<script src="../../javascript/cambio_headers.js"></script>
+<script src="../../javascript/barra_de_busqueda.js"></script>
+
+<script>
+fetch("../../componentes/header/header.html")
+    .then(res => res.text())
+    .then(html => {
+        document.getElementById("header").innerHTML = html;
+        cargarHeaderSegunUsuario();
+    });
+</script>
+
+</body>
+</html>
