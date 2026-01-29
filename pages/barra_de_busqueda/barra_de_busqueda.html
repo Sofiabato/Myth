@@ -24,45 +24,120 @@
 <main class="catalog">
 
     <!-- FILTROS -->
-    <aside class="filters">
+<aside class="filters">
 
-        <div class="filter">
-            <button class="filter-header">
-                <span>Color</span>
-                <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <div class="filter-content colors" data-filter="color">
-                <span data-value="black" class="c black"></span>
-                <span data-value="white" class="c white"></span>
-                <span data-value="red" class="c red"></span>
+    <!-- COLOR -->
+    <div class="filter">
+        <button class="filter-header">
+            <span>Color</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <div class="filter-content colors" data-filter="color">
+            <span data-value="black" class="c black"></span>
+            <span data-value="white" class="c white"></span>
+            <span data-value="red" class="c red"></span>
+            <span data-value="blue" class="c blue"></span>
+            <span data-value="green" class="c green"></span>
+            <span data-value="gray" class="c gray"></span>
+            <span data-value="brown" class="c brown"></span>
+            <span data-value="beige" class="c beige"></span>
+
+            <button class="clear-colors">Quitar colores</button>
+        </div>
+    </div>
+
+    <!-- TALLA -->
+    <div class="filter">
+        <button class="filter-header">
+            <span>Talla</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="filter-content tags" data-filter="size">
+            <span data-value="xs">XS</span>
+            <span data-value="s">S</span>
+            <span data-value="m">M</span>
+            <span data-value="l">L</span>
+            <span data-value="xl">XL</span>
+        </div>
+    </div>
+
+    <!-- TIPO -->
+   <div class="filter">
+    <button class="filter-header">
+        <span>Tipo de prenda</span>
+        <i class="fa-solid fa-chevron-down"></i>
+    </button>
+    <div class="filter-content tags" data-filter="type">
+        <span data-value="sudadera">Sudaderas</span>
+        <span data-value="camiseta">Camisetas</span>
+        <span data-value="pantalon">Pantalones</span>
+        <span data-value="vestido">Vestidos</span>
+        <span data-value="gafas">Gafas</span>
+        <span data-value="joyas">Joyas</span>
+        <span data-value="chaqueta">Chaquetas</span>
+        <span data-value="ropa-interior">Ropa interior</span>
+    </div>
+</div>
+
+
+    <!-- MATERIAL -->
+    <div class="filter">
+        <button class="filter-header">
+            <span>Material</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="filter-content tags" data-filter="material">
+            <span data-value="algodon">Algodón</span>
+            <span data-value="lino">Lino</span>
+            <span data-value="cachemir">Cachemir</span>
+            <span data-value="lana">Lana</span>
+            <span data-value="tencel">Tencel</span>
+            <span data-value="bambu">Bambú</span>
+            <span data-value="cuero">Cuero</span>
+            <span data-value="nylon">Nylon</span>
+        </div>
+    </div>
+
+    <!-- DISEÑADORES ✅ -->
+    <div class="filter">
+        <button class="filter-header">
+            <span>Diseñadores</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="filter-content tags" data-filter="designer">
+            <span data-value="marca-x">Marca X</span>
+            <span data-value="marca-y">Marca Y</span>
+            <span data-value="marca-z">Marca Z</span>
+        </div>
+    </div>
+
+    <!-- PRECIO -->
+    <div class="filter">
+        <button class="filter-header">
+            <span>Rango de precio</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="filter-content price-filter">
+            <label>
+                Min €
+                <input type="range" id="priceMin" min="0" max="300" value="0">
+            </label>
+
+            <label>
+                Max €
+                <input type="range" id="priceMax" min="0" max="300" value="300">
+            </label>
+
+            <div class="price-values">
+                <span id="minValue">0€</span>
+                <span id="maxValue">300€</span>
             </div>
         </div>
+    </div>
 
-        <div class="filter">
-            <button class="filter-header">
-                <span>Talla</span>
-                <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <div class="filter-content tags" data-filter="size">
-                <span data-value="s">S</span>
-                <span data-value="m">M</span>
-                <span data-value="l">L</span>
-            </div>
-        </div>
+</aside>
 
-        <div class="filter">
-            <button class="filter-header">
-                <span>Tipo de prenda</span>
-                <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <div class="filter-content tags" data-filter="type">
-                <span data-value="sudadera">Sudaderas</span>
-                <span data-value="camiseta">Camisetas</span>
-                <span data-value="pantalon">Pantalones</span>
-            </div>
-        </div>
-
-    </aside>
 
     <!-- PRODUCTOS -->
     <section class="products">
@@ -100,20 +175,116 @@
                 <p>Pantalón rojo</p>
                 <span>120,00€</span>
             </div>
+            <div class="product-card"
+                 data-name="sudadera negra"
+                 data-color="black"
+                 data-size="m"
+                 data-type="sudadera">
+                <img src="../../images/sudadera.png">
+                <h3>Marca X</h3>
+                <p>Sudadera negra</p>
+                <span>90,00€</span>
+            </div>
+
+            <div class="product-card"
+                 data-name="camiseta blanca"
+                 data-color="white"
+                 data-size="s"
+                 data-type="camiseta">
+                <img src="../../images/camiseta.png">
+                <h3>Marca Y</h3>
+                <p>Camiseta blanca</p>
+                <span>75,00€</span>
+            </div>
+
+            <div class="product-card"
+                 data-name="pantalon rojo"
+                 data-color="red"
+                 data-size="l"
+                 data-type="pantalon">
+                <img src="../../images/pantalones.png">
+                <h3>Marca Z</h3>
+                <p>Pantalón rojo</p>
+                <span>120,00€</span>
+            </div>
+            <div class="product-card"
+                 data-name="sudadera negra"
+                 data-color="black"
+                 data-size="m"
+                 data-type="sudadera">
+                <img src="../../images/sudadera.png">
+                <h3>Marca X</h3>
+                <p>Sudadera negra</p>
+                <span>90,00€</span>
+            </div>
+
+            <div class="product-card"
+                 data-name="camiseta blanca"
+                 data-color="white"
+                 data-size="s"
+                 data-type="camiseta">
+                <img src="../../images/camiseta.png">
+                <h3>Marca Y</h3>
+                <p>Camiseta blanca</p>
+                <span>75,00€</span>
+            </div>
+
+            <div class="product-card"
+                 data-name="pantalon rojo"
+                 data-color="red"
+                 data-size="l"
+                 data-type="pantalon">
+                <img src="../../images/pantalones.png">
+                <h3>Marca Z</h3>
+                <p>Pantalón rojo</p>
+                <span>120,00€</span>
+            </div>
 
         </div>
+        <p id="noResults" class="no-results">
+    No se han encontrado productos con esos criterios.
+</p>
+
     </section>
 
 </main>
 
 <footer class="footer">
-    <div class="footer-content">
-        <div class="footer-col">
-            <h3>MYTH</h3>
-            <p>Eslogan</p>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>MYTH</h3>
+                <p>Eslogan</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Colección</a></li>
+                    <li><a href="#">Diseñadores</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Síguenos</h4>
+                <div class="socials">
+                    <span>📸</span>
+                    <span>✖</span>
+                    <span>🎵</span>
+                </div>
+            </div>
         </div>
-    </div>
-</footer>
+
+        <div class="footer-bottom">
+            <p>© 2026 MYTH. Todos los derechos reservados.</p>
+            <div class="legal">
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Términos y Condiciones</a>
+                <a href="#">Política de Cookies</a>
+            </div>
+        </div>
+    </footer>
 
 <script src="../../javascript/login.js"></script>
 <script src="../../javascript/cambio_headers.js"></script>

@@ -1,0 +1,146 @@
+.checkout {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    padding: 60px 40px;
+    background: #fff;
+}
+
+/* IZQUIERDA */
+.checkout-left h2 {
+    font-size: 18px;
+    margin: 25px 0 10px;
+}
+
+.checkout-left input[type="text"],
+.checkout-left input[type="email"],
+.checkout-left input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.two-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.three-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.checkbox {
+    display: flex;
+    gap: 8px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.box {
+    padding: 14px;
+    background: #f2f2f2;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #666;
+}
+
+.payment-option {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 14px;
+    margin-bottom: 10px;
+}
+
+.payment-option.active {
+    border-color: #8b0000;
+}
+
+.payment-option label {
+    font-weight: bold;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.payment-form {
+    margin-top: 15px;
+}
+
+.pay-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 14px;
+    background: #8b0000;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* DERECHA */
+.checkout-right {
+    background: #f6f6f6;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 60px 1fr auto;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.cart-item img {
+    width: 60px;
+    border-radius: 8px;
+}
+
+.discount {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.discount input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.discount button {
+    padding: 10px 16px;
+    background: #8b0000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+.summary div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.summary .total {
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    font-size: 18px;
+}
+ .footer {
+    position: relative;
+    color: #fff;
+    padding: 80px 40px 30px;
+
+    background-image: url("../../images/footer 1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

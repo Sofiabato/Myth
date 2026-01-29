@@ -3,8 +3,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const filters = {};
     const products = document.querySelectorAll(".product-card");
     const searchInput = document.getElementById("searchInput");
+    const noResults = document.getElementById("noResults");
 
-    // Desplegables
+    const priceMin = document.getElementById("priceMin");
+    const priceMax = document.getElementById("priceMax");
+    const minValue = document.getElementById("minValue");
+    const maxValue = document.getElementById("maxValue");
+
+    /* ===================== */
+    /* DESPLEGABLES */
+    /* ===================== */
     document.querySelectorAll(".filter-header").forEach(header => {
         header.addEventListener("click", () => {
             const filter = header.parentElement;
@@ -17,39 +25,105 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Selección de filtros
+    /* ===================== */
+    /* FILTROS TIPO TAG */
+    /* ===================== */
     document.querySelectorAll(".filter-content span").forEach(option => {
         option.addEventListener("click", () => {
             const group = option.parentElement.dataset.filter;
             const value = option.dataset.value;
 
-            option.classList.toggle("active");
-            filters[group] = value;
+            if (!group || !value) return;
+
+            if (option.classList.contains("active")) {
+                option.classList.remove("active");
+                delete filters[group];
+            } else {
+                option.parentElement
+                    .querySelectorAll("span")
+                    .forEach(el => el.classList.remove("active"));
+
+                option.classList.add("active");
+                filters[group] = value;
+            }
 
             applyFilters();
         });
     });
 
-    // Búsqueda por texto
+    /* ===================== */
+    /* LIMPIAR COLORES */
+    /* ===================== */
+    const clearColorsBtn = document.querySelector(".clear-colors");
+    if (clearColorsBtn) {
+        clearColorsBtn.addEventListener("click", () => {
+            delete filters.color;
+            document
+                .querySelectorAll(".colors .c")
+                .forEach(c => c.classList.remove("active"));
+            applyFilters();
+        });
+    }
+
+    /* ===================== */
+    /* FILTRO PRECIO */
+    /* ===================== */
+    if (priceMin && priceMax) {
+        const updatePrice = () => {
+            filters.priceMin = parseInt(priceMin.value);
+            filters.priceMax = parseInt(priceMax.value);
+
+            minValue.textContent = filters.priceMin + "€";
+            maxValue.textContent = filters.priceMax + "€";
+
+            applyFilters();
+        };
+
+        priceMin.addEventListener("input", updatePrice);
+        priceMax.addEventListener("input", updatePrice);
+    }
+
+    /* ===================== */
+    /* BÚSQUEDA TEXTO */
+    /* ===================== */
     searchInput.addEventListener("input", applyFilters);
 
+    /* ===================== */
+    /* APLICAR FILTROS */
+    /* ===================== */
     function applyFilters() {
         const text = searchInput.value.toLowerCase();
+        let visibleCount = 0;
 
         products.forEach(product => {
             let visible = true;
 
+            // Texto
             if (text && !product.dataset.name.includes(text)) {
                 visible = false;
             }
 
+            // Resto de filtros
             for (let key in filters) {
-                if (product.dataset[key] !== filters[key]) {
-                    visible = false;
+                if (key === "priceMin" || key === "priceMax") {
+                    const price = parseInt(product.dataset.price);
+                    if (price < filters.priceMin || price > filters.priceMax) {
+                        visible = false;
+                    }
+                } else {
+                    if (product.dataset[key] !== filters[key]) {
+                        visible = false;
+                    }
                 }
             }
 
             product.style.display = visible ? "block" : "none";
+            if (visible) visibleCount++;
         });
+
+        // Mensaje sin resultados
+        if (noResults) {
+            noResults.style.display = visibleCount === 0 ? "block" : "none";
+        }
     }
 });

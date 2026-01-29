@@ -59,14 +59,21 @@ body {
 .colors {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
+    gap: 10px;
 }
 
 .c {
-    width: 20px;
-    height: 20px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+    width: 26px;
+    height: 26px;
+    border-radius: 6px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+}
+
+/* Estado activo */
+.c.active {
+    border: 2px solid #8b0000;
+    box-shadow: 0 0 0 2px rgba(139,0,0,0.3);
 }
 
 .black { background: #000; }
@@ -286,3 +293,66 @@ body {
     background-color: #8b0000;
     color: #fff;
 }
+main.catalog {
+    min-height: calc(100vh - 200px);
+}
+ /* BOTÓN LIMPIAR COLORES */
+.clear-colors {
+    margin-top: 12px;
+    background: none;
+    border: none;
+    font-size: 13px;
+    color: #8b0000;
+    cursor: pointer;
+    text-align: left;
+}
+
+.clear-colors:hover {
+    text-decoration: underline;
+}
+
+/* ASEGURAR FOOTER VISIBLE */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main.catalog {
+    flex: 1;
+    margin-bottom: 40px;
+}
+/* ===================== */
+/* FILTRO PRECIO */
+/* ===================== */
+
+.price-filter label {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.price-filter input[type="range"] {
+    width: 100%;
+}
+
+.price-values {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* ===================== */
+/* MENSAJE SIN RESULTADOS */
+/* ===================== */
+
+.no-results {
+    display: none;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 15px;
+    color: #666;
+}
+
