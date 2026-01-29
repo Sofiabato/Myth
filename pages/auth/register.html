@@ -17,55 +17,57 @@
     <!-- HEADER -->
     <div id="header"></div>
 
-    <!-- LOGIN -->
+    <!-- REGISTER -->
     <div class="page">
         <main class="login">
 
             <div class="login-form">
 
-<<<<<<< HEAD
-                <h1>Inicio de sesión</h1>
-=======
                 <h1>Crear cuenta</h1>
->>>>>>> 584645e3c45a983dbc2c6ad5e5ee248616a48ce0
 
                 <!-- EMAIL -->
                 <div class="input-group">
-                    <span class="icon">📧</span>
-                    <input type="email" id="email" placeholder="Correo electrónico">
+                    <input type="nombre" id="nombre" placeholder="Nombre y apellidos">
                 </div>
 
                 <!-- PASSWORD -->
                 <div class="input-group">
-                    <span class="icon">🔒</span>
-                    <input type="password" id="password" placeholder="Contraseña">
-                    <span class="icon eye">👁️</span>
+                    <input type="user" id="user" placeholder="Usuario">
+                </div>
+
+                <div class="input-group">
+                    <input type="correo" id="correo" placeholder="Correo electronico">
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <input type="password" id="password" placeholder="Contraseña">
+                    </div>
+
+                    <div class="input-group">
+                        <input type="password" id="confirmpassword" placeholder="Confirmar contraseña">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <input type="telefono" id="telefono" placeholder="Teléfono">
+                </div>
+
+                <div class="input-group select-group">
+                    <select id="usertype">
+                        <option value="" disabled selected>Tipo de usuario</option>
+                        <option value="cliente">Comprador</option>
+                        <option value="vendedor">Diseñador</option>
+                    </select>
                 </div>
 
                 <!-- LINKS -->
                 <div class="login-links">
-                    <a href="#">¿Olvidaste tu contraseña?</a>
-                    <a href="#">¿No tienes cuenta? Crear una</a>
+                    <a href="#">¿Ya tienes cuenta? Inicia sesión</a>
                 </div>
 
                 <!-- BOTÓN PRINCIPAL (YA EXISTENTE) -->
-                <button id="login-btn" class="button-def btn-login">Iniciar Sesión</button>
-
-                <!-- SEPARADOR -->
-                <div class="separator"></div>
-
-                <!-- GOOGLE -->
-                <button class="btn-secondary google">
-                    <span>G</span>
-                    Inicia sesión con Google
-                </button>
-
-                <!-- APPLE -->
-                <button class="btn-secondary apple">
-                    <span></span>
-                    Inicia sesión con Apple
-                </button>
-
+                <button id="login-btn" class="button-def btn-login">Crear cuenta</button>
             </div>
         </main>
 

@@ -56,16 +56,18 @@ html { overflow-y: scroll; }
   display: flex;
   align-items: center;
   justify-content: space-between;
+  align-self: stretch;
+  text-align: center;
 
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 0px 50px;
+  gap: 10px;
 }
 
 /* NAV IZQUIERDA */
 .nav {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 35px;
 }
 
 .nav a {
@@ -77,35 +79,63 @@ html { overflow-y: scroll; }
   color: var(--color-prim);
 }
 
-/* LOGO CENTRADO */
 .logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-weight: bold;
-  font-size: 20px;
+  height: 25px;
 }
 
 /* ACCIONES DERECHA */
 .actions {
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
   gap: 10px;
+}
+
+.actions img {
+  height: 28px;
+  width: 28px;
+  display: block;
+}
+
+.actions > a {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.actions .icono {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 25px;
 }
 
 /* BOTÓN BASE */
 .button-def {
   background-color: var(--color-prim);
-  color: white;
-  padding: 8px 14px;
-  border-radius: 5px;
+  color: var(--texto-secun);
+  padding: 10px 20px;
+  border-radius: 20px;
   text-decoration: none;
   border: none;
   cursor: pointer;
+  font-size: 16px;
 }
 
 .button-def:hover {
   background-color: var(--color-hover);
 }
+
 
 /* SEPARADOR NAV */
 .divider {
@@ -147,6 +177,7 @@ html { overflow-y: scroll; }
 .login-form h1 {
   font-size: 32px;
   margin-bottom: 40px;
+  text-align: center;
 }
 
 /* INPUTS */
@@ -155,15 +186,16 @@ html { overflow-y: scroll; }
   max-width: 600px;
   height: 54px;
 
+  position: relative;
+
   display: flex;
   align-items: center;
 
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(8px);
+  background: var(--fondo-inputs);
 
   border-radius: 14px;
   padding: 0 18px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .input-group input {
@@ -173,14 +205,58 @@ html { overflow-y: scroll; }
   background: transparent;
   outline: none;
 
-  font-size: 14px;
+  font-size: 16px;
   color: var(--texto-inputs);
+  line-height: 54px;
+}
+
+.select-group::after {
+  content: "▾";
+  position: absolute;
+  right: 18px;
+  color: var(--texto-inputs);
+  pointer-events: none;
+}
+
+/* FILA DE DOS INPUTS */
+.input-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.input-row .input-group {
+  margin-bottom: 0;
+}
+
+/* SELECT IGUAL QUE INPUT */
+.input-group select {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background: transparent;
+  outline: none;
+
+  font-size: 16px;
+  color: var(--texto-inputs);
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  line-height: 54px;
+  cursor: pointer;
 }
 
 /* ICONOS INPUT */
 .icon {
-  margin-right: 12px;
-  opacity: 0.6;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  flex-shrink: 0;
 }
 
 .eye {
