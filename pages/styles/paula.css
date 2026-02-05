@@ -3,10 +3,16 @@ html, body {
   overflow: hidden;
 }
 
+:root {
+  --header-height: 70px;
+}
+
+/* ================= CONTENEDOR FONDO ================= */
+
 .preferences {
   min-height: 100vh;
-  background-size: cover;
   background-image: url("../../images/fondo_formulario.jpg");
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
@@ -17,46 +23,82 @@ html, body {
   position: relative;
 }
 
+/* ================= CONTENEDOR FORMULARIO ================= */
+
 .preferences-right {
+  margin-top: var(--header-height);
   width: 630px;
-  max-width: 90%;
   height: 650px;
+  max-width: 90%;
 
   margin-right: 120px;
-
-  border-radius: 24px;
   padding: 40px 48px;
 
   display: grid;
-  grid-template-rows: 1fr auto auto;
-
-  transform: translateY(-60px);
+  grid-template-rows:
+    110px   /* título + subtítulo */
+    200px   /* opciones (FIJO) */
+    80px    /* puntos */
+    45px;   /* botones */
 }
+
+/* ================= STEPS ================= */
 
 .step {
   display: none;
 }
 
+/* 🔑 CLAVE: el step NO afecta al layout */
 .step.active {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  height: 100%;
+  display: contents;
 }
 
+/* ================= TÍTULO ================= */
+
+.step h2 {
+  grid-row: 1;
+  height: 38px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* ================= SUBTÍTULO ================= */
+
+.step p {
+  grid-row: 1;
+  color: #6D6D6D;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* ================= OPCIONES (BLOQUE FIJO) ================= */
+
 .options {
+  grid-row: 2;
+
+  height: 250px;
+  overflow-y: auto; /* si hay muchas, scroll interno */
+  margin-top: 60px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  margin-bottom: -30px;
   gap: 12px;
 }
 
-/* CHIP */
-.chip {
-  height: 41px;              /* alto fijo */
-  width: auto;               /* ancho según texto */
+/* ================= CHIPS ================= */
 
-  padding: 0 22px;           /* espacio horizontal */
+.chip {
+  height: 41px;
+  padding: 0 22px;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -67,7 +109,7 @@ html, body {
   color: var(--color-prim);
 
   font-size: 14px;
-  white-space: nowrap;       /* evita saltos de línea */
+  white-space: nowrap;
   cursor: pointer;
 
   transition: background-color 0.2s ease, color 0.2s ease;
@@ -81,34 +123,44 @@ html, body {
 }
 
 /* seleccionado */
-.chip input:checked ~ * ,
 .chip:has(input:checked) {
   background-color: var(--color-prim);
   color: var(--texto-secun);
 }
 
+/* ================= PROGRESO ================= */
+
 .progress {
+  grid-row: 3;
+
+  height: 80px;
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-self: center;
   gap: 10px;
 }
 
-.form-actions {
-  display: flex;
-  justify-content: space-between;
-  align-self: stretch;
-}
-
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  background: #ccc;
+  background: var(--color-hover);
 }
 
 .dot.active {
   background: var(--color-prim);
+  width: 25px;
+}
+
+/* ================= BOTONES (CLAVADOS) ================= */
+
+.form-actions {
+  grid-row: 4;
+
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .next-btn,
@@ -122,7 +174,6 @@ html, body {
 
   cursor: pointer;
   font-size: 15px;
-
   transition: background-color 0.2s ease;
 }
 
@@ -131,48 +182,20 @@ html, body {
   background-color: var(--color-hover);
 }
 
-.step h2 {
-  height: 38px; /* altura fija del título */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+/* ================= RESPONSIVE FONDO ================= */
 
-.step p {
-  height: 48px; /* altura fija del subtítulo */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 80px;
-}
-
-/* Centrar título y subtítulo respecto al formulario en todos los pasos */
-.preferences-right h2 {
-  text-align: center;
-  width: 100%;
-  margin-bottom: 15px;
-}
-
-.preferences-right p {
-  margin-bottom: 80px;
-  text-align: center;
-}
-
-/* MacBook / desktop medio */
 @media (max-width: 1680px) {
   .preferences {
     background-position: 35% center;
   }
 }
 
-/* Portátiles */
 @media (max-width: 1440px) {
   .preferences {
     background-position: 30% center;
   }
 }
 
-/* Portátiles pequeños */
 @media (max-width: 1280px) {
   .preferences {
     background-position: 25% center;
