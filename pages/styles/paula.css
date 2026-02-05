@@ -20,16 +20,17 @@ html, body {
 .preferences-right {
   width: 630px;
   max-width: 90%;
-  min-height: 650px;
+  height: 650px;
 
   margin-right: 120px;
 
   border-radius: 24px;
   padding: 40px 48px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: 1fr auto auto;
+
+  transform: translateY(-60px);
 }
 
 .step {
@@ -39,7 +40,9 @@ html, body {
 .step.active {
   display: flex;
   flex-direction: column;
-  align-items: center; /* 🔑 clave */
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
 }
 
 .options {
@@ -87,8 +90,14 @@ html, body {
 .progress {
   display: flex;
   justify-content: center;
+  align-self: center;
   gap: 10px;
-  margin: 30px 0 10px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-self: stretch;
 }
 
 .dot {
@@ -100,12 +109,6 @@ html, body {
 
 .dot.active {
   background: var(--color-prim);
-}
-
-.form-actions {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
 }
 
 .next-btn,
@@ -128,12 +131,19 @@ html, body {
   background-color: var(--color-hover);
 }
 
-/* PASO 1: grid 4 columnas x 3 filas con gaps específicos */
-.step:first-of-type .options {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 45px; /* espacio entre columnas */
-  row-gap: 60px;    /* espacio entre filas */
+.step h2 {
+  height: 38px; /* altura fija del título */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step p {
+  height: 48px; /* altura fija del subtítulo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 80px;
 }
 
 /* Centrar título y subtítulo respecto al formulario en todos los pasos */
@@ -148,8 +158,23 @@ html, body {
   text-align: center;
 }
 
+/* MacBook / desktop medio */
+@media (max-width: 1680px) {
+  .preferences {
+    background-position: 35% center;
+  }
+}
+
+/* Portátiles */
 @media (max-width: 1440px) {
   .preferences {
-    background-position: 10% center;
+    background-position: 30% center;
+  }
+}
+
+/* Portátiles pequeños */
+@media (max-width: 1280px) {
+  .preferences {
+    background-position: 25% center;
   }
 }
