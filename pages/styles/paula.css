@@ -1,0 +1,155 @@
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.preferences {
+  min-height: 100vh;
+  background-size: cover;
+  background-image: url("../../images/fondo_formulario.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  position: relative;
+}
+
+.preferences-right {
+  width: 630px;
+  max-width: 90%;
+  min-height: 650px;
+
+  margin-right: 120px;
+
+  border-radius: 24px;
+  padding: 40px 48px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.step {
+  display: none;
+}
+
+.step.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 🔑 clave */
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* CHIP */
+.chip {
+  height: 41px;              /* alto fijo */
+  width: auto;               /* ancho según texto */
+
+  padding: 0 22px;           /* espacio horizontal */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+  border: 1px solid var(--color-prim);
+  background: transparent;
+  color: var(--color-prim);
+
+  font-size: 14px;
+  white-space: nowrap;       /* evita saltos de línea */
+  cursor: pointer;
+
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* ocultar checkbox real */
+.chip input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* seleccionado */
+.chip input:checked ~ * ,
+.chip:has(input:checked) {
+  background-color: var(--color-prim);
+  color: var(--texto-secun);
+}
+
+.progress {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px 0 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+}
+
+.dot.active {
+  background: var(--color-prim);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.next-btn,
+.prev-btn {
+  background-color: var(--color-prim);
+  color: var(--texto-secun);
+
+  padding: 10px 24px;
+  border-radius: 20px;
+  border: none;
+
+  cursor: pointer;
+  font-size: 15px;
+
+  transition: background-color 0.2s ease;
+}
+
+.next-btn:hover,
+.prev-btn:hover {
+  background-color: var(--color-hover);
+}
+
+/* PASO 1: grid 4 columnas x 3 filas con gaps específicos */
+.step:first-of-type .options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 45px; /* espacio entre columnas */
+  row-gap: 60px;    /* espacio entre filas */
+}
+
+/* Centrar título y subtítulo respecto al formulario en todos los pasos */
+.preferences-right h2 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.preferences-right p {
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+@media (max-width: 1440px) {
+  .preferences {
+    background-position: 10% center;
+  }
+}
