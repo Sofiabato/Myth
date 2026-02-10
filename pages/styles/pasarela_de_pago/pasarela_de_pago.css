@@ -1,107 +1,175 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===================== */
+/* LAYOUT GENERAL */
+/* ===================== */
 .checkout {
+    max-width: 1200px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 60px;
-    padding: 60px 40px;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 80px;
+    padding: 60px 20px;
     background: #fff;
 }
 
-/* IZQUIERDA */
+/* ===================== */
+/* TITULOS */
+/* ===================== */
 .checkout-left h2 {
-    font-size: 18px;
-    margin: 25px 0 10px;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 32px 0 14px;
 }
 
+/* ===================== */
+/* INPUTS (CORREGIDOS) */
+/* ===================== */
 .checkout-left input[type="text"],
 .checkout-left input[type="email"],
-.checkout-left input[type="tel"] {
+.checkout-left input[type="tel"],
+.discount input {
     width: 100%;
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
+    height: 48px;
+    padding: 0 18px;
+    border-radius: 999px;
+    border: none;
+    background: #ececec;
+    font-size: 14px;
+    line-height: 48px;            /* 🔥 CENTRADO VERTICAL */
+    color: #555;
+}
+
+/* separación REAL entre inputs */
+.checkout-left input {
     margin-bottom: 10px;
 }
 
+/* placeholder */
+.checkout-left input::placeholder,
+.discount input::placeholder {
+    color: #888;
+    font-weight: 400;
+}
+
+/* focus limpio */
+.checkout-left input:focus,
+.discount input:focus {
+    outline: none;
+    background: #e6e6e6;
+}
+
+/* ===================== */
+/* GRIDS */
+/* ===================== */
 .two-cols {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
+    margin-bottom: 10px;
 }
 
 .three-cols {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
-}
-
-.checkbox {
-    display: flex;
-    gap: 8px;
-    font-size: 13px;
-    margin-bottom: 20px;
-}
-
-.box {
-    padding: 14px;
-    background: #f2f2f2;
-    border-radius: 8px;
-    font-size: 13px;
-    color: #666;
-}
-
-.payment-option {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 14px;
     margin-bottom: 10px;
 }
 
-.payment-option.active {
-    border-color: #8b0000;
+/* ===================== */
+/* ENVÍO */
+/* ===================== */
+.box {
+    background: #f4f4f4;
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 14px;
+    color: #777;
 }
 
-.payment-option label {
-    font-weight: bold;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.payment-form {
-    margin-top: 15px;
-}
-
-.pay-btn {
-    margin-top: 20px;
-    width: 100%;
-    padding: 14px;
-    background: #8b0000;
-    color: #fff;
-    border: none;
-    border-radius: 30px;
-    font-weight: bold;
+/* ===================== */
+/* PAGO */
+/* ===================== */
+.payment-option {
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 12px;
     cursor: pointer;
 }
 
-/* DERECHA */
+.payment-option.active {
+    border-color: #ddd;
+    background: #f5f5f5;
+}
+
+.payment-option label {
+    font-size: 15px;
+}
+
+.payment-form {
+    margin-top: 14px;
+}
+
+.pay-btn {
+    margin-top: 26px;
+    height: 52px;
+    border-radius: 30px;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+/* ===================== */
+/* COLUMNA DERECHA */
+/* ===================== */
 .checkout-right {
     background: #f6f6f6;
     padding: 30px;
     border-radius: 20px;
+    position: sticky;
+    top: 100px;
+    height: fit-content;
 }
 
+/* ===================== */
+/* CARRITO */
+/* ===================== */
 .cart-item {
     display: grid;
     grid-template-columns: 60px 1fr auto;
-    gap: 10px;
-    margin-bottom: 15px;
+    gap: 12px;
+    margin-bottom: 18px;
 }
 
 .cart-item img {
     width: 60px;
-    border-radius: 8px;
+    border-radius: 6px;
 }
 
+.cart-item strong {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.cart-item p {
+    font-size: 13px;
+    margin: 2px 0;
+}
+
+.cart-item small {
+    font-size: 12px;
+}
+
+.cart-item:not(:last-child) {
+    padding-bottom: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* ===================== */
+/* DESCUENTO */
+/* ===================== */
 .discount {
     display: flex;
     gap: 10px;
@@ -110,37 +178,99 @@
 
 .discount input {
     flex: 1;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
 }
 
 .discount button {
-    padding: 10px 16px;
+    padding: 10px 18px;
     background: #8b0000;
-    color: white;
+    color: #fff;
     border: none;
-    border-radius: 8px;
+    border-radius: 999px;
 }
 
+/* ===================== */
+/* RESUMEN */
+/* ===================== */
 .summary div {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .summary .total {
-    border-top: 1px solid #ccc;
-    padding-top: 10px;
-    font-size: 18px;
+    border-top: 1px solid #ddd;
+    padding-top: 14px;
+    font-size: 20px;
 }
- .footer {
-    position: relative;
-    color: #fff;
-    padding: 80px 40px 30px;
+.footer {
+        position: relative;
+        color: #fff;
+        padding: 80px 40px 30px;
 
-    background-image: url("../../images/footer 1.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+        /* Imagen de fondo */
+        background-image: url("../../../images/footer\ 1.png"); /* <-- tu imagen */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 40px;
+        max-width: 1100px;
+        margin: 0 auto 40px;
+    }
+
+    .footer-col h3 {
+        font-size: 22px;
+    }
+
+    .footer-col h4 {
+        margin-bottom: 15px;
+    }
+
+    .footer-col ul {
+        list-style: none;
+    }
+
+    .footer-col ul li {
+        margin-bottom: 8px;
+    }
+
+    .footer-col a {
+        text-decoration: none;
+        color: #bbb;
+        font-size: 14px;
+    }
+
+    .footer-col a:hover {
+        color: white;
+    }
+
+    .socials span {
+        font-size: 20px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    /* FOOTER BOTTOM */
+    .footer-bottom {
+        border-top: 1px solid #444;
+        padding-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font-size: 13px;
+    }
+
+    .footer-bottom a {
+        color: #bbb;
+        margin-left: 15px;
+        text-decoration: none;
+    }
+
+    .footer-bottom a:hover {
+        color: white;
+    }
