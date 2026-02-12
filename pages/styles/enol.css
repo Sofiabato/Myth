@@ -1,0 +1,831 @@
+/* ===================== */
+/* RESET + FUENTE */
+/* ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Evitar diferencias Mac / Windows */
+html {
+  overflow-y: scroll;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+html { overflow-y: scroll; }
+
+/* ===================== */
+/* CONTENEDOR GENERAL */
+/* ===================== */
+.page {
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+/* ===================== */
+/* VARIABLES */
+/* ===================== */
+:root {
+  /* colores */
+  --fondo-prim: #F7F7F7;
+  --color-prim: #830007;
+  --color-hover: #A30008;
+  --fondo-inputs: #E8E8E8;
+
+  /* texto */
+  --texto-prim: #0F0F0F;
+  --texto-secun: #F7F7F7;
+  --texto-inputs: #6D6D6D;
+  --barritas: #999999;
+}
+
+/* ===================== */
+/* HEADER */
+/* ===================== */
+.site-header {
+  position: relative;
+  width: 100%;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+/* NAV IZQUIERDA */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav a {
+  color: var(--texto-prim);
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: var(--color-prim);
+}
+
+/* LOGO CENTRADO */
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* ACCIONES DERECHA */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* BOTÓN BASE */
+.button-def {
+  background-color: var(--color-prim);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 5px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.button-def:hover {
+  background-color: var(--color-hover);
+}
+
+/* SEPARADOR NAV */
+.divider {
+  color: var(--barritas);
+}
+
+/* ===================== */
+/* LOGIN PAGE */
+/* ===================== */
+
+/* FONDO SOLO PARA LOGIN */
+.login-page {
+  background-image: url("../../images/loginBg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* CONTENEDOR LOGIN */
+/* Derecha + centrado vertical */
+.login {
+  height: calc(100vh - 70px); /* quitamos el alto del header */
+  
+  display: flex;
+  justify-content: flex-end; /* derecha */
+  align-items: center;       /* centro vertical */
+}
+
+/* FORMULARIO */
+.login-form {
+  width: 100%;
+  max-width: 600px;
+  color: var(--texto-prim);
+}
+
+/* TÍTULO */
+.login-form h1 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+/* INPUTS */
+.input-group {
+  width: 100%;
+  max-width: 600px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+
+  border-radius: 14px;
+  padding: 0 18px;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background: transparent;
+  outline: none;
+
+  font-size: 14px;
+  color: var(--texto-inputs);
+}
+
+/* ICONOS INPUT */
+.icon {
+  margin-right: 12px;
+  opacity: 0.6;
+}
+
+.eye {
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+/* LINKS */
+.login-links {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 30px;
+}
+
+.login-links a {
+  color: var(--texto-prim);
+  text-decoration: none;
+}
+
+/* BOTÓN LOGIN (reutiliza button-def) */
+.btn-login {
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 30px;
+  margin-bottom: 30px;
+}
+
+/* SEPARADOR */
+.separator {
+  height: 1px;
+  background: rgba(0, 0, 0, 0.3);
+  margin-bottom: 30px;
+}
+
+/* BOTONES SOCIALES */
+.btn-secondary {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 14px;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.google span {
+  font-weight: bold;
+}
+
+.apple span {
+  font-size: 18px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* ===================== */
+/* RESPONSIVE */
+/* ===================== */
+@media (max-width: 900px) {
+  .login {
+    justify-content: center;
+  }
+}
+
+/* ===================== */
+/* COLECCION*/
+/* ===================== */
+
+
+/* ===================== */
+/* DISEÑO COLECCIÓN      */
+/* ===================== */
+
+body.coleccion .section-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--texto-prim);
+    margin: 40px 0 25px 0;
+}
+
+body.coleccion .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+body.coleccion .product-card {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+body.coleccion .product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Fondo gris suave para las fotos */
+body.coleccion .product-image {
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    aspect-ratio: 1 / 1.15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+body.coleccion .product-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Textos del producto */
+body.coleccion .product-info {
+    margin-top: 15px;
+}
+
+body.coleccion .brand {
+    display: block;
+    font-weight: 800;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: var(--texto-prim);
+}
+
+body.coleccion .desc {
+    display: block;
+    font-size: 13px;
+    color: var(--texto-inputs);
+    margin: 3px 0;
+}
+
+body.coleccion .price {
+    display: block;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--texto-prim);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .page { padding: 0 50px; }
+}
+
+@media (max-width: 850px) {
+    body.coleccion .product-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 500px) {
+    body.coleccion .product-grid { grid-template-columns: 1fr; }
+    .page { padding: 0 20px; }
+}
+
+/* ===================== */
+/* PERFIL.HTML    */
+/* ===================== */
+
+/* Contenedor Perfil */
+body.coleccion .user-info-section {
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+body.coleccion .profile-container {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+/* Avatar circular con borde rojo */
+body.coleccion .avatar-wrapper {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 2.5px solid #830007; /* Rojo oscuro de la imagen */
+    padding: 5px;
+    background-color: #fff;
+}
+
+body.coleccion .profile-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #e0e0e0;
+}
+
+/* Detalles de usuario */
+body.coleccion .profile-details { flex: 1; }
+
+body.coleccion .profile-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+body.coleccion .username { font-size: 20px; font-weight: 600; }
+body.coleccion .rating-stars { color: #830007; font-size: 18px; }
+
+/* Botón Editar Perfil */
+body.coleccion .btn-edit-profile {
+    background-color: #830007;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Grid de información (Bio/Verificado) */
+body.coleccion .profile-stats-grid {
+    display: flex;
+    gap: 80px;
+}
+
+body.coleccion .stat-col p { margin-bottom: 4px; font-size: 14px; }
+body.coleccion .low-opacity { color: var(--texto-inputs); opacity: 0.8; }
+body.coleccion .check-icon { color: #830007; font-weight: bold; }
+
+/* Tabs */
+body.coleccion .profile-tabs {
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+body.coleccion .tab-item {
+    text-decoration: none;
+    color: var(--texto-inputs);
+    padding-bottom: 12px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+body.coleccion .tab-item.active {
+    color: var(--texto-prim);
+    border-bottom: 2px solid var(--texto-prim);
+}
+
+/* --- GRID DE PRODUCTOS --- */
+body.coleccion .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+body.coleccion .product-image-container {
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    aspect-ratio: 1 / 1.1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+body.coleccion .product-image-container img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Icono de edición sobre la prenda */
+body.coleccion .product-edit-trigger {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #333;
+}
+
+body.coleccion .brand-name { font-size: 14px; font-weight: 800; text-transform: uppercase; }
+body.coleccion .item-desc { font-size: 13px; color: var(--texto-inputs); margin: 2px 0; }
+body.coleccion .item-price { font-size: 14px; font-weight: 600; }
+
+/* Responsive */
+@media (max-width: 1000px) {
+    body.coleccion .profile-container { flex-direction: column; align-items: center; text-align: center; }
+    body.coleccion .profile-top-row { flex-direction: column; gap: 15px; }
+    body.coleccion .profile-stats-grid { gap: 30px; justify-content: center; }
+    body.coleccion .product-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* --- APARTADO RESEÑAS --- */
+body.coleccion .reviews-section {
+    margin-top: 20px;
+}
+
+body.coleccion .reviews-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+body.coleccion .review-card {
+    background-color: #F9F9F9; /* Un gris muy sutil */
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid #eee;
+}
+
+body.coleccion .review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+body.coleccion .review-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+body.coleccion .review-avatar-small {
+    width: 35px;
+    height: 35px;
+    background-color: #ddd;
+    border-radius: 50%;
+}
+
+body.coleccion .review-username {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+body.coleccion .review-rating {
+    color: #830007; /* Rojo Myth */
+    font-size: 14px;
+}
+
+body.coleccion .review-text {
+    font-size: 14px;
+    color: var(--texto-inputs);
+    line-height: 1.5;
+    font-style: italic;
+}
+
+body.coleccion .review-date {
+    display: block;
+    margin-top: 10px;
+    font-size: 11px;
+    color: #bbb;
+}
+
+/* ===================== */
+/* HISTORIAL_PEDIDOS.HTML */
+/* ===================== */
+
+/* --- SECCIÓN MIS COMPRAS --- */
+body.coleccion .purchases-section {
+    margin-top: 40px;
+    margin-top: 0;
+}
+
+body.coleccion .purchases-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: var(--texto-prim); /* Asegúrate que esta variable exista, si no pon #000 */
+}
+
+body.coleccion .purchases-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Tarjeta con borde rojo fino */
+body.coleccion .purchase-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+    border: 1px solid #A57070; 
+    border-radius: 15px;
+    background-color: #fff;
+}
+
+/* Columna de texto (CORREGIDO: antes .purchase-details) */
+body.coleccion .purchase-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+body.coleccion .status {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--texto-prim); /* O usa #000 */
+}
+
+body.coleccion .delivery-date {
+    font-size: 13px;
+    color: #999;
+}
+
+body.coleccion .total-price {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+/* Contenedor de miniaturas (CORREGIDO: antes .purchase-images) */
+body.coleccion .purchase-items-preview {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* El cuadro gris (CORREGIDO: antes .purchase-thumb) */
+body.coleccion .item-thumb {
+    width: 120px !important;    /* Forzamos ancho */
+    height: 105px !important;   /* Forzamos alto */
+    background-color: #F2F2F2;
+    border-radius: 12px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    flex-shrink: 0; /* Evita que se aplaste si hay poco espacio */
+    overflow: hidden;
+}
+
+/* La imagen dentro del cuadro */
+body.coleccion .item-thumb img {
+    width: 100% !important;      /* Ocupa todo el ancho del cuadro gris */
+    height: 100% !important;     /* Ocupa todo el alto del cuadro gris */
+    object-fit: contain !important; /* Mantiene la proporción sin deformarse */
+    display: block;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+    body.coleccion .purchase-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    body.coleccion .purchase-items-preview {
+        width: 100%;
+        overflow-x: auto; /* Scroll horizontal si hay muchas fotos */
+        padding-bottom: 5px;
+    }
+}
+
+/* ==========================================================================
+   ESTILOS HISTORIAL DE PEDIDOS
+   ========================================================================== */
+
+/* --- 1. TITULAR DE LA PÁGINA --- */
+body.coleccion .page-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: var(--texto-prim, #000);
+}
+
+/* --- 2. ESTRUCTURA PRINCIPAL (LAYOUT) --- */
+body.coleccion .layout-container {
+    display: flex;
+    gap: 60px;          /* Espacio entre el menú y las tarjetas */
+    align-items: flex-start; /* Alinea ambas columnas al inicio superior */
+}
+
+/* --- 3. COLUMNA IZQUIERDA: MENÚ (SIDEBAR) --- */
+body.coleccion .sidebar-menu {
+    width: 250px;       /* Ancho fijo del menú */
+    flex-shrink: 0;     /* Evita que el menú se aplaste */
+}
+
+body.coleccion .sidebar-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 0;      /* Elimina margen superior para alinear */
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: var(--texto-prim, #000);
+}
+
+body.coleccion .sidebar-menu nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+body.coleccion .menu-item {
+    text-decoration: none;
+    color: #666;
+    font-size: 16px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+body.coleccion .menu-item:hover {
+    color: #000;
+}
+
+body.coleccion .menu-item.active {
+    color: #000;
+    font-weight: 600;
+    padding-left: 10px;
+    border-left: 3px solid #000;
+}
+
+/* --- 4. COLUMNA DERECHA: SECCIÓN DE COMPRAS --- */
+body.coleccion .purchases-section {
+    flex-grow: 1;       /* Ocupa el resto del espacio */
+    max-width: 900px;
+    margin-top: 0px;   /* AJUSTE: Sube ligeramente la columna derecha */
+}
+
+body.coleccion .section-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 0;      /* Elimina margen superior para alinear */
+    margin-bottom: 25px;
+    line-height: 1.2;
+    color: var(--texto-prim, #000);
+}
+
+body.coleccion .purchases-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* --- 5. TARJETAS DE PEDIDO --- */
+body.coleccion .purchase-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    border: 1px solid #A57070; 
+    border-radius: 15px;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease;
+}
+
+body.coleccion .purchase-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+body.coleccion .purchase-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+body.coleccion .status {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--texto-prim, #000);
+}
+
+body.coleccion .delivery-date {
+    font-size: 13px;
+    color: #999;
+}
+
+body.coleccion .total-price {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+/* --- 6. MINIATURAS DE PRODUCTO --- */
+body.coleccion .purchase-items-preview {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+body.coleccion .item-thumb {
+    width: 80px !important;
+    height: 90px !important;
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+body.coleccion .item-thumb img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    display: block;
+}
+
+/* --- 7. RESPONSIVE (DISEÑO MÓVIL) --- */
+@media (max-width: 850px) {
+    body.coleccion .layout-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    body.coleccion .sidebar-menu {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 20px;
+    }
+    
+    body.coleccion .sidebar-menu nav {
+        flex-direction: row;
+        gap: 20px;
+        overflow-x: auto;
+    }
+
+    body.coleccion .purchases-section {
+        margin-top: 0; /* Quitamos el ajuste negativo en móvil */
+    }
+
+    body.coleccion .purchase-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+}
