@@ -6,6 +6,7 @@
     <title>Myth - Mi perfil</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/enol.css">
+    <link rel="stylesheet" href="../styles/componentes.css">
 </head>
 <div id="header"></div>
 <body class="coleccion"> 
@@ -50,56 +51,87 @@
         </section>
 
         <section class="products-section" id="section-productos">
-            <div class="product-grid">
-                <article class="product-card">
-                    <div class="product-image-container">
-                        <img src="../../images/sudadera.png" alt="Sudadera">
-                        <span class="product-edit-trigger">✎</span>
+            <div class="designers-grid">
+                <div class="designer-card">
+                    <img src="../../images/pantalones.png" alt="">
+                    <div class="card-content">
+                        <div class="card-info-default">
+                            <h3>NOMBREMARCA</h3>
+                            <p>Descripción de la prenda</p>
+                            <span>90.00€</span>
+                        </div>
+                        <div class="card-info-hover">
+                            <h3>NOMBREMARCA</h3>
+                            <p class="card-size">One size</p>
+                            <div class="card-colors">
+                                <div class="color-circle color-black"></div>
+                                <div class="color-circle color-red"></div>
+                                <div class="color-circle color-blue"></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="product-text">
-                        <h3 class="brand-name">NOMBREMARCA</h3>
-                        <p class="item-desc">Descripción de la prenda</p>
-                        <p class="item-price">90.00€</p>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="product-image-container">
-                        <img src="../../images/sudadera.png" alt="Sudadera">
-                        <span class="product-edit-trigger">✎</span>
-                    </div>
-                    <div class="product-text">
-                        <h3 class="brand-name">NOMBREMARCA</h3>
-                        <p class="item-desc">Descripción de la prenda</p>
-                        <p class="item-price">90.00€</p>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="product-image-container">
-                        <img src="../../images/sudadera.png" alt="Sudadera">
-                        <span class="product-edit-trigger">✎</span>
-                    </div>
-                    <div class="product-text">
-                        <h3 class="brand-name">NOMBREMARCA</h3>
-                        <p class="item-desc">Descripción de la prenda</p>
-                        <p class="item-price">90.00€</p>
-                    </div>
-                </article>
-                                <article class="product-card">
-                    <div class="product-image-container">
-                        <img src="../../images/sudadera.png" alt="Sudadera">
-                        <span class="product-edit-trigger">✎</span>
-                    </div>
-                    <div class="product-text">
-                        <h3 class="brand-name">NOMBREMARCA</h3>
-                        <p class="item-desc">Descripción de la prenda</p>
-                        <p class="item-price">90.00€</p>
-                    </div>
-                </article>
-
-                
                 </div>
+
+                <div class="designer-card">
+                    <img src="../../images/sudadera.png" alt="">
+                    <div class="card-content">
+                        <div class="card-info-default">
+                            <h3>NOMBREMARCA</h3>
+                            <p>Descripción de la prenda</p>
+                            <span>90.00€</span>
+                        </div>
+                        <div class="card-info-hover">
+                            <h3>NOMBREMARCA</h3>
+                            <p class="card-size">One size</p>
+                            <div class="card-colors">
+                                <div class="color-circle color-black"></div>
+                                <div class="color-circle color-red"></div>
+                                <div class="color-circle color-blue"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="designer-card">
+                    <img src="../../images/sudadera2.png" alt="">
+                    <div class="card-content">
+                        <div class="card-info-default">
+                            <h3>NOMBREMARCA</h3>
+                            <p>Descripción de la prenda</p>
+                            <span>90.00€</span>
+                        </div>
+                        <div class="card-info-hover">
+                            <h3>NOMBREMARCA</h3>
+                            <p class="card-size">One size</p>
+                            <div class="card-colors">
+                                <div class="color-circle color-black"></div>
+                                <div class="color-circle color-red"></div>
+                                <div class="color-circle color-blue"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="designer-card">
+                    <img src="../../images/pantalones.png" alt="">
+                    <div class="card-content">
+                        <div class="card-info-default">
+                            <h3>NOMBREMARCA</h3>
+                            <p>Descripción de la prenda</p>
+                            <span>90.00€</span>
+                        </div>
+                        <div class="card-info-hover">
+                            <h3>NOMBREMARCA</h3>
+                            <p class="card-size">One size</p>
+                            <div class="card-colors">
+                                <div class="color-circle color-black"></div>
+                                <div class="color-circle color-red"></div>
+                                <div class="color-circle color-blue"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="reviews-section" id="section-resenas" style="display: none;">
@@ -118,6 +150,8 @@
             </div>
         </section>
     </main>
+
+    <div id="footer"></div>
 
     <script src="../../javascript/cambio_headers.js"></script>
     <script>
@@ -151,6 +185,13 @@
             btnRes.classList.remove('active');
             btnPub.classList.add('active');
         });
+    </script>
+        <script>
+        fetch("../../componentes/footer/footer.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("footer").innerHTML = html;
+            });
     </script>
 </body>
 </html>
