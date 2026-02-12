@@ -1,0 +1,185 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* ===================== */
+/* LAYOUT GENERAL */
+/* ===================== */
+.profile-page {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 160px;
+    padding: 50px 40px 140px;
+}
+
+/* ===================== */
+/* SIDEBAR */
+/* ===================== */
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 34px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.sidebar a {
+    font-size: 14px;
+    color: #777;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sidebar a.active {
+    color: black;
+    font-weight: 500;
+}
+
+/* ===================== */
+/* PANEL PERFIL */
+/* ===================== */
+.profile-panel {
+    width: 640px;
+}
+
+/* ===================== */
+/* FOTO */
+/* ===================== */
+.photo-row {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 26px;
+}
+
+.avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #ddd;
+}
+
+/* ===================== */
+/* CAMPOS */
+/* ===================== */
+.field {
+    margin-bottom: 22px;
+}
+
+.field label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+/* Texto auxiliar */
+.field span {
+    font-size: 12px;
+    color: #777;
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* ===================== */
+/* INPUTS */
+/* ===================== */
+.profile-panel input,
+.profile-panel select,
+.profile-panel textarea {
+    width: 100%;
+    height: 54px;
+    border-radius: 999px;
+    border: none;
+    background: #efefef;
+    padding: 0 20px;
+    font-size: 14px;
+}
+
+.profile-panel textarea {
+    height: 120px;
+    border-radius: 18px;
+    padding-top: 16px;
+    resize: none;
+}
+
+.profile-panel input:focus,
+.profile-panel select:focus,
+.profile-panel textarea:focus {
+    outline: none;
+    background: #e6e6e6;
+}
+
+/* ===================== */
+/* FILAS */
+/* ===================== */
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+/* ===================== */
+/* BOTONES */
+/* ===================== */
+button {
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.ghost {
+    height: 38px;
+    padding: 0 18px;
+    background: white;
+    border: 1px solid #ddd;
+    font-size: 12px;
+}
+
+.ghost.small {
+    margin-top: 10px;
+}
+
+.primary-btn {
+    margin-top: 34px;
+    width: 100%;
+    height: 62px;
+    background: #8b0000;
+    color: white;
+    font-size: 14px;
+}
+
+/* ===================== */
+/* TOGGLE */
+/* ===================== */
+.toggle-row {
+    margin: 26px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+}
+
+.toggle {
+    width: 46px;
+    height: 24px;
+    border-radius: 999px;
+    background: #8b0000;
+    position: relative;
+}
+
+.toggle::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+}

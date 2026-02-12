@@ -1,11 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <title>MYTH | Datos de perfil</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Myth - Datos de mi perfil</title>
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../pages/styles/datos_perfil/datos_perfil.css">
+    <link rel="stylesheet" href="../pages/styles/index.css">
+
+    <!-- Iconos (por si luego los usas) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
-    
+
+<!-- HEADER DINÁMICO -->
+<div id="header"></div>
+
+<main class="profile-page">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2>Ajustes</h2>
+
+        <nav>
+            <a class="active">Datos de perfil</a>
+            <a>Ajustes de Cuenta</a>
+            <a>Privacidad</a>
+        </nav>
+    </aside>
+
+    <!-- PANEL CENTRAL -->
+    <section class="profile-panel">
+
+        <!-- FOTO -->
+        <div class="photo-row">
+            <div class="avatar"></div>
+            <button class="ghost">Cambiar foto</button>
+        </div>
+
+        <!-- TÍTULO -->
+        <div class="field">
+            <label>Título</label>
+            <input type="text">
+        </div>
+
+        <!-- USERNAME -->
+        <div class="field">
+            <label>Nombre de usuario</label>
+
+            <div class="inline-row">
+                <input type="text">
+                <button class="ghost small">Cambiar nombre</button>
+            </div>
+        </div>
+
+        <!-- SOBRE MI -->
+        <div class="field">
+            <label>Sobre mí</label>
+            <textarea placeholder="Cuéntanos más sobre ti"></textarea>
+        </div>
+
+        <!-- UBICACIÓN -->
+        <div class="field">
+            <label>Mi ubicación</label>
+
+            <div class="row">
+                <div>
+                    <span>País</span>
+                    <select>
+                        <option>España</option>
+                    </select>
+                </div>
+
+                <div>
+                    <span>Ciudad</span>
+                    <select>
+                        <option>Elige una ciudad</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOGGLE -->
+        <div class="toggle-row">
+            <span>Mostrar ubicación en mi perfil</span>
+            <div class="toggle"></div>
+        </div>
+
+        <!-- IDIOMA -->
+        <div class="field">
+            <label>Idioma</label>
+            <select>
+                <option>español (España)</option>
+            </select>
+        </div>
+
+        <!-- BOTÓN -->
+        <button class="primary-btn">Actualizar perfil</button>
+
+    </section>
+
+</main>
+
+<!-- FOOTER (MISMO QUE RESTO DEL SITIO) -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-col">
+            <h3>MYTH</h3>
+            <p>Eslogan</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Enlaces</h4>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Colección</a></li>
+                <li><a href="#">Diseñadores</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Síguenos</h4>
+            <div class="socials">
+                <span>📸</span>
+                <span>✖</span>
+                <span>🎵</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 MYTH. Todos los derechos reservados.</p>
+        <div class="legal">
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Términos y Condiciones</a>
+            <a href="#">Política de Cookies</a>
+        </div>
+    </div>
+</footer>
+
+<!-- JS HEADER -->
+<script src="../javascript/cambio_headers.js"></script>
+<script src="../javascript/login.js"></script>
+
+<script>
+fetch("../../componentes/header/header.html")
+    .then(res => res.text())
+    .then(html => {
+        document.getElementById("header").innerHTML = html;
+        cargarHeaderSegunUsuario();
+    });
+</script>
+
 </body>
 </html>
