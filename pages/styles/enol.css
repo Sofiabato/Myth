@@ -264,9 +264,9 @@ html { overflow-y: scroll; }
 /* DISEÑO COLECCIÓN      */
 /* ===================== */
 
-body.coleccion .section-title {
+body.coleccion h2.section-title {
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 600px;
     color: var(--texto-prim);
     margin: 40px 0 25px 0;
 }
@@ -828,4 +828,168 @@ body.coleccion .item-thumb img {
         align-items: flex-start;
         gap: 20px;
     }
+}
+
+/*FOOTER*/
+
+.site-footer {
+  background-image: url("../../images/footer_myth.jpg"); /* 👈 TU IMAGEN */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #ffffff;
+  padding: 70px 80px 30px;
+}
+
+/* ================= CONTENIDO SUPERIOR ================= */
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+/* ================= COLUMNAS ================= */
+
+.footer-col h3,
+.footer-col h4 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.footer-brand h3 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.footer-slogan {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* LINKS */
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #ffffff;
+  opacity: 0.85;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+}
+
+/* SOCIAL */
+
+.footer-social .social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-social a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.footer-social a:hover {
+  opacity: 1;
+}
+
+/* ================= BARRA INFERIOR ================= */
+
+.footer-bottom {
+  margin-top: 80px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+
+/* ===================== */ /* FAVORITOS.HTML */ /* ===================== */
+
+/* Contenedor principal */
+.seccion-favoritos {
+    padding: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Título superior izquierdo */
+.titulo-favoritos {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 100px; /* Espacio para que el contenido quede centrado */
+}
+
+/* Bloque central */
+.contenido-vacio {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contenido-vacio h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contenido-vacio p {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+/* El botón granate de la captura */
+.btn-explorar {
+    background-color: #800000; 
+    color: white;
+    text-decoration: none;
+    padding: 10px 50px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.btn-explorar:hover {
+    background-color: #600000;
+}
+
+main {
+    padding-bottom: 100px; 
 }

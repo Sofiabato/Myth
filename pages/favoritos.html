@@ -1,11 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Myth - Mis favoritos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/enol.css">
 </head>
+
 <body>
-    
+    <div id="header"></div>
+    <main class="account-container">
+        <section class="seccion-favoritos">
+            <h2 class="titulo-favoritos">Favoritos</h2>
+
+            <div class="contenido-vacio">
+                <h3>Guarda tus favoritos</h3>
+                <p>Aquí encontrarás todos los artículos que marques en favoritos</p>
+                <a href="../pages/favoritos2.html" class="btn-explorar">Explorar colección</a>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="../../javascript/cambio_headers.js"></script>
+    <script>
+        fetch("../componentes/header/header.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("header").innerHTML = html;
+                cargarHeaderSegunUsuario();
+            });
+    </script>
+    <script>
+        fetch("../componentes/footer/footer.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("footer").innerHTML = html;
+            });
+    </script>
 </body>
+
 </html>
