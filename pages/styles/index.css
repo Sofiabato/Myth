@@ -322,6 +322,36 @@ html { overflow-y: scroll; }
   display: none !important;
 }
 
+/* Forzamos el contenedor de la miniatura */
+body.coleccion .item-thumb {
+    width: 80px !important;    /* Ancho fijo */
+    height: 95px !important;   /* Alto fijo */
+    background-color: #F2F2F2;
+    border-radius: 12px;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 10px !important;
+    flex-shrink: 0 !important; /* Evita que se aplaste */
+    overflow: hidden;          /* Corta cualquier cosa que sobresalga */
+}
+
+/* Forzamos que la imagen NO se salga de ese cuadro */
+body.coleccion .item-thumb img {
+    width: 100% !important;    /* Ocupa el ancho del cuadradito */
+    height: 100% !important;   /* Ocupa el alto del cuadradito */
+    object-fit: contain !important; /* Mantiene la forma de la prenda sin deformar */
+    display: block !important;
+}
+
+/* Aseguramos que el contenedor de las miniaturas las ponga en fila */
+body.coleccion .purchase-items-preview {
+    display: flex !important;
+    flex-direction: row !important; /* En fila */
+    gap: 15px !important;
+    align-items: center !important;
+}
+
 /* ===================== */
 /* RESPONSIVE */
 /* ===================== */
@@ -331,94 +361,3 @@ html { overflow-y: scroll; }
   }
 }
 
-/* ===================== */
-/* COLECCION*/
-/* ===================== */
-
-
-/* ===================== */
-/* DISEÑO COLECCIÓN      */
-/* ===================== */
-
-body.coleccion .section-title {
-    font-size: 24px;
-    font-weight: 800;
-    color: var(--texto-prim);
-    margin: 40px 0 25px 0;
-}
-
-body.coleccion .product-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    margin-bottom: 50px;
-}
-
-body.coleccion .product-card {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-body.coleccion .product-card:hover {
-    transform: translateY(-5px);
-}
-
-/* Fondo gris suave para las fotos */
-body.coleccion .product-image {
-    background-color: #F2F2F2;
-    border-radius: 20px;
-    aspect-ratio: 1 / 1.15;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-body.coleccion .product-image img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-
-/* Textos del producto */
-body.coleccion .product-info {
-    margin-top: 15px;
-}
-
-body.coleccion .brand {
-    display: block;
-    font-weight: 800;
-    font-size: 15px;
-    text-transform: uppercase;
-    color: var(--texto-prim);
-}
-
-body.coleccion .desc {
-    display: block;
-    font-size: 13px;
-    color: var(--texto-inputs);
-    margin: 3px 0;
-}
-
-body.coleccion .price {
-    display: block;
-    font-weight: 600;
-    font-size: 15px;
-    color: var(--texto-prim);
-}
-
-/* Responsive */
-@media (max-width: 1200px) {
-    .page { padding: 0 50px; }
-}
-
-@media (max-width: 850px) {
-    body.coleccion .product-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 500px) {
-    body.coleccion .product-grid { grid-template-columns: 1fr; }
-    .page { padding: 0 20px; }
-}
