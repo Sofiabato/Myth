@@ -1,6 +1,7 @@
 html, body {
   height: 100%;
   overflow: hidden;
+  font-family: Poppins;
 }
 
 :root {
@@ -182,22 +183,111 @@ html, body {
   background-color: var(--color-hover);
 }
 
-/* ================= RESPONSIVE FONDO ================= */
+/*FOOTER*/
 
-@media (max-width: 1680px) {
-  .preferences {
-    background-position: 35% center;
+.site-footer {
+  background-image: url("../../images/footer_myth.jpg"); /* 👈 TU IMAGEN */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #ffffff;
+  padding: 70px 80px 30px;
+}
+
+/* ================= CONTENIDO SUPERIOR ================= */
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+/* ================= COLUMNAS ================= */
+
+.footer-col h3,
+.footer-col h4 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.footer-brand h3 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.footer-slogan {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* LINKS */
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #ffffff;
+  opacity: 0.85;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+}
+
+/* SOCIAL */
+
+.footer-social .social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-social a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.footer-social a:hover {
+  opacity: 1;
+}
+
+/* ================= BARRA INFERIOR ================= */
+
+.footer-bottom {
+  margin-top: 80px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
   }
 }
 
-@media (max-width: 1440px) {
-  .preferences {
-    background-position: 30% center;
-  }
-}
-
-@media (max-width: 1280px) {
-  .preferences {
-    background-position: 25% center;
-  }
-}

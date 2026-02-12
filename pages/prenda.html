@@ -1,11 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/prenda.css">
+    <link rel="stylesheet" href="styles/index.css">
     <title>Myth - Prenda</title>
 </head>
+
 <body>
-    
+    <div id="header"></div>
+
+    <main class="container">
+
+        <!-- GALERÍA -->
+        <section class="gallery">
+            <img src="../images/sudadera2.png" alt="Producto principal" class="main-image" />
+
+            <div class="thumbnails">
+                <img src="../images/camiseta.png" alt="">
+                <img src="../images/sudadera.png" alt="">
+                <img src="../images/pantalones.png" alt="">
+            </div>
+        </section>
+
+        <!-- INFO PRODUCTO -->
+        <section class="product-info">
+            <h1 class="brand">NOMBREMARCA</h1>
+            <h2 class="product-name">Nombre prenda</h2>
+            <p class="price">90.00€</p>
+
+            <!-- COLORES -->
+            <div class="colors">
+                <span class="color black"></span>
+                <span class="color green"></span>
+                <span class="color blue"></span>
+                <span class="color orange"></span>
+            </div>
+
+            <p class="ref">Negro · Ref. 5624/534/400</p>
+
+            <!-- TALLAS -->
+            <div class="sizes">
+                <button>XS</button>
+                <button class="active">S</button>
+                <button>M</button>
+                <button>L</button>
+                <button>XL</button>
+            </div>
+
+            <!-- CTA -->
+            <div class="actions">
+                <button class="add-cart">Añadir al carrito</button>
+                <button><img src="../images/iconos/favoritos.svg" alt=""></button>
+            </div>
+
+            <!-- TABS -->
+            <div class="tabs">
+                <span class="tab active" data-tab="descripcion">Descripción</span>
+                <span class="tab" data-tab="detalles">Detalles</span>
+                <span class="tab" data-tab="envio">Envío</span>
+            </div>
+
+            <div class="tab-content">
+
+                <p class="content active" id="descripcion">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit felis, fusce
+                    integer nulla tortor malesuada iaculis potenti varius, duis etiam
+                    lacinia netus pellentesque scelerisque senectus.
+                </p>
+
+                <p class="content" id="detalles">
+                    • Algodón orgánico 100%<br>
+                    • Gramaje: 320 g/m²<br>
+                    • Corte oversize<br>
+                    • Fabricado en Portugal
+                </p>
+
+                <p class="content" id="envio">
+                    Envío estándar: 3–5 días laborables.<br>
+                    Envío express: 24–48h.<br><br>
+                    Devoluciones gratuitas durante 30 días.
+                </p>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RECOMENDADOS -->
+    <section class="related">
+        <h3>También te puede interesar</h3>
+
+        <div class="related-grid">
+            <article class="card">
+                <img src="../images/camiseta.png" alt="">
+                <h4>NOMBREMARCA</h4>
+                <p>Descripción de la prenda</p>
+                <span>90.00€</span>
+            </article>
+
+            <article class="card">
+                <img src="../images/pantalones.png" alt="">
+                <h4>NOMBREMARCA</h4>
+                <p>Descripción de la prenda</p>
+                <span>90.00€</span>
+            </article>
+
+            <article class="card">
+                <img src="../images/sudadera2.png" alt="">
+                <h4>NOMBREMARCA</h4>
+                <p>Descripción de la prenda</p>
+                <span>90.00€</span>
+            </article>
+
+            <article class="card">
+                <img src="../images/sudadera.png" alt="">
+                <h4>NOMBREMARCA</h4>
+                <p>Descripción de la prenda</p>
+                <span>90.00€</span>
+            </article>
+        </div>
+    </section>
+    <script src="../../javascript/cambio_headers.js"></script>
+
+    <script>
+        fetch("../componentes/header/header.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("header").innerHTML = html;
+                cargarHeaderSegunUsuario(); // 👈 AQUÍ
+            });
+    </script>
+
+    <script src="../../javascript/prenda.js"></script>
 </body>
+
 </html>
