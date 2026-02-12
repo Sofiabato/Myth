@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Myth - Diseñadores</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/diseñadores.css">
 </head>
 <body>
     <!-- AQUÍ llamas al componente -->
@@ -99,7 +101,85 @@
             <!-- NUEVOS -->
             <h2>Diseñadores nuevos</h2>
             <div class="designers-grid">
-                <!-- mismas cards -->
+                <div class="designer-card">
+                    <img src="../images/pantalones.png" alt="">
+                    <div class="card-content">
+                        <div class="card-info-default">
+                            <h3>NOMBREMARCA</h3>
+                            <p>Descripción de la prenda</p>
+                            <span>90.00€</span>
+                        </div>
+                        <div class="card-info-hover">
+                            <h3>NOMBREMARCA</h3>
+                            <p class="card-size">One size</p>
+                            <div class="card-colors">
+                                <div class="color-circle color-black"></div>
+                                <div class="color-circle color-red"></div>
+                                <div class="color-circle color-blue"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="designer-card">
+                    <img src="../images/sudadera.png" alt="">
+                    <div class="card-content">
+                        <div class="card-info-default">
+                            <h3>NOMBREMARCA</h3>
+                            <p>Descripción de la prenda</p>
+                            <span>90.00€</span>
+                        </div>
+                        <div class="card-info-hover">
+                            <h3>NOMBREMARCA</h3>
+                            <p class="card-size">One size</p>
+                            <div class="card-colors">
+                                <div class="color-circle color-black"></div>
+                                <div class="color-circle color-red"></div>
+                                <div class="color-circle color-blue"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="designer-card">
+                    <img src="../images/sudadera2.png" alt="">
+                    <div class="card-content">
+                        <div class="card-info-default">
+                            <h3>NOMBREMARCA</h3>
+                            <p>Descripción de la prenda</p>
+                            <span>90.00€</span>
+                        </div>
+                        <div class="card-info-hover">
+                            <h3>NOMBREMARCA</h3>
+                            <p class="card-size">One size</p>
+                            <div class="card-colors">
+                                <div class="color-circle color-black"></div>
+                                <div class="color-circle color-red"></div>
+                                <div class="color-circle color-blue"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="designer-card">
+                    <img src="../images/pantalones.png" alt="">
+                    <div class="card-content">
+                        <div class="card-info-default">
+                            <h3>NOMBREMARCA</h3>
+                            <p>Descripción de la prenda</p>
+                            <span>90.00€</span>
+                        </div>
+                        <div class="card-info-hover">
+                            <h3>NOMBREMARCA</h3>
+                            <p class="card-size">One size</p>
+                            <div class="card-colors">
+                                <div class="color-circle color-black"></div>
+                                <div class="color-circle color-red"></div>
+                                <div class="color-circle color-blue"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- LISTADO A-Z -->
@@ -366,14 +446,15 @@
         </section>
     </div>
 
-    <script src="../../javascript/cambio_headers.js"></script>
-    <script>
-        fetch("../componentes/header/header.html")
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById("header").innerHTML = html;
-                cargarHeaderSegunUsuario(); // 👈 AQUÍ
-            });
-    </script>
+<script src="../../javascript/cambio_headers.js"></script>
+
+<script>
+  fetch("../componentes/header/header.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("header").innerHTML = html;
+      cargarHeaderSegunUsuario(); // 👈 AQUÍ
+    });
+</script>
 </body>
 </html>
