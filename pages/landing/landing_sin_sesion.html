@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>MYTH | Moda Emergente</title>
+    <link rel="stylesheet" href="../styles/landing/landing.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+      <link rel="stylesheet" href="../styles/index.css">
+
+</head>
+<body>
+
+    <div id="header"></div>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Descubre moda creada por diseñadores emergentes</h1>
+
+            <div class="hero-buttons">
+                <a href="#" class="btn primary">Explorar colección</a>
+                <a href="#" class="btn secondary">Regístrate como Diseñador</a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="../../images/ChatGPT Image 7 ene 2026, 18_23_52 1.png" alt="Modelos de moda MYTH">
+        </div>
+    </section>
+
+        <!-- MÁS VENDIDOS -->
+    <section class="products">
+        <h2>Más vendidos</h2>
+
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="../../images/sudadera2.png" alt="Producto 1">
+                <h3>NOMBREMARCA</h3>
+                <p>Descripción de la prenda</p>
+                <span>90,00€</span>
+            </div>
+
+            <div class="product-card">
+                <img src="../../images/pantalones.png" alt="Producto 2">
+                <h3>NOMBREMARCA</h3>
+                <p>Descripción de la prenda</p>
+                <span>90,00€</span>
+            </div>
+
+            <div class="product-card">
+                <img src="../../images/camiseta.png" alt="Producto 3">
+                <h3>NOMBREMARCA</h3>
+                <p>Descripción de la prenda</p>
+                <span>90,00€</span>
+            </div>
+
+            <div class="product-card">
+                <img src="../../images/sudadera.png" alt="Producto 4">
+                <h3>NOMBREMARCA</h3>
+                <p>Descripción de la prenda</p>
+                <span>90,00€</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>MYTH</h3>
+                <p>Eslogan</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Colección</a></li>
+                    <li><a href="#">Diseñadores</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Síguenos</h4>
+                <div class="socials">
+                    <span>📸</span>
+                    <span>✖</span>
+                    <span>🎵</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 MYTH. Todos los derechos reservados.</p>
+            <div class="legal">
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Términos y Condiciones</a>
+                <a href="#">Política de Cookies</a>
+            </div>
+        </div>
+    </footer>
+  <!-- CARGA DEL HEADER -->
+
+    <script src="../../javascript/login.js"></script>
+    <script src="../../javascript/cambio_headers.js"></script>
+    <script>
+        fetch("../../componentes/header/header.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("header").innerHTML = html;
+                cargarHeaderSegunUsuario(); // 👈 AQUÍ
+            });
+    </script>
+    
+
+</body>
+</html>

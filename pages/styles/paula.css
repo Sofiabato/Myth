@@ -1,0 +1,293 @@
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: Poppins;
+}
+
+:root {
+  --header-height: 70px;
+}
+
+/* ================= CONTENEDOR FONDO ================= */
+
+.preferences {
+  min-height: 100vh;
+  background-image: url("../../images/fondo_formulario.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  position: relative;
+}
+
+/* ================= CONTENEDOR FORMULARIO ================= */
+
+.preferences-right {
+  margin-top: var(--header-height);
+  width: 630px;
+  height: 650px;
+  max-width: 90%;
+
+  margin-right: 120px;
+  padding: 40px 48px;
+
+  display: grid;
+  grid-template-rows:
+    110px   /* título + subtítulo */
+    200px   /* opciones (FIJO) */
+    80px    /* puntos */
+    45px;   /* botones */
+}
+
+/* ================= STEPS ================= */
+
+.step {
+  display: none;
+}
+
+/* 🔑 CLAVE: el step NO afecta al layout */
+.step.active {
+  display: contents;
+}
+
+/* ================= TÍTULO ================= */
+
+.step h2 {
+  grid-row: 1;
+  height: 38px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* ================= SUBTÍTULO ================= */
+
+.step p {
+  grid-row: 1;
+  color: #6D6D6D;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* ================= OPCIONES (BLOQUE FIJO) ================= */
+
+.options {
+  grid-row: 2;
+
+  height: 250px;
+  overflow-y: auto; /* si hay muchas, scroll interno */
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  margin-bottom: -30px;
+  gap: 12px;
+}
+
+/* ================= CHIPS ================= */
+
+.chip {
+  height: 41px;
+  padding: 0 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+  border: 1px solid var(--color-prim);
+  background: transparent;
+  color: var(--color-prim);
+
+  font-size: 14px;
+  white-space: nowrap;
+  cursor: pointer;
+
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* ocultar checkbox real */
+.chip input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* seleccionado */
+.chip:has(input:checked) {
+  background-color: var(--color-prim);
+  color: var(--texto-secun);
+}
+
+/* ================= PROGRESO ================= */
+
+.progress {
+  grid-row: 3;
+
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-hover);
+}
+
+.dot.active {
+  background: var(--color-prim);
+  width: 25px;
+}
+
+/* ================= BOTONES (CLAVADOS) ================= */
+
+.form-actions {
+  grid-row: 4;
+
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.next-btn,
+.prev-btn {
+  background-color: var(--color-prim);
+  color: var(--texto-secun);
+
+  padding: 10px 24px;
+  border-radius: 20px;
+  border: none;
+
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.2s ease;
+}
+
+.next-btn:hover,
+.prev-btn:hover {
+  background-color: var(--color-hover);
+}
+
+/*FOOTER*/
+
+.site-footer {
+  background-image: url("../../images/footer_myth.jpg"); /* 👈 TU IMAGEN */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #ffffff;
+  padding: 70px 80px 30px;
+}
+
+/* ================= CONTENIDO SUPERIOR ================= */
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+/* ================= COLUMNAS ================= */
+
+.footer-col h3,
+.footer-col h4 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.footer-brand h3 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.footer-slogan {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* LINKS */
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #ffffff;
+  opacity: 0.85;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+}
+
+/* SOCIAL */
+
+.footer-social .social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-social a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.footer-social a:hover {
+  opacity: 1;
+}
+
+/* ================= BARRA INFERIOR ================= */
+
+.footer-bottom {
+  margin-top: 80px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+

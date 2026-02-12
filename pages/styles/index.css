@@ -50,21 +50,27 @@ html {
 /* HEADER */
 /* ===================== */
 .site-header {
-    position: relative;
-    width: 100%;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 50px;
-    padding-right: 50px;
+  position: absolute;
+  width: 100%;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+  text-align: center;
+
+  padding: 0px 50px;
+  gap: 10px;
+  z-index: 10;
+  background: transparent;
 }
 
 /* NAV IZQUIERDA */
 .nav {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 35px;
 }
 
 .nav a {
@@ -76,35 +82,63 @@ html {
     color: var(--color-prim);
 }
 
-/* LOGO CENTRADO */
 .logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    font-weight: bold;
-    font-size: 20px;
+  height: 25px;
 }
 
 /* ACCIONES DERECHA */
 .actions {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.actions img {
+  height: 28px;
+  width: 28px;
+  display: block;
+}
+
+.actions > a {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.actions .icono {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 25px;
 }
 
 /* BOTÓN BASE */
 .button-def {
-    background-color: var(--color-prim);
-    color: white;
-    padding: 8px 14px;
-    border-radius: 5px;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
+  background-color: var(--color-prim);
+  color: var(--texto-secun);
+  padding: 10px 20px;
+  border-radius: 15px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 .button-def:hover {
     background-color: var(--color-hover);
 }
+
 
 /* SEPARADOR NAV */
 .divider {
@@ -142,38 +176,88 @@ html {
 
 /* TÍTULO */
 .login-form h1 {
-    font-size: 32px;
-    margin-bottom: 40px;
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 /* INPUTS */
 .input-group {
-    width: 100%;
-    max-width: 600px;
-    height: 54px;
-    display: flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(8px);
-    border-radius: 14px;
-    padding: 0 18px;
-    margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+  height: 54px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  background: var(--fondo-inputs);
+
+  border-radius: 14px;
+  padding: 0 18px;
+  margin-bottom: 15px;
 }
 
 .input-group input {
-    height: 100%;
-    width: 100%;
-    border: none;
-    background: transparent;
-    outline: none;
-    font-size: 14px;
-    color: var(--texto-inputs);
+  height: 100%;
+  width: 100%;
+  border: none;
+  background: transparent;
+  outline: none;
+
+  font-size: 16px;
+  color: var(--texto-inputs);
+  line-height: 54px;
+}
+
+.select-group::after {
+  content: "▾";
+  position: absolute;
+  right: 18px;
+  color: var(--texto-inputs);
+  pointer-events: none;
+}
+
+/* FILA DE DOS INPUTS */
+.input-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.input-row .input-group {
+  margin-bottom: 0;
+}
+
+/* SELECT IGUAL QUE INPUT */
+.input-group select {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background: transparent;
+  outline: none;
+
+  font-size: 16px;
+  color: var(--texto-inputs);
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  line-height: 54px;
+  cursor: pointer;
 }
 
 /* ICONOS INPUT */
 .icon {
-    margin-right: 12px;
-    opacity: 0.6;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  flex-shrink: 0;
 }
 
 .eye {
@@ -238,6 +322,36 @@ html {
     display: none !important;
 }
 
+/* Forzamos el contenedor de la miniatura */
+body.coleccion .item-thumb {
+    width: 80px !important;    /* Ancho fijo */
+    height: 95px !important;   /* Alto fijo */
+    background-color: #F2F2F2;
+    border-radius: 12px;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 10px !important;
+    flex-shrink: 0 !important; /* Evita que se aplaste */
+    overflow: hidden;          /* Corta cualquier cosa que sobresalga */
+}
+
+/* Forzamos que la imagen NO se salga de ese cuadro */
+body.coleccion .item-thumb img {
+    width: 100% !important;    /* Ocupa el ancho del cuadradito */
+    height: 100% !important;   /* Ocupa el alto del cuadradito */
+    object-fit: contain !important; /* Mantiene la forma de la prenda sin deformar */
+    display: block !important;
+}
+
+/* Aseguramos que el contenedor de las miniaturas las ponga en fila */
+body.coleccion .purchase-items-preview {
+    display: flex !important;
+    flex-direction: row !important; /* En fila */
+    gap: 15px !important;
+    align-items: center !important;
+}
+
 /* ===================== */
 /* RESPONSIVE */
 /* ===================== */
@@ -246,10 +360,4 @@ html {
         justify-content: center;
     }
 }
-
-
-
-
-
-
 
