@@ -9,8 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../../pages/styles/datos_perfil/datos_perfil.css">
-    <link rel="stylesheet" href="../pages/styles/index.css">
+    <link rel="stylesheet" href="../styles/datos_perfil/datos_perfil.css">
+
+<link rel="stylesheet" href="../styles/index.css">
+
 
     <!-- Iconos (por si luego los usas) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -35,75 +37,72 @@
     </aside>
 
     <!-- PANEL CENTRAL -->
-    <section class="profile-panel">
+ <section class="profile-panel">
 
-        <!-- FOTO -->
-        <div class="photo-row">
-            <div class="avatar"></div>
-            <button class="ghost">Cambiar foto</button>
-        </div>
+   <!-- TARJETA FOTO (FIGMA REAL) -->
+<div class="card split-card">
+    <span class="split-label">Tu foto</span>
 
-        <!-- TÍTULO -->
-        <div class="field">
-            <label>Título</label>
-            <input type="text">
-        </div>
+    <div class="split-content photo-content">
+        <div class="avatar large"></div>
+        <button class="ghost">Cambiar foto</button>
+    </div>
+</div>
 
-        <!-- USERNAME -->
-        <div class="field">
-            <label>Nombre de usuario</label>
+<!-- TARJETA USERNAME (NO TOCADA) -->
+<div class="card username-card">
+    <span class="card-label">Nombre de usuario</span>
+    <button class="ghost small">Cambiar nombre</button>
+</div>
 
-            <div class="inline-row">
-                <input type="text">
-                <button class="ghost small">Cambiar nombre</button>
-            </div>
-        </div>
+<!-- TARJETA SOBRE MI (FIGMA REAL) -->
+<div class="card split-card about-card">
+    <span class="split-label centered">Sobre mi</span>
 
-        <!-- SOBRE MI -->
-        <div class="field">
-            <label>Sobre mí</label>
-            <textarea placeholder="Cuéntanos más sobre ti"></textarea>
-        </div>
+    <div class="split-content">
+        <textarea placeholder="Cuéntanos más sobre ti"></textarea>
+    </div>
+</div>
 
-        <!-- UBICACIÓN -->
-        <div class="field">
-            <label>Mi ubicación</label>
+    <!-- UBICACIÓN -->
+<!-- TARJETA PAÍS -->
+<div class="thin-row">
+    <span>País</span>
+    <select>
+        <option>España</option>
+    </select>
+</div>
 
-            <div class="row">
-                <div>
-                    <span>País</span>
-                    <select>
-                        <option>España</option>
-                    </select>
-                </div>
+<div class="thin-row">
+    <span>Ciudad</span>
+    <select>
+        <option>Elige una ciudad</option>
+    </select>
+</div>
 
-                <div>
-                    <span>Ciudad</span>
-                    <select>
-                        <option>Elige una ciudad</option>
-                    </select>
-                </div>
-            </div>
-        </div>
 
-        <!-- TOGGLE -->
-        <div class="toggle-row">
-            <span>Mostrar ubicación en mi perfil</span>
-            <div class="toggle"></div>
-        </div>
+    <!-- TOGGLE -->
+    <div class="toggle-card">
+        <span>Mostrar ubicación en el perfil</span>
+        <div class="toggle"></div>
+    </div>
 
-        <!-- IDIOMA -->
-        <div class="field">
-            <label>Idioma</label>
-            <select>
-                <option>español (España)</option>
-            </select>
-        </div>
+    <!-- IDIOMA -->
+<div class="thin-row">
+    <span>Idioma</span>
 
-        <!-- BOTÓN -->
-        <button class="primary-btn">Actualizar perfil</button>
+    <select>
+        <option>Español (Spanish)</option>
+        <option>English</option>
+    </select>
+</div>
 
-    </section>
+    <!-- BOTÓN -->
+    <button class="primary-btn">Actualizar perfil</button>
+
+</section>
+
+
 
 </main>
 
@@ -146,8 +145,9 @@
 </footer>
 
 <!-- JS HEADER -->
-<script src="../javascript/cambio_headers.js"></script>
-<script src="../javascript/login.js"></script>
+<script src="../../javascript/login.js"></script>
+<script src="../../javascript/cambio_headers.js"></script>
+
 
 <script>
 fetch("../../componentes/header/header.html")

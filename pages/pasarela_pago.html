@@ -196,16 +196,24 @@
     </footer>
   <!-- CARGA DEL HEADER -->
 <!-- JS -->
-<script src="../javascript/cambio_headers.js"></script>
-<script src="../javascript/login.js"></script>
+<script src="../../javascript/login.js"></script>
+<script src="../../javascript/cambio_headers.js"></script>
+
 <script>
 fetch("../../componentes/header/header.html")
     .then(res => res.text())
     .then(html => {
         document.getElementById("header").innerHTML = html;
-        cargarHeaderSegunUsuario();
+
+        if (typeof cargarHeaderSegunUsuario === "function") {
+            cargarHeaderSegunUsuario();
+        } else {
+            console.warn("Header JS no cargó");
+        }
     });
 </script>
+
+
 
 </body>
 </html>
