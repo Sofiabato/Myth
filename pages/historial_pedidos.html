@@ -86,6 +86,8 @@
             </section>
         </div>
     </main>
+
+    <div id="footer"></div>
     
     <script src="../../javascript/cambio_headers.js"></script>
     <script>
@@ -95,6 +97,13 @@
             document.getElementById("header").innerHTML = html;
             if(typeof cargarHeaderSegunUsuario === 'function') cargarHeaderSegunUsuario(); 
           });
+    </script>
+        <script>
+        fetch("../componentes/footer/footer.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("footer").innerHTML = html;
+            });
     </script>
     
 </body>
