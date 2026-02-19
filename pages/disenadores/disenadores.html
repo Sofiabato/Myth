@@ -19,7 +19,9 @@
             <h2>Diseñadores destacados</h2>
             <div class="designers-grid">
                 <div class="designer-card">
-                    <img src="../../images/pantalones.png" alt="">
+                    <a href="../../pages/prenda/prenda.html">
+                    <img href="../../pages/prenda/prenda.html" src="../../images/pantalones.png" alt="">
+                    </a>
                     <div class="card-content">
                         <div class="card-info-default">
                             <h3>NOMBREMARCA</h3>
@@ -39,7 +41,9 @@
                 </div>
 
                 <div class="designer-card">
+                    <a href="../../pages/prenda/prenda.html">
                     <img src="../../images/sudadera.png" alt="">
+                    </a>
                     <div class="card-content">
                         <div class="card-info-default">
                             <h3>NOMBREMARCA</h3>
@@ -59,7 +63,9 @@
                 </div>
 
                 <div class="designer-card">
+                    <a href="../../pages/prenda/prenda.html">
                     <img src="../../images/sudadera2.png" alt="">
+                    </a>
                     <div class="card-content">
                         <div class="card-info-default">
                             <h3>NOMBREMARCA</h3>
@@ -79,7 +85,9 @@
                 </div>
 
                 <div class="designer-card">
+                    <a href="../../pages/prenda/prenda.html">
                     <img src="../../images/pantalones.png" alt="">
+                    </a>
                     <div class="card-content">
                         <div class="card-info-default">
                             <h3>NOMBREMARCA</h3>
@@ -103,7 +111,9 @@
             <h2>Diseñadores nuevos</h2>
             <div class="designers-grid">
                 <div class="designer-card">
+                    <a href="../../pages/prenda/prenda.html">
                     <img src="../../images/pantalones.png" alt="">
+                    </a>
                     <div class="card-content">
                         <div class="card-info-default">
                             <h3>NOMBREMARCA</h3>
@@ -123,7 +133,9 @@
                 </div>
 
                 <div class="designer-card">
+                    <a href="../../pages/prenda/prenda.html">
                     <img src="../../images/sudadera.png" alt="">
+                    </a>
                     <div class="card-content">
                         <div class="card-info-default">
                             <h3>NOMBREMARCA</h3>
@@ -143,7 +155,9 @@
                 </div>
 
                 <div class="designer-card">
+                    <a href="../../pages/prenda/prenda.html">
                     <img src="../../images/sudadera2.png" alt="">
+                    </a>
                     <div class="card-content">
                         <div class="card-info-default">
                             <h3>NOMBREMARCA</h3>
@@ -163,7 +177,9 @@
                 </div>
 
                 <div class="designer-card">
+                    <a href="../../pages/prenda/prenda.html">
                     <img src="../../images/pantalones.png" alt="">
+                    </a>
                     <div class="card-content">
                         <div class="card-info-default">
                             <h3>NOMBREMARCA</h3>
@@ -447,6 +463,8 @@
         </section>
     </div>
 
+    <div id="footer"></div>
+
 
 <script src="../../javascript/login.js"></script>
 <script src="../../javascript/cambio_headers.js"></script>
@@ -458,6 +476,30 @@
       document.getElementById("header").innerHTML = html;
       cargarHeaderSegunUsuario(); // 👈 AQUÍ
     });
+</script>
+<script>
+  fetch("../../componentes/footer/footer.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("footer").innerHTML = html;
+    });
+</script>
+<script>
+  // Hacer clicables las letras del alfabeto
+  document.querySelectorAll('.alphabet span').forEach(span => {
+    span.style.cursor = 'pointer';
+    span.addEventListener('click', () => {
+      window.location.href = '../../pages/perfil/perfil.html';
+    });
+  });
+
+  // Hacer clicables los nombres de la lista A-Z
+  document.querySelectorAll('.designer-list li').forEach(li => {
+    li.style.cursor = 'pointer';
+    li.addEventListener('click', () => {
+      window.location.href = '../../pages/perfil/perfil.html';
+    });
+  });
 </script>
 </body>
 </html>

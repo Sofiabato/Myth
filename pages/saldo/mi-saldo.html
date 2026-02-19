@@ -91,19 +91,28 @@
     </div>
 </main>
 
+<div id="footer"></div>
+
 
 
 <script src="../../javascript/cambio_headers.js"></script>
 
 <script>
-  fetch("../componentes/header/header.html")
+  fetch("../../componentes/header/header.html")
     .then(res => res.text())
     .then(html => {
       document.getElementById("header").innerHTML = html;
       cargarHeaderSegunUsuario(); // 👈 AQUÍ
     });
 </script>
-    <script src="../javascript/mi-saldo.js"></script>
+    <script src="../../javascript/mi-saldo.js"></script>
+    <script>
+  fetch("../../componentes/footer/footer.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("footer").innerHTML = html;
+    });
+</script>
 </body>
 
 </html>

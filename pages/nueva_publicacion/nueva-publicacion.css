@@ -398,16 +398,17 @@ body {
 
 /* Oscurecer el color del borde para cada color específico */
 .color-option[style*="#000000"].active { box-shadow: 0 0 0 3px #E8E8E8, 0 0 0 5px #1a1a1a; }
-.color-option[style*="#3B82F6"].active { box-shadow: 0 0 0 3px #E8E8E8, 0 0 0 5px #2563eb; }
-.color-option[style*="#10B981"].active { box-shadow: 0 0 0 3px #E8E8E8, 0 0 0 5px #059669; }
-.color-option[style*="#6B7280"].active { box-shadow: 0 0 0 3px #E8E8E8, 0 0 0 5px #4b5563; }
-.color-option[style*="#F59E0B"].active { box-shadow: 0 0 0 3px #E8E8E8, 0 0 0 5px #d97706; }
-.color-option[style*="#EC4899"].active { box-shadow: 0 0 0 3px #E8E8E8, 0 0 0 5px #db2777; }
+.color-option[style*="#FFFFFF"].active { box-shadow: 0 0 0 3px #E8E8E8, 0 0 0 5px #999; }
+.color-option[style*="#DC2626"].active { box-shadow: 0 0 0 3px #E8E8E8, 0 0 0 5px #7a0000; }
+.color-option[style*="#3B82F6"].active { box-shadow: 0 0 0 3px #E8E8E8, 0 0 0 5px rgb(66, 66, 160); }
+.color-option[style*="#10B981"].active { box-shadow: 0 0 0 3px #E8E8E8, 0 0 0 5px #064e3b; }
+.color-option[style*="#6B7280"].active { box-shadow: 0 0 0 3px #E8E8E8, 0 0 0 5px #555; }
+.color-option[style*="#78350F"].active { box-shadow: 0 0 0 3px #E8E8E8, 0 0 0 5px #4a2c2c; }
+.color-option[style*="#F5DEB3"].active { box-shadow: 0 0 0 3px #E8E8E8, 0 0 0 5px #d6b98c; }
+.color-option[style*="#EAB308"].active { box-shadow: 0 0 0 3px #E8E8E8, 0 0 0 5px #d97706; }
+.color-option[style*="#F97316"].active { box-shadow: 0 0 0 3px #E8E8E8, 0 0 0 5px #c2410c; }
 .color-option[style*="#8B5CF6"].active { box-shadow: 0 0 0 3px #E8E8E8, 0 0 0 5px #7c3aed; }
-.color-option[style*="#EF4444"].active { box-shadow: 0 0 0 3px #E8E8E8, 0 0 0 5px #dc2626; }
-.color-option[style*="#EAB308"].active { box-shadow: 0 0 0 3px #E8E8E8, 0 0 0 5px #ca8a04; }
-.color-option[style*="#78350F"].active { box-shadow: 0 0 0 3px #E8E8E8, 0 0 0 5px #5a2a0a; }
-.color-option[style*="#FDE68A"].active { box-shadow: 0 0 0 3px #E8E8E8, 0 0 0 5px #fcd34d; }
+.color-option[style*="#EC4899"].active { box-shadow: 0 0 0 3px #E8E8E8, 0 0 0 5px #be185d; }
 
 /* Price input - debe estar en la columna derecha */
 .price-group {
