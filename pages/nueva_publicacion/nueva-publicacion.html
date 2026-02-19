@@ -205,22 +205,33 @@
         <div id="footer"></div>
 
     <script src="../../javascript/nueva-publicacion.js"></script>
-<script src="../../javascript/cambio_headers.js"></script>
+    <script src="../../javascript/cambio_headers.js"></script>
 
-<script>
-  fetch("../componentes/header/header.html")
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById("header").innerHTML = html;
-      cargarHeaderSegunUsuario(); // 👈 AQUÍ
-    });
-</script>
-<script>
-  fetch("../componentes/footer/footer.html")
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById("footer").innerHTML = html;
-    });
-</script>
+    <script>
+        fetch("../../componentes/header/header.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("header").innerHTML = html;
+                cargarHeaderSegunUsuario();   // ← muestra el header correcto
+            });
+    </script>
+
+    <script>
+        fetch("../../componentes/carrito/carrito.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("cart-component").innerHTML = html;
+            });
+    </script>
+
+    <script src="../../javascript/carrito.js"></script>
+
+    <script>
+        fetch("../../componentes/footer/footer.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("footer").innerHTML = html;
+            });
+    </script>
 </body>
 </html>
