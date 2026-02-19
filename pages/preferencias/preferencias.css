@@ -182,21 +182,3 @@ html, body {
 .prev-btn:hover {
   background-color: var(--color-hover);
 }
-
-
-
-/* ================= RESPONSIVE ================= */
-
-@media (max-width: 900px) {
-  .footer-content {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
-}
-

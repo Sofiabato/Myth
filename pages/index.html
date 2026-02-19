@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../styles/landing/landing.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-      <link rel="stylesheet" href="styles/landing/landing.css">
+      <link rel="stylesheet" href="styles/landing.css">
       <link rel="stylesheet" href="styles/index.css">
 
 </head>
@@ -65,10 +65,10 @@
     </section>
   <!-- CARGA DEL HEADER -->
 
-    <script src="../../javascript/login.js"></script>
-    <script src="../../javascript/cambio_headers.js"></script>
+    <script src="../javascript/login.js"></script>
+    <script src="../javascript/cambio_headers.js"></script>
     <script>
-        fetch("../../componentes/header/header.html")
+        fetch("../componentes/header/header.html")
             .then(res => res.text())
             .then(html => {
                 document.getElementById("header").innerHTML = html;
