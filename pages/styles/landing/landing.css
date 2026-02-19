@@ -61,9 +61,10 @@
 
     .btn {
         padding: 14px 32px;
-        border-radius: 30px;
+        border-radius: 15px;
         text-decoration: none;
         font-weight: bold;
+        width: 280px;
     }
     .primary {
         background-color: var(--primary);
@@ -76,9 +77,8 @@
     }
 
     .btn:hover {
-        opacity: 0.9;
-        transform: translateY(-2px);
-        transition: all 0.2s ease;
+        background-color: var(--color-hover);
+        transition: 0.6;
     }
 
 
