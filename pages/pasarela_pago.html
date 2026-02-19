@@ -1,11 +1,219 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=xs, initial-scale=1.0">
-    <title>Myth - Pasarela de pago</title>
+    <title>MYTH | Pasarela de pago</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="../pages/styles/pasarela_de_pago/pasarela_de_pago.css">
+    <link rel="stylesheet" href="../pages/styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    
+
+<!-- HEADER DINÁMICO (IGUAL QUE EL RESTO DE PÁGINAS) -->
+<div id="header"></div>
+
+<main class="checkout">
+
+    <!-- COLUMNA IZQUIERDA -->
+    <section class="checkout-left">
+
+        <h2>Contacto</h2>
+        <input type="email" placeholder="Correo electrónico">
+        <label class="checkbox">
+            <input type="checkbox">
+            Enviarme novedades y ofertas al correo electrónico
+        </label>
+
+        <h2>Entrega</h2>
+        <div class="two-cols">
+            <input type="text" placeholder="Nombre">
+            <input type="text" placeholder="Apellidos">
+        </div>
+
+        <input type="text" placeholder="País">
+        <input type="text" placeholder="Dirección">
+        <input type="text" placeholder="Casa, apartamento, etc. (opcional)">
+
+        <div class="three-cols">
+            <input type="text" placeholder="Código Postal">
+            <input type="text" placeholder="Ciudad">
+            <input type="text" placeholder="Provincia">
+        </div>
+
+        <input type="tel" placeholder="Teléfono">
+
+        <h2>Métodos de envío</h2>
+        <div class="box disabled">
+            Introduce tu dirección para ver los métodos disponibles.
+        </div>
+
+        <h2>Pago</h2>
+
+        <div class="payment-option active">
+            <label>
+                <input type="radio" name="payment" checked>
+                Tarjeta de crédito
+            </label>
+
+            <div class="payment-form">
+                <input type="text" placeholder="Número de tarjeta">
+                <div class="two-cols">
+                    <input type="text" placeholder="Fecha de vencimiento">
+                    <input type="text" placeholder="Código de seguridad">
+                </div>
+                <input type="text" placeholder="Nombre del titular">
+            </div>
+        </div>
+
+        <div class="payment-option">
+            <label>
+                <input type="radio" name="payment">
+                <i class="fa-brands fa-google-pay"></i> Google Pay
+            </label>
+        </div>
+
+        <div class="payment-option">
+            <label>
+                <input type="radio" name="payment">
+                <i class="fa-brands fa-apple-pay"></i> Apple Pay
+            </label>
+        </div>
+
+        <div class="payment-option">
+            <label>
+                <input type="radio" name="payment">
+                <i class="fa-brands fa-paypal"></i> PayPal
+            </label>
+        </div>
+
+        <label class="checkbox">
+            <input type="checkbox">
+            Guardar mi información para pagar más rápido
+        </label>
+
+        <button class="pay-btn">Pagar ahora</button>
+
+    </section>
+
+    <!-- COLUMNA DERECHA -->
+    <aside class="checkout-right">
+
+        <div class="cart-item">
+            <img src="../../images/sudadera.png">
+            <div>
+                <strong>NOMBREMARCA</strong>
+                <p>Descripción de la prenda</p>
+                <small>Talla: XS</small>
+            </div>
+            <span>90,00€</span>
+        </div>
+
+        <div class="cart-item">
+            <img src="../../images/sudadera.png">
+            <div>
+                <strong>NOMBREMARCA</strong>
+                <p>Descripción de la prenda</p>
+                <small>Talla: XS</small>
+            </div>
+            <span>90,00€</span>
+        </div>
+
+        <div class="cart-item">
+            <img src="../../images/sudadera.png">
+            <div>
+                <strong>NOMBREMARCA</strong>
+                <p>Descripción de la prenda</p>
+                <small>Talla: XS</small>
+            </div>
+            <span>90,00€</span>
+        </div>
+
+        <div class="discount">
+            <input type="text" placeholder="Código de descuento o tarjeta regalo">
+            <button>Aplicar</button>
+        </div>
+
+        <div class="summary">
+            <div>
+                <span>Subtotal</span>
+                <span>150,00€</span>
+            </div>
+            <div>
+                <span>Envío</span>
+                <span>Gratuito</span>
+            </div>
+            <div class="total">
+                <strong>Total</strong>
+                <strong>150,00€</strong>
+            </div>
+        </div>
+
+    </aside>
+
+</main>
+
+<!-- FOOTER (IGUAL QUE LANDING Y BÚSQUEDA) -->
+<footer class="footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>MYTH</h3>
+                <p>Eslogan</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Colección</a></li>
+                    <li><a href="#">Diseñadores</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Síguenos</h4>
+                <div class="socials">
+                    <span>📸</span>
+                    <span>✖</span>
+                    <span>🎵</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 MYTH. Todos los derechos reservados.</p>
+            <div class="legal">
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Términos y Condiciones</a>
+                <a href="#">Política de Cookies</a>
+            </div>
+        </div>
+    </footer>
+  <!-- CARGA DEL HEADER -->
+<!-- JS -->
+<script src="../../javascript/login.js"></script>
+<script src="../../javascript/cambio_headers.js"></script>
+
+<script>
+fetch("../../componentes/header/header.html")
+    .then(res => res.text())
+    .then(html => {
+        document.getElementById("header").innerHTML = html;
+
+        if (typeof cargarHeaderSegunUsuario === "function") {
+            cargarHeaderSegunUsuario();
+        } else {
+            console.warn("Header JS no cargó");
+        }
+    });
+</script>
+
+
+
 </body>
 </html>

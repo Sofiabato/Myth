@@ -122,9 +122,11 @@
     }
 
     .products h2 {
-        font-size: 28px;
-        margin-bottom: 50px;
-    }
+    font-size: 28px;
+    margin-top: 10px;   /* 🔽 bájalo un poco */
+    margin-bottom: 50px;
+}
+
 
     .products-grid {
         display: grid;

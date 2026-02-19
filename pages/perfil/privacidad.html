@@ -1,11 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <title>MYTH | Privacidad</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Myth - Privacidad</title>
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/privacidad/privacidad.css">
+    <link rel="stylesheet" href="../styles/index.css">
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
-    
+
+<div id="header"></div>
+
+<main class="profile-page">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2>Ajustes</h2>
+
+        <nav>
+            <a>Datos de perfil</a>
+            <a>Ajustes de Cuenta</a>
+            <a class="active">Privacidad</a>
+        </nav>
+    </aside>
+
+    <!-- PANEL -->
+    <section class="profile-panel">
+
+        <div class="toggle-card">
+            <span>Mostrar mis artículos en campañas de marketing</span>
+            <div class="toggle"></div>
+        </div>
+
+        <div class="toggle-card">
+            <span>Notificar al vendedor<br>cuando marque su artículo como favorito</span>
+            <div class="toggle"></div>
+        </div>
+
+        <div class="toggle-card">
+            <span>Permitir seguimiento de terceros</span>
+            <div class="toggle"></div>
+        </div>
+
+        <div class="toggle-card">
+            <span>Permitir a Vinted...</span>
+            <div class="toggle"></div>
+        </div>
+
+        <div class="toggle-card">
+            <span>Permitir a Vinted...</span>
+            <div class="toggle"></div>
+        </div>
+
+        <div class="thin-row">
+            <span>Gestionar datos de cuenta</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+
+        <button class="primary-btn">Guardar</button>
+
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-col">
+            <h3>MYTH</h3>
+            <p>Eslogan</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Enlaces</h4>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Colección</a></li>
+                <li><a href="#">Diseñadores</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Síguenos</h4>
+            <div class="socials">
+                <span>📸</span>
+                <span>✖</span>
+                <span>🎵</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 MYTH. Todos los derechos reservados.</p>
+        <div class="legal">
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Términos y Condiciones</a>
+            <a href="#">Política de Cookies</a>
+        </div>
+    </div>
+</footer>
+
+<script src="../../javascript/login.js"></script>
+<script src="../../javascript/cambio_headers.js"></script>
+
+<script>
+fetch("../../componentes/header/header.html")
+    .then(res => res.text())
+    .then(html => {
+        document.getElementById("header").innerHTML = html;
+        cargarHeaderSegunUsuario();
+    });
+</script>
+
 </body>
 </html>
