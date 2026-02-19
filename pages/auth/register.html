@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Myth - Crear cuenta</title>
+    <link rel="stylesheet" href="../styles/index.css">
     <link rel="stylesheet" href="../styles/index.css">
 </head>
 
@@ -17,7 +23,7 @@
     <!-- HEADER -->
     <div id="header"></div>
 
-    <!-- LOGIN -->
+    <!-- REGISTER -->
     <div class="page">
         <main class="login">
 
@@ -27,41 +33,47 @@
 
                 <!-- EMAIL -->
                 <div class="input-group">
-                    <span class="icon">📧</span>
-                    <input type="email" id="email" placeholder="Correo electrónico">
+                    <input type="nombre" id="nombre" placeholder="Nombre y apellidos">
                 </div>
 
                 <!-- PASSWORD -->
                 <div class="input-group">
-                    <span class="icon">🔒</span>
-                    <input type="password" id="password" placeholder="Contraseña">
-                    <span class="icon eye">👁️</span>
+                    <input type="user" id="user" placeholder="Usuario">
+                </div>
+
+                <div class="input-group">
+                    <input type="correo" id="correo" placeholder="Correo electronico">
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <input type="password" id="password" placeholder="Contraseña">
+                    </div>
+
+                    <div class="input-group">
+                        <input type="password" id="confirmpassword" placeholder="Confirmar contraseña">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <input type="telefono" id="telefono" placeholder="Teléfono">
+                </div>
+
+                <div class="input-group select-group">
+                    <select id="usertype">
+                        <option value="" disabled selected>Tipo de usuario</option>
+                        <option value="cliente">Comprador</option>
+                        <option value="vendedor">Diseñador</option>
+                    </select>
                 </div>
 
                 <!-- LINKS -->
                 <div class="login-links">
-                    <a href="#">¿Olvidaste tu contraseña?</a>
-                    <a href="#">¿No tienes cuenta? Crear una</a>
+                    <a href="#">¿Ya tienes cuenta? Inicia sesión</a>
                 </div>
 
                 <!-- BOTÓN PRINCIPAL (YA EXISTENTE) -->
-                <button id="login-btn" class="button-def btn-login">Iniciar Sesión</button>
-
-                <!-- SEPARADOR -->
-                <div class="separator"></div>
-
-                <!-- GOOGLE -->
-                <button class="btn-secondary google">
-                    <span>G</span>
-                    Inicia sesión con Google
-                </button>
-
-                <!-- APPLE -->
-                <button class="btn-secondary apple">
-                    <span></span>
-                    Inicia sesión con Apple
-                </button>
-
+                <a href="../form_preferencias.html"><button id="login-btn" class="button-def btn-login">Crear cuenta</button></a>
             </div>
         </main>
 

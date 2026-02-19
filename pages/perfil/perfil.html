@@ -1,11 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Myth - Mi perfil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/enol.css">
 </head>
-<body>
-    
+<div id="header"></div>
+<body class="coleccion"> 
+
+    <main class="page">
+        <section class="user-info-section">
+            <div class="profile-container">
+                <div class="avatar-wrapper">
+                    <img src="../../images/perfil.png" alt="Usuario" class="profile-pic">
+                </div>
+
+                <div class="profile-details">
+                    <div class="profile-top-row">
+                        <div class="user-meta">
+                            <h1 class="username">Nombre de usuario</h1>
+                            <div class="rating-stars">★★★★☆</div>
+                        </div>
+                        <button class="btn-edit-profile">
+                            <span class="edit-icon-btn">✎</span> Editar perfil
+                        </button>
+                    </div>
+
+                    <div class="profile-stats-grid">
+                        <div class="stat-col">
+                            <p><strong>Bio</strong></p>
+                            <p class="low-opacity">ubicación</p>
+                            <p class="low-opacity">seguidores &nbsp; seguidos</p>
+                        </div>
+                        <div class="stat-col">
+                            <p><strong>Información verificada <span class="check-icon">✓</span></strong></p>
+                            <p class="low-opacity">correo</p>
+                            <p class="low-opacity">teléfono</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="profile-tabs">
+                <a href="#" class="tab-item active" id="btn-publicaciones">Publicaciones</a>
+                <a href="#" class="tab-item" id="btn-resenas">Reseñas</a>
+            </nav>
+        </section>
+
+        <section class="products-section" id="section-productos">
+            <div class="product-grid">
+                <article class="product-card">
+                    <div class="product-image-container">
+                        <img src="../../images/sudadera.png" alt="Sudadera">
+                        <span class="product-edit-trigger">✎</span>
+                    </div>
+                    <div class="product-text">
+                        <h3 class="brand-name">NOMBREMARCA</h3>
+                        <p class="item-desc">Descripción de la prenda</p>
+                        <p class="item-price">90.00€</p>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image-container">
+                        <img src="../../images/sudadera.png" alt="Sudadera">
+                        <span class="product-edit-trigger">✎</span>
+                    </div>
+                    <div class="product-text">
+                        <h3 class="brand-name">NOMBREMARCA</h3>
+                        <p class="item-desc">Descripción de la prenda</p>
+                        <p class="item-price">90.00€</p>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image-container">
+                        <img src="../../images/sudadera.png" alt="Sudadera">
+                        <span class="product-edit-trigger">✎</span>
+                    </div>
+                    <div class="product-text">
+                        <h3 class="brand-name">NOMBREMARCA</h3>
+                        <p class="item-desc">Descripción de la prenda</p>
+                        <p class="item-price">90.00€</p>
+                    </div>
+                </article>
+                                <article class="product-card">
+                    <div class="product-image-container">
+                        <img src="../../images/sudadera.png" alt="Sudadera">
+                        <span class="product-edit-trigger">✎</span>
+                    </div>
+                    <div class="product-text">
+                        <h3 class="brand-name">NOMBREMARCA</h3>
+                        <p class="item-desc">Descripción de la prenda</p>
+                        <p class="item-price">90.00€</p>
+                    </div>
+                </article>
+
+                
+                </div>
+        </section>
+
+        <section class="reviews-section" id="section-resenas" style="display: none;">
+            <div class="reviews-container">
+                <article class="review-card">
+                    <div class="review-header">
+                        <div class="review-user">
+                            <div class="review-avatar-small"></div>
+                            <span class="review-username">Usuario_Ejemplo</span>
+                        </div>
+                        <div class="review-rating">★★★★★</div>
+                    </div>
+                    <p class="review-text">"Excelente calidad y diseño. El envío fue muy rápido."</p>
+                    <span class="review-date">Publicado hace 3 días</span>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <script src="../../javascript/cambio_headers.js"></script>
+    <script>
+        // Carga del Header
+        fetch("../../componentes/header/header.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("header").innerHTML = html;
+                if(typeof cargarHeaderSegunUsuario === 'function') cargarHeaderSegunUsuario();
+            })
+            .catch(err => console.error("Error cargando el header:", err));
+
+        // Lógica para cambiar entre Publicaciones y Reseñas
+        const btnPub = document.getElementById('btn-publicaciones');
+        const btnRes = document.getElementById('btn-resenas');
+        const secPub = document.getElementById('section-productos');
+        const secRes = document.getElementById('section-resenas');
+
+        btnRes.addEventListener('click', (e) => {
+            e.preventDefault();
+            secPub.style.display = 'none';
+            secRes.style.display = 'block';
+            btnPub.classList.remove('active');
+            btnRes.classList.add('active');
+        });
+
+        btnPub.addEventListener('click', (e) => {
+            e.preventDefault();
+            secRes.style.display = 'none';
+            secPub.style.display = 'grid';
+            btnRes.classList.remove('active');
+            btnPub.classList.add('active');
+        });
+    </script>
 </body>
 </html>

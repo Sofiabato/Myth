@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva publicación - MYTH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/nueva-publicacion.css">
+    <!-- <link rel="stylesheet" href="styles/index.css"> -->
+</head>
+<body>
+    <!-- <div id="header"></div> -->
+    
+    <div class="page">
+        <div class="publication-container">
+            <h1 class="publication-title">Nueva publicación</h1>
+            
+            <!-- Tabs -->
+            <div class="tabs">
+                <div class="tab" data-tab="imagenes">
+                    <span>Imágenes</span>
+                </div>
+                <div class="tab" data-tab="datos">
+                    <span>Datos</span>
+                </div>
+                <div class="tab active" data-tab="vista-previa">
+                    <span>Vista previa</span>
+                </div>
+            </div>
+
+            <!-- Contenido Tab: Imágenes -->
+            <div class="tab-content" id="imagenes-content">
+                <div class="upload-area">
+                    <div class="upload-header">
+                        <p class="upload-title">Arrastra o pulsa seleccionar</p>
+                        <p class="upload-info">Máx 4 imágenes - Delante, detrás, libre y etiqueta</p>
+                    </div>
+                    
+                    <div class="upload-zone" id="dropZone">
+                        <div class="upload-empty">
+                            <p>Aún no has subido imágenes</p>
+                        </div>
+                        <button class="button-def upload-button">Subir imágenes</button>
+                        <input type="file" id="fileInput" accept="image/*" multiple hidden>
+                    </div>
+
+                    <div class="upload-actions">
+                        <div class="upload-actions-rside">
+                        <button class="button-def secondary-button">Cambiar imagen</button>
+                        <button class="button-def secondary-button">Eliminar imagen</button>
+                        </div>
+                        <div class="upload-actions-lside">
+                        <button class="button-def next-button">Siguiente</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contenido Tab: Datos -->
+            <div class="tab-content" id="datos-content">
+                <div class="form-container">
+                    <div class="form-grid">
+                        <!-- Columna izquierda -->
+                        <div class="form-column">
+                            <div class="form-group">
+                                <label>Nombre de la prenda</label>
+                                <input type="text" class="form-input" placeholder="Nombre">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Descripción de la prenda</label>
+                                <textarea class="form-textarea" placeholder="Nombre"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Tipo de prenda</label>
+                                <div class="button-group">
+                                    <button class="option-button">Chaqueta</button>
+                                    <button class="option-button">Pantalón</button>
+                                    <button class="option-button">Sudadera</button>
+                                    <button class="option-button">Joya</button>
+                                    <button class="option-button">Ropa interior</button>
+                                    <button class="option-button">Camiseta</button>
+                                    <button class="option-button">Vestido</button>
+                                    <button class="option-button">Gafas</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Columna medio -->
+                        <div class="form-column">
+                            <div class="form-group">
+                                <label>Talla</label>
+                                <div class="size-group">
+                                    <button class="size-button">XS</button>
+                                    <button class="size-button">S</button>
+                                    <button class="size-button">M</button>
+                                    <button class="size-button">L</button>
+                                    <button class="size-button">XL</button>
+                                    <button class="size-button">XXL</button>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Color</label>
+                                <div class="color-picker">
+                                    <button class="color-option" style="background-color: #000000;"></button>
+                                    <button class="color-option" style="background-color: #3B82F6;"></button>
+                                    <button class="color-option" style="background-color: #10B981;"></button>
+                                    <button class="color-option" style="background-color: #6B7280;"></button>
+                                    <button class="color-option" style="background-color: #F59E0B;"></button>
+                                    <button class="color-option" style="background-color: #EC4899;"></button>
+                                    <button class="color-option" style="background-color: #8B5CF6;"></button>
+                                    <button class="color-option" style="background-color: #EF4444;"></button>
+                                    <button class="color-option" style="background-color: #EAB308;"></button>
+                                    <button class="color-option" style="background-color: #78350F;"></button>
+                                    <button class="color-option" style="background-color: #FDE68A;"></button>
+                                </div>
+                            </div>
+
+                            <div style="display: grid; gap: 20px; align-items: start;">
+                                <div class="form-group">
+                                    <label>Material</label>
+                                    <div class="button-group">
+                                        <button class="option-button">Algodón</button>
+                                        <button class="option-button">Lino</button>
+                                        <button class="option-button">Tencel</button>
+                                        <button class="option-button">Cachemir</button>
+                                        <button class="option-button">Lana</button>
+                                        <button class="option-button">Cuero</button>
+                                        <button class="option-button">Bambú</button>
+                                        <button class="option-button">Nylon</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <!-- Columna derecha -->
+                            <div class="form-column">
+                                <div class="form-group price-group">
+                                    <label>Precio (€)</label>
+                                    <input type="text" class="form-input price-input" placeholder="99€">
+                                </div>
+                            </div>
+
+                    </div>
+
+                    <div class="form-actions">
+                        <button class="button-def secondary-button">Atrás</button>
+                        <button class="button-def next-button">Siguiente</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contenido Tab: Vista previa -->
+            <div class="tab-content active" id="vista-previa-content">
+                <div class="preview-container">
+                    <!-- Galería de imágenes -->
+                    <div class="preview-gallery">
+                        <div class="preview-main-image">
+                            <img src="../images/sudadera.png" alt="Vista principal">
+                        </div>
+                        <div class="preview-thumbnails">
+                            <img src="../images/sudadera.png" alt="Miniatura 1">
+                            <img src="../images/sudadera.png" alt="Miniatura 2">
+                            <img src="../images/sudadera.png" alt="Miniatura 3">
+                        </div>
+                    </div>
+
+                    <!-- Información del producto -->
+                    <div class="preview-info">
+                        <h2 class="preview-designer">Nombre Diseñador</h2>
+                        <h3 class="preview-product-name">Nombre prenda</h3>
+                        <p class="preview-description">Descripcion prenda</p>
+                        
+                        <div class="preview-price">90,00€</div>
+                        
+                        <!-- Color selector -->
+                        <div class="preview-color">
+                            <div class="color-circle" style="background-color: #EF4444;"></div>
+                        </div>
+
+                        <!-- Size selector -->
+                        <div class="preview-sizes">
+                            <button class="preview-size-button">XS</button>
+                            <button class="preview-size-button">S</button>
+                            <button class="preview-size-button active">M</button>
+                            <button class="preview-size-button">L</button>
+                            <button class="preview-size-button">XL</button>
+                        </div>
+
+                        <!-- Action buttons -->
+                        <div class="preview-actions">
+                            <button class="button-def secondary-button">Atrás</button>
+                            <button class="button-def next-button">Publicar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="nueva-publicacion.js"></script>
+    <script src="../../javascript/cambio_headers.js"></script>
+    <script>
+  fetch("../componentes/header/header.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("header").innerHTML = html;
+      cargarHeaderSegunUsuario(); // 👈 AQUÍ
+    });
+</script>
+</body>
+</html>

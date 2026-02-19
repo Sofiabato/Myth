@@ -1,0 +1,217 @@
+/* ===================================== */
+/* PRODUCTO - LAYOUT PRINCIPAL */
+/* ===================================== */
+
+.product-layout {
+    display: grid;
+    grid-template-columns: 535px 1fr; /* fijamos ancho real de la imagen */
+    column-gap: 110px;
+    margin-top: 120px;
+    align-items: start; /* 🔥 clave para que no se estire */
+}
+
+/* ===================================== */
+/* GALERÍA */
+/* ===================================== */
+
+.preview-gallery {
+    display: flex;
+    gap: 30px;
+}
+
+.preview-main-image {
+    width: 401px;
+    height: 473px;
+    background: #F2F2F2;
+    border-radius: 16px;
+    padding: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0; /* evita que cambie tamaño */
+}
+
+.preview-main-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.preview-thumbnails {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.preview-thumbnails img {
+    width: 116px;
+    height: 137px;
+    background: #F2F2F2;
+    border-radius: 16px;
+    padding: 20px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.preview-thumbnails img:hover {
+    opacity: 0.7;
+}
+
+/* ===================================== */
+/* INFO PRODUCTO */
+/* ===================================== */
+
+.preview-info {
+    max-width: 480px;
+}
+
+.preview-designer {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.preview-product-name {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.preview-description {
+    font-size: 14px;
+    color: #6D6D6D;
+    margin-bottom: 18px;
+}
+
+.preview-price {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* ===================================== */
+/* COLORES */
+/* ===================================== */
+
+.preview-color {
+    margin-bottom: 25px;
+}
+
+.preview-color .color-circle {
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* ===================================== */
+/* TALLAS */
+/* ===================================== */
+
+.preview-sizes {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.preview-size-button {
+    padding: 8px 16px;
+    border-radius: 25px;
+    border: none;
+    background: var(--fondo-inputs);
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.preview-size-button.active {
+    background: var(--color-prim);
+    color: white;
+}
+
+/* ===================================== */
+/* BOTONES */
+/* ===================================== */
+
+.preview-info .actions {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.add-cart {
+    flex: 1;
+    height: 48px;
+    border-radius: 30px;
+    border: none;
+    background: var(--color-prim);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.add-cart:hover {
+    background: var(--color-hover);
+}
+
+.preview-info .actions button:last-child {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid var(--color-prim);
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===================================== */
+/* TABS */
+/* ===================================== */
+
+.tabs {
+    display: flex;
+    gap: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+
+.tab {
+    font-size: 14px;
+    cursor: pointer;
+    color: #999;
+}
+
+.tab.active {
+    color: var(--texto-prim);
+    font-weight: 500;
+}
+
+.tab-content {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* ===================================== */
+/* RECOMENDADOS */
+/* ===================================== */
+
+.recommended-layout {
+    margin-top: 200px;
+}
+
+.recommended-layout h3 {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
