@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>MYTH | Moda Emergente</title>
     <link rel="stylesheet" href="../styles/landing/landing.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-      <link rel="stylesheet" href="styles/landing.css">
-      <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/landing.css">
+    <link rel="stylesheet" href="styles/index.css">
 
 </head>
+
 <body>
 
     <div id="header"></div>
@@ -29,7 +31,7 @@
         </div>
     </section>
 
-        <!-- MÁS VENDIDOS -->
+    <!-- MÁS VENDIDOS -->
     <section class="products">
         <h2>Más vendidos</h2>
 
@@ -63,7 +65,7 @@
             </div>
         </div>
     </section>
-  <!-- CARGA DEL HEADER -->
+    <!-- CARGA DEL HEADER -->
 
     <script src="../javascript/login.js"></script>
     <script src="../javascript/cambio_headers.js"></script>
@@ -75,7 +77,19 @@
                 cargarHeaderSegunUsuario(); // 👈 AQUÍ
             });
     </script>
-    
+
+    <div id="cart-component"></div>
+
+    <script>
+        fetch("../../componentes/carrito/carrito.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("cart-component").innerHTML = html;
+            });
+    </script>
+
+    <script src="../../javascript/carrito.js"></script>
 
 </body>
+
 </html>
