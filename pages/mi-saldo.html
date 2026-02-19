@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myth - Mi saldo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/mi-saldo.css">
+</head>
+
+<body class="coleccion">
+    <div id="header"></div>
+
+    <main class="page">
+    <div class="layout">
+
+        <div class="left">
+            <h1 class="page-title">Mi saldo</h1>
+        </div>
+
+        <div class="right">
+
+            <div class="card balance-card">
+                <div>
+                    <p class="balance-amount">00.00€</p>
+                    <p class="balance-label">Saldo disponible</p>
+                </div>
+                <button class="btn-outline">Activar saldo</button>
+            </div>
+
+            <h2 class="section-title">Datos personales de la cuenta</h2>
+
+            <div class="card row">
+                <span>Nombre de titular de cuenta</span>
+                <button class="btn-outline">Cambiar</button>
+            </div>
+
+            <div class="card row">
+                <span>Apellidos de titular de cuenta</span>
+                <button class="btn-outline">Cambiar</button>
+            </div>
+
+            <div class="card row">
+                <span>País</span>
+
+                <div class="row select">
+                <select class="form-control">
+                    <option value="es">España</option>
+                    <option value="fr">Francia</option>
+                    <option value="it">Italia</option>
+                    <option value="pt">Portugal</option>
+                    <option value="de">Alemania</option>
+                    <option value="uk">Reino Unido</option>
+                    <option value="us">Estados Unidos</option>
+                    <option value="mx">México</option>
+                    <option value="ar">Argentina</option>
+                </select>
+
+            <!-- Flecha SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <path d="M18 23.1L9 14.1L11.1 12L18 18.9L24.9 12L27 14.1L18 23.1Z" fill="#0F0F0F"/>
+            </svg>
+            </div>
+            </div>
+
+
+            <div class="card row">
+                <span>Fecha de nacimiento</span>
+
+                <div class="date-group">
+                    <input type="text" maxlength="2" class="date-part" placeholder="dd">
+                    <span class="date-separator">/</span>
+                    <input type="text" maxlength="2" class="date-part" placeholder="mm">
+                    <span class="date-separator">/</span>
+                    <input type="text" maxlength="4" class="date-part year" placeholder="aaaa">
+                </div>
+            </div>
+
+
+            <h2 class="section-title">Dirección de facturación</h2>
+
+            <div class="card row">
+                <span>Dirección de facturación</span>
+                <button class="btn-outline">Cambiar</button>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+
+
+<script src="../../javascript/cambio_headers.js"></script>
+
+<script>
+  fetch("../componentes/header/header.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("header").innerHTML = html;
+      cargarHeaderSegunUsuario(); // 👈 AQUÍ
+    });
+</script>
+    <script src="scripts/mi-saldo.js"></script>
+</body>
+
+</html>

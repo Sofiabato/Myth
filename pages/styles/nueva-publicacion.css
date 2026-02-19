@@ -24,7 +24,7 @@ body {
 .page {
     padding-left: 150px;
     padding-right: 150px;
-    padding-top: 40px;
+    padding-top: 100px;
     padding-bottom: 60px;
 }
 
@@ -68,13 +68,13 @@ body {
 }
 
 .secondary-button {
-    background-color: transparent;
-    border: 1px solid var(--color-prim);
-    color: var(--color-prim);
+    background-color: transparent !important; 
+    border: 1px solid var(--color-prim) !important;
+    color: var(--color-prim) !important;
 }
 
 .secondary-button:hover {
-    background-color: rgba(131, 0, 7, 0.05);
+    background-color: rgba(131, 0, 7, 0.05) !important;
 }
 
 /* ===================== */

@@ -1,0 +1,208 @@
+/* ===================== */
+/* RESET BÁSICO */
+/* ===================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f6f6f6; */
+    color: #0f0f0f;
+}
+
+/* ===================== */
+/* LAYOUT */
+/* ===================== */
+
+.page {
+    margin-top: 40px;
+    padding: 80px 100px;
+}
+
+.layout {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.left {
+    flex: 1;
+}
+
+.right {
+    flex: 1.4;
+    max-width: 800px;
+}
+
+/* ===================== */
+/* TÍTULOS */
+/* ===================== */
+
+.page-title {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.section-title {
+    font-size: 16px;
+    margin: 40px 0 20px 0;
+}
+
+/* ===================== */
+/* TARJETAS */
+/* ===================== */
+
+.card {
+    /* background: #ffffff; */
+    border: 1px solid #830007;
+    border-radius: 15px;
+    padding: 25px 30px;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ===================== */
+/* SALDO */
+/* ===================== */
+
+.balance-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.balance-amount {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.balance-label {
+    font-size: 13px;
+    color: #999;
+    margin-top: 5px;
+}
+
+/* ===================== */
+/* BOTONES */
+/* ===================== */
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #830007;
+    padding: 8px 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.btn-outline:hover {
+    background-color: rgba(165, 112, 112, 0.1);
+}
+
+.muted {
+    color: #999;
+}
+
+
+/* ===================== */
+/* FORM CONTROLS */
+/* ===================== */
+
+.form-control {
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    text-align: right;
+    outline: none;
+    font-family: Arial, sans-serif;
+    color: #0f0f0f;
+    cursor: pointer;
+}
+
+/* Quitar estilo feo por defecto en select */
+select.form-control {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* ===================== */
+/* FECHA EN 3 CAMPOS */
+/* ===================== */
+
+.date-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.date-part {
+    width: 30px;
+    border: none;
+    background: transparent;
+    text-align: center;
+    font-size: 14px;
+    outline: none;
+    font-family: Arial, sans-serif;
+}
+
+.date-part.year {
+    width: 50px;
+}
+
+.date-part::placeholder {
+    color: #999;
+}
+
+.date-separator {
+    font-size: 14px;
+    color: #0f0f0f;
+}
+
+/* ===================== */
+/* SELECT CON FLECHA */
+/* ===================== */
+
+.row.select {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.row.select select {
+    flex: 1;
+    padding-right: 45px;
+    text-align: center;
+}
+
+.row.select svg {
+    position: absolute;
+    right: 0;
+    pointer-events: none;
+}
+
+
+/* ===================== */
+/* RESPONSIVE */
+/* ===================== */
+
+@media (max-width: 1024px) {
+    .layout {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .page {
+        padding: 40px 20px;
+    }
+}
