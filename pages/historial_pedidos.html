@@ -7,7 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/enol.css">
+    <link rel="stylesheet" href="styles/historial_pedidos.css">
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 <body class="coleccion"> <div id="header"></div>
 
@@ -89,17 +90,29 @@
 
     <div id="footer"></div>
     
-    <script src="../../javascript/cambio_headers.js"></script>
+<script src="../../javascript/cambio_headers.js"></script>
+
     <script>
-        fetch("../componentes/header/header.html")
-          .then(res => res.text())
-          .then(html => {
-            document.getElementById("header").innerHTML = html;
-            if(typeof cargarHeaderSegunUsuario === 'function') cargarHeaderSegunUsuario(); 
-          });
+        fetch("../../componentes/header/header.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("header").innerHTML = html;
+                cargarHeaderSegunUsuario();   // ← muestra el header correcto
+            });
     </script>
-        <script>
-        fetch("../componentes/footer/footer.html")
+
+    <script>
+        fetch("../../componentes/carrito/carrito.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("cart-component").innerHTML = html;
+            });
+    </script>
+
+    <script src="../../javascript/carrito.js"></script>
+
+    <script>
+        fetch("../../componentes/footer/footer.html")
             .then(res => res.text())
             .then(html => {
                 document.getElementById("footer").innerHTML = html;

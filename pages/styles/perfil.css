@@ -1,0 +1,201 @@
+/* ===================== */
+/* PERFIL.HTML    */
+/* ===================== */
+
+/* Contenedor Perfil */
+body.coleccion .user-info-section {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+body.coleccion .profile-container {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+/* Avatar circular con borde rojo */
+body.coleccion .avatar-wrapper {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 2.5px solid #830007; /* Rojo oscuro de la imagen */
+    padding: 5px;
+    background-color: #fff;
+}
+
+body.coleccion .profile-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #e0e0e0;
+}
+
+/* Detalles de usuario */
+body.coleccion .profile-details { flex: 1; }
+
+body.coleccion .profile-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+body.coleccion .username { font-size: 20px; font-weight: 600; }
+body.coleccion .rating-stars { color: #830007; font-size: 18px; }
+
+/* Botón Editar Perfil */
+body.coleccion .btn-edit-profile {
+    background-color: #830007;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Grid de información (Bio/Verificado) */
+body.coleccion .profile-stats-grid {
+    display: flex;
+    gap: 80px;
+}
+
+body.coleccion .stat-col p { margin-bottom: 4px; font-size: 14px; }
+body.coleccion .low-opacity { color: var(--texto-inputs); opacity: 0.8; }
+body.coleccion .check-icon { color: #830007; font-weight: bold; }
+
+/* Tabs */
+body.coleccion .profile-tabs {
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+body.coleccion .tab-item {
+    text-decoration: none;
+    color: var(--texto-inputs);
+    padding-bottom: 12px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+body.coleccion .tab-item.active {
+    color: var(--texto-prim);
+    border-bottom: 2px solid var(--texto-prim);
+}
+
+/* --- GRID DE PRODUCTOS --- */
+body.coleccion .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+body.coleccion .product-image-container {
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    aspect-ratio: 1 / 1.1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+body.coleccion .product-image-container img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Icono de edición sobre la prenda */
+body.coleccion .product-edit-trigger {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #333;
+}
+
+body.coleccion .brand-name { font-size: 14px; font-weight: 800; text-transform: uppercase; }
+body.coleccion .item-desc { font-size: 13px; color: var(--texto-inputs); margin: 2px 0; }
+body.coleccion .item-price { font-size: 14px; font-weight: 600; }
+
+/* Responsive */
+@media (max-width: 1000px) {
+    body.coleccion .profile-container { flex-direction: column; align-items: center; text-align: center; }
+    body.coleccion .profile-top-row { flex-direction: column; gap: 15px; }
+    body.coleccion .profile-stats-grid { gap: 30px; justify-content: center; }
+    body.coleccion .product-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* --- APARTADO RESEÑAS --- */
+body.coleccion .reviews-section {
+    margin-top: 20px;
+}
+
+body.coleccion .reviews-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+body.coleccion .review-card {
+    background-color: #F9F9F9; /* Un gris muy sutil */
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid #eee;
+}
+
+body.coleccion .review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+body.coleccion .review-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+body.coleccion .review-avatar-small {
+    width: 35px;
+    height: 35px;
+    background-color: #ddd;
+    border-radius: 50%;
+}
+
+body.coleccion .review-username {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+body.coleccion .review-rating {
+    color: #830007; /* Rojo Myth */
+    font-size: 14px;
+}
+
+body.coleccion .review-text {
+    font-size: 14px;
+    color: var(--texto-inputs);
+    line-height: 1.5;
+    font-style: italic;
+}
+
+body.coleccion .review-date {
+    display: block;
+    margin-top: 10px;
+    font-size: 11px;
+    color: #bbb;
+}
