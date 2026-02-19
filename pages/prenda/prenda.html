@@ -16,6 +16,7 @@
 
 <body>
     <div id="header"></div>
+    <div id="cart-component"></div>
 
     <main class="page">
 
@@ -23,12 +24,12 @@
         <section class="product-layout">
             <div class="preview-gallery">
                 <div class="preview-main-image">
-                    <img src="../images/sudadera.png" alt="Vista principal">
+                    <img src="../../images/sudadera.png" alt="Vista principal">
                 </div>
                 <div class="preview-thumbnails">
-                    <img src="../images/sudadera.png" alt="Miniatura 1">
-                    <img src="../images/sudadera.png" alt="Miniatura 2">
-                    <img src="../images/sudadera.png" alt="Miniatura 3">
+                    <img src="../../images/sudadera.png" alt="Miniatura 1">
+                    <img src="../../images/sudadera.png" alt="Miniatura 2">
+                    <img src="../../images/sudadera.png" alt="Miniatura 3">
                 </div>
             </div>
 
@@ -57,7 +58,7 @@
                 <!-- CTA -->
                 <div class="actions">
                     <button class="add-cart">Añadir al carrito</button>
-                    <button><img src="../images/iconos/favoritos.svg" alt=""></button>
+                    <button><img src="../../images/iconos/favoritos.svg" alt=""></button>
                 </div>
 
                 <!-- TABS -->
@@ -94,7 +95,7 @@
             <h3>Tambien te podria interesar</h1>
                 <div class="designers-grid">
                     <div class="designer-card">
-                        <img src="../images/pantalones.png" alt="">
+                        <img src="../../images/pantalones.png" alt="">
                         <div class="card-content">
                             <div class="card-info-default">
                                 <h3>NOMBREMARCA</h3>
@@ -114,7 +115,7 @@
                     </div>
 
                     <div class="designer-card">
-                        <img src="../images/sudadera.png" alt="">
+                        <img src="../../images/sudadera.png" alt="">
                         <div class="card-content">
                             <div class="card-info-default">
                                 <h3>NOMBREMARCA</h3>
@@ -134,7 +135,7 @@
                     </div>
 
                     <div class="designer-card">
-                        <img src="../images/sudadera2.png" alt="">
+                        <img src="../../images/sudadera2.png" alt="">
                         <div class="card-content">
                             <div class="card-info-default">
                                 <h3>NOMBREMARCA</h3>
@@ -154,7 +155,7 @@
                     </div>
 
                     <div class="designer-card">
-                        <img src="../images/pantalones.png" alt="">
+                        <img src="../../images/pantalones.png" alt="">
                         <div class="card-content">
                             <div class="card-info-default">
                                 <h3>NOMBREMARCA</h3>
@@ -176,19 +177,32 @@
         </section>
     </main>
     <footer id="footer"></footer>
-    <script src="nueva-publicacion.js"></script>
+
+    <script src="../../javascript/prenda.js"></script>
+
     <script src="../../javascript/cambio_headers.js"></script>
 
     <script>
-        fetch("../componentes/header/header.html")
+        fetch("../../componentes/header/header.html")
             .then(res => res.text())
             .then(html => {
                 document.getElementById("header").innerHTML = html;
-                cargarHeaderSegunUsuario(); // 👈 AQUÍ
+                cargarHeaderSegunUsuario();   // ← muestra el header correcto
             });
     </script>
+
     <script>
-        fetch("../componentes/footer/footer.html")
+        fetch("../../componentes/carrito/carrito.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("cart-component").innerHTML = html;
+            });
+    </script>
+
+    <script src="../../javascript/carrito.js"></script>
+
+    <script>
+        fetch("../../componentes/footer/footer.html")
             .then(res => res.text())
             .then(html => {
                 document.getElementById("footer").innerHTML = html;
@@ -196,6 +210,8 @@
     </script>
 
     <script src="../../javascript/prenda.js"></script>
+
+
 </body>
 
 </html>
