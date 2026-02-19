@@ -72,54 +72,34 @@
 
 </main>
 
-<footer class="footer">
-    <div class="footer-content">
-        <div class="footer-col">
-            <h3>MYTH</h3>
-            <p>Eslogan</p>
-        </div>
+    <script src="../../javascript/cambio_headers.js"></script>
 
-        <div class="footer-col">
-            <h4>Enlaces</h4>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Colección</a></li>
-                <li><a href="#">Diseñadores</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </div>
+    <script>
+        fetch("../../componentes/header/header.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("header").innerHTML = html;
+                cargarHeaderSegunUsuario();   // ← muestra el header correcto
+            });
+    </script>
 
-        <div class="footer-col">
-            <h4>Síguenos</h4>
-            <div class="socials">
-                <span>📸</span>
-                <span>✖</span>
-                <span>🎵</span>
-            </div>
-        </div>
-    </div>
+    <script>
+        fetch("../../componentes/carrito/carrito.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("cart-component").innerHTML = html;
+            });
+    </script>
 
-    <div class="footer-bottom">
-        <p>© 2026 MYTH. Todos los derechos reservados.</p>
-        <div class="legal">
-            <a href="#">Política de Privacidad</a>
-            <a href="#">Términos y Condiciones</a>
-            <a href="#">Política de Cookies</a>
-        </div>
-    </div>
-</footer>
+    <script src="../../javascript/carrito.js"></script>
 
-<script src="../../javascript/login.js"></script>
-<script src="../../javascript/cambio_headers.js"></script>
-
-<script>
-fetch("../../componentes/header/header.html")
-    .then(res => res.text())
-    .then(html => {
-        document.getElementById("header").innerHTML = html;
-        cargarHeaderSegunUsuario();
-    });
-</script>
+    <script>
+        fetch("../../componentes/footer/footer.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("footer").innerHTML = html;
+            });
+    </script>
 
 </body>
 </html>
