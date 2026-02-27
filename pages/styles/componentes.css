@@ -97,17 +97,16 @@
 }
 
 .color-circle {
-    /* width: 29px; */
     width: 25px;
     height: 20px;
     border-radius: 6px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
+    /* cursor: pointer; */
+    /* transition: transform 0.2s ease; */
 }
 
-.color-circle:hover {
+/* .color-circle:hover {
     transform: scale(1.2);
-}
+} */
 
 .color-black {
     background-color: #000000;
