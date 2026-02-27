@@ -216,9 +216,20 @@
             .then(res => res.text())
             .then(html => {
                 document.getElementById("header").innerHTML = html;
-                cargarHeaderSegunUsuario(); // 👈 AQUÍ
+                cargarHeaderSegunUsuario();   // ← muestra el header correcto
             });
     </script>
+
+    <script>
+        fetch("../../componentes/carrito/carrito.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("cart-component").innerHTML = html;
+            });
+    </script>
+
+    <script src="../../javascript/carrito.js"></script>
+
     <script>
         fetch("../../componentes/footer/footer.html")
             .then(res => res.text())
