@@ -8,17 +8,20 @@
 /* ===================== */
 
 .profile-page {
-    max-width: 1180px;
-    margin: 0 auto;
+    max-width: 1400px;
+    margin: 120px 0 0 200px;  /* prueba entre 140–180 */
     display: grid;
-    grid-template-columns: 220px 1fr;
-    gap: 160px;
-    padding: 50px 40px 140px;
+    grid-template-columns: 240px 1fr;
+    gap: 260px;
+    padding: 0 60px 140px;
 }
-
 /* ===================== */
 /* SIDEBAR */
 /* ===================== */
+
+.sidebar {
+    margin-left: -120px;
+}
 
 .sidebar h2 {
     font-size: 18px;
@@ -48,7 +51,7 @@
 /* ===================== */
 
 .profile-panel {
-    width: 640px;
+    width: 680px;
 }
 
 /* ===================== */
@@ -236,80 +239,6 @@ button {
     top: 3px;
 }
 
-/* ===================== */
-/* FOOTER */
-/* ===================== */
-
-.footer {
-    position: relative;
-    color: #fff;
-    padding: 80px 40px 30px;
-    background-image: url("../../../images/footer 1.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
-    max-width: 1100px;
-    margin: 0 auto 40px;
-}
-
-.footer-col h3 {
-    font-size: 22px;
-}
-
-.footer-col h4 {
-    margin-bottom: 15px;
-}
-
-.footer-col ul {
-    list-style: none;
-}
-
-.footer-col ul li {
-    margin-bottom: 8px;
-}
-
-.footer-col a {
-    text-decoration: none;
-    color: #bbb;
-    font-size: 14px;
-}
-
-.footer-col a:hover {
-    color: white;
-}
-
-.socials span {
-    font-size: 20px;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-/* FOOTER BOTTOM */
-
-.footer-bottom {
-    border-top: 1px solid #444;
-    padding-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    font-size: 13px;
-}
-
-.footer-bottom a {
-    color: #bbb;
-    margin-left: 15px;
-    text-decoration: none;
-}
-
-.footer-bottom a:hover {
-    color: white;
-}
 
 /* ===================== */
 /* TARJETAS DIVIDIDAS (FIGMA) */

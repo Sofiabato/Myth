@@ -106,43 +106,7 @@
 
 </main>
 
-<!-- FOOTER (MISMO QUE RESTO DEL SITIO) -->
-<footer class="footer">
-    <div class="footer-content">
-        <div class="footer-col">
-            <h3>MYTH</h3>
-            <p>Eslogan</p>
-        </div>
 
-        <div class="footer-col">
-            <h4>Enlaces</h4>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Colección</a></li>
-                <li><a href="#">Diseñadores</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-col">
-            <h4>Síguenos</h4>
-            <div class="socials">
-                <span>📸</span>
-                <span>✖</span>
-                <span>🎵</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <p>© 2026 MYTH. Todos los derechos reservados.</p>
-        <div class="legal">
-            <a href="#">Política de Privacidad</a>
-            <a href="#">Términos y Condiciones</a>
-            <a href="#">Política de Cookies</a>
-        </div>
-    </div>
-</footer>
 
 <!-- JS HEADER -->
 <script src="../../javascript/login.js"></script>
@@ -167,7 +131,8 @@
 
     <script src="../../javascript/carrito.js"></script>
 
-    <script>
+   <div id="footer"></div>
+ <script>
         fetch("../../componentes/footer/footer.html")
             .then(res => res.text())
             .then(html => {

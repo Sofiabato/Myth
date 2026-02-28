@@ -129,20 +129,19 @@
 
 
     .products-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 30px;
-        max-width: 1100px;
-        margin: 0 auto;
-    }
-
-    .product-card {
-        background-color: white;
-        padding: 20px;
-        border-radius: 12px;
-        text-align: left;
-        transition: transform 0.2s ease;
-    }
+    display: grid;
+    grid-template-columns: repeat(4, minmax(260px, 1fr));
+    gap: 40px;
+    max-width: 1400px;   /* 🔥 más ancho */
+    margin: 0 auto;
+}
+.product-card {
+    background-color: white;
+    padding: 25px;        /* 🔥 más espacio interno */
+    border-radius: 16px;  /* un poco más redondeado */
+    text-align: left;
+    transition: transform 0.2s ease;
+}
 
     .product-card:hover {
         transform: translateY(-5px);

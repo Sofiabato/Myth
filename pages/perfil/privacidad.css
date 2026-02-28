@@ -8,12 +8,12 @@
 /* ===================== */
 
 .profile-page {
-    max-width: 1180px;
-    margin: 0 auto;
+    max-width: 1400px;
+    margin: 120px 0 0 200px;  /* prueba entre 140–180 */
     display: grid;
-    grid-template-columns: 220px 1fr;
-    gap: 160px;
-    padding: 50px 40px 140px;
+    grid-template-columns: 240px 1fr;
+    gap: 260px;
+    padding: 0 60px 140px;
 }
 
 .profile-panel {
@@ -23,7 +23,9 @@
 /* ===================== */
 /* SIDEBAR */
 /* ===================== */
-
+.sidebar {
+    margin-left: -120px;
+}
 .sidebar h2 {
     font-size: 18px;
     margin-bottom: 34px;

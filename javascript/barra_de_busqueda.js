@@ -28,29 +28,28 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ===================== */
     /* FILTROS TIPO TAG */
     /* ===================== */
-    document.querySelectorAll(".filter-content span").forEach(option => {
-        option.addEventListener("click", () => {
-            const group = option.parentElement.dataset.filter;
-            const value = option.dataset.value;
+ document.querySelectorAll("[data-filter] span").forEach(option => {
 
-            if (!group || !value) return;
+    option.addEventListener("click", () => {
 
-            if (option.classList.contains("active")) {
-                option.classList.remove("active");
-                delete filters[group];
-            } else {
-                option.parentElement
-                    .querySelectorAll("span")
-                    .forEach(el => el.classList.remove("active"));
+        const group = option.parentElement.dataset.filter;
+        const value = option.dataset.value;
 
-                option.classList.add("active");
-                filters[group] = value;
-            }
+        if (!group || !value) return;
 
-            applyFilters();
-        });
+        // Quitar activos del mismo grupo
+        option.parentElement
+            .querySelectorAll("span")
+            .forEach(el => el.classList.remove("active"));
+
+        option.classList.add("active");
+
+        filters[group] = value;
+
+        applyFilters();
     });
 
+});
     /* ===================== */
     /* LIMPIAR COLORES */
     /* ===================== */
@@ -58,9 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (clearColorsBtn) {
         clearColorsBtn.addEventListener("click", () => {
             delete filters.color;
-            document
-                .querySelectorAll(".colors .c")
-                .forEach(c => c.classList.remove("active"));
+           document
+    .querySelectorAll(".color-option")
+    .forEach(c => c.classList.remove("active"));
             applyFilters();
         });
     }
@@ -99,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
             let visible = true;
 
             // Texto
-            if (text && !product.dataset.name.includes(text)) {
+           if (text && !product.dataset.name.toLowerCase().includes(text))  {
                 visible = false;
             }
 

@@ -36,15 +36,19 @@
             <i class="fa-solid fa-chevron-down"></i>
         </button>
 
-        <div class="filter-content colors" data-filter="color">
-            <span data-value="black" class="c black"></span>
-            <span data-value="white" class="c white"></span>
-            <span data-value="red" class="c red"></span>
-            <span data-value="blue" class="c blue"></span>
-            <span data-value="green" class="c green"></span>
-            <span data-value="gray" class="c gray"></span>
-            <span data-value="brown" class="c brown"></span>
-            <span data-value="beige" class="c beige"></span>
+   <div class="filter-content color-picker" data-filter="color">
+            <span data-value="black" class="color-option black"></span>
+            <span data-value="white" class="color-option white"></span>
+            <span data-value="red" class="color-option red"></span>
+            <span data-value="blue" class="color-option blue"></span>
+            <span data-value="green" class="color-option green"></span>
+            <span data-value="gray" class="color-option gray"></span>
+            <span data-value="brown" class="color-option brown"></span>
+            <span data-value="beige" class="color-option beige"></span>
+            <span data-value="yellow" class="color-option yellow"></span>
+            <span data-value="orange" class="color-option orange"></span>
+            <span data-value="purple" class="color-option purple"></span>
+            <span data-value="pink" class="color-option pink"></span>
 
             <button class="clear-colors">Quitar colores</button>
         </div>
@@ -252,42 +256,7 @@
 
 </main>
 
-<footer class="footer">
-        <div class="footer-content">
-            <div class="footer-col">
-                <h3>MYTH</h3>
-                <p>Eslogan</p>
-            </div>
 
-            <div class="footer-col">
-                <h4>Enlaces</h4>
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Colección</a></li>
-                    <li><a href="#">Diseñadores</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h4>Síguenos</h4>
-                <div class="socials">
-                    <span>📸</span>
-                    <span>✖</span>
-                    <span>🎵</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>© 2026 MYTH. Todos los derechos reservados.</p>
-            <div class="legal">
-                <a href="#">Política de Privacidad</a>
-                <a href="#">Términos y Condiciones</a>
-                <a href="#">Política de Cookies</a>
-            </div>
-        </div>
-    </footer>
 <script src="../../javascript/barra_de_busqueda.js"></script>
 
     <script src="../../javascript/cambio_headers.js"></script>
@@ -310,7 +279,7 @@
     </script>
 
     <script src="../../javascript/carrito.js"></script>
-
+<div id="footer"></div>
     <script>
         fetch("../../componentes/footer/footer.html")
             .then(res => res.text())
