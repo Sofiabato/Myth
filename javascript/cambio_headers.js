@@ -18,5 +18,5 @@ function cargarHeaderSegunUsuario() {
 
 function logout() {
   localStorage.removeItem("userType");
-  window.location.href = "../pages/index.html";
+  window.location.href = "../../index.html";
 }

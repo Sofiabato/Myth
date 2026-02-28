@@ -37,5 +37,5 @@ document.getElementById("login-btn")?.addEventListener("click", () => {
   localStorage.setItem("userEmail", user.email);
 
   // 👉 AQUÍ es donde navegas al index
-  window.location.href = "../index.html";
+  window.location.href = "../../index.html";
 });

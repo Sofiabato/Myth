@@ -10,9 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="styles/landing.css">
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="../pages/disenadores/disenadores.css">
+    <link rel="stylesheet" href="pages/styles/landing.css">
+    <link rel="stylesheet" href="pages/styles/index.css">
+    <link rel="stylesheet" href="pages/disenadores/disenadores.css">
 
 </head>
 
@@ -25,13 +25,13 @@
             <h1>Descubre moda creada por diseñadores emergentes</h1>
 
             <div class="hero-buttons">
-                <a href="../pages/coleccion/coleccion.html" class="btn primary">Explorar colección</a>
-                <a href="../pages/auth/register.html" class="btn secondary">Regístrate como Diseñador</a>
+                <a href="pages/coleccion/coleccion.html" class="btn primary">Explorar colección</a>
+                <a href="pages/auth/register.html" class="btn secondary">Regístrate como Diseñador</a>
             </div>
         </div>
 
         <div class="hero-image">
-            <img src="../images/ChatGPT Image 7 ene 2026, 18_23_52 1.png" alt="Modelos de moda MYTH">
+            <img src="images/ChatGPT Image 7 ene 2026, 18_23_52 1.png" alt="Modelos de moda MYTH">
         </div>
     </section>
 
@@ -41,8 +41,8 @@
 
         <div class="designers-grid">
             <div class="designer-card">
-                <a href="../pages/prenda/prenda.html">
-                    <img src="../images/sudadera2.png" alt="">
+                <a href="pages/prenda/prenda.html">
+                    <img src="images/sudadera2.png" alt="">
                 </a>
                 <div class="card-content">
                     <div class="card-info-default">
@@ -63,8 +63,8 @@
             </div>
 
             <div class="designer-card">
-                <a href="../pages/prenda/prenda.html">
-                    <img src="../images/pantalones.png" alt="">
+                <a href="pages/prenda/prenda.html">
+                    <img src="images/pantalones.png" alt="">
                 </a>
                 <div class="card-content">
                     <div class="card-info-default">
@@ -85,8 +85,8 @@
             </div>
 
             <div class="designer-card">
-                <a href="../pages/prenda/prenda.html">
-                    <img src="../images/camiseta.png" alt="">
+                <a href="pages/prenda/prenda.html">
+                    <img src="images/camiseta.png" alt="">
                 </a>
                 <div class="card-content">
                     <div class="card-info-default">
@@ -107,8 +107,8 @@
             </div>
 
             <div class="designer-card">
-                <a href="../pages/prenda/prenda.html">
-                    <img src="../images/sudadera.png" alt="">
+                <a href="pages/prenda/prenda.html">
+                    <img src="images/sudadera.png" alt="">
                 </a>
                 <div class="card-content">
                     <div class="card-info-default">
@@ -131,10 +131,10 @@
     </section>
     <!-- CARGA DEL HEADER -->
 
-    <script src="../javascript/login.js"></script>
-    <script src="../javascript/cambio_headers.js"></script>
+    <script src="javascript/login.js"></script>
+    <script src="javascript/cambio_headers.js"></script>
     <script>
-        fetch("../componentes/header/header.html")
+        fetch("componentes/header/header.html")
             .then(res => res.text())
             .then(html => {
                 document.getElementById("header").innerHTML = html;
@@ -145,17 +145,17 @@
     <div id="cart-component"></div>
 
     <script>
-        fetch("../componentes/carrito/carrito.html")
+        fetch("componentes/carrito/carrito.html")
             .then(res => res.text())
             .then(html => {
                 document.getElementById("cart-component").innerHTML = html;
             });
     </script>
 
-    <script src="../javascript/carrito.js"></script>
+    <script src="javascript/carrito.js"></script>
     <div id="footer"></div>
     <script>
-        fetch("../componentes/footer/footer.html")
+        fetch("componentes/footer/footer.html")
             .then(res => res.text())
             .then(html => {
                 document.getElementById("footer").innerHTML = html;
