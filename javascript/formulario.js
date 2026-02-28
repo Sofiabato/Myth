@@ -47,7 +47,7 @@ function prevStep() {
 }
 
 function submitPreferences() {
-  window.location.href = "auth/login.html";
+  window.location.href = "../../pages/auth/login.html";
 }
 
 showStep(currentStep);

@@ -61,10 +61,10 @@
     }
 
     .btn {
-        padding: 14px 32px;
+        padding: 10px;
         border-radius: 15px;
         text-decoration: none;
-        font-weight: bold;
+        /* font-weight: bold; */
         width: 280px;
     }
 
@@ -118,18 +118,29 @@
     /* MÁS VENDIDOS */
     /* ===================== */
 
+    .products .designers-grid {
+        max-width: 1400px;
+        margin: 0 auto 0;
+    }
+
+    .products h2 {
+        padding-left: 0;
+        text-align: left;
+        max-width: 1400px;
+        margin: 0 auto 50px;
+    }
+
     .products {
         padding: 80px 40px;
         text-align: center;
         background-color: var(--light-bg);
     }
 
-    .products h2 {
+    /* .products h2 {
         font-size: 28px;
         margin-top: 10px;
-        /* 🔽 bájalo un poco */
         margin-bottom: 50px;
-    }
+    } */
 
 
     .products-grid {

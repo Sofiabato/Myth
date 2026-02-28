@@ -302,3 +302,43 @@ body.coleccion .item-thumb img {
         gap: 20px;
     }
 }
+
+.profile-page {
+    max-width: 1400px;
+    margin: 120px 0 0 200px;
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 260px;
+    padding: 0 60px 140px;
+}
+
+.sidebar {
+    margin-left: -120px;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 34px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.sidebar a {
+    font-size: 14px;
+    color: #777;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sidebar a.active {
+    color: black;
+    font-weight: 500;
+}
+
+.profile-panel {
+    width: 640px;
+}

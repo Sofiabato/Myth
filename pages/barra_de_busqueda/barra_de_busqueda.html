@@ -15,6 +15,7 @@
 <body>
 
 <div id="header"></div>
+    <div id="cart-component"></div>
 
 <!-- BARRA DE BÚSQUEDA -->
 <section class="search-bar">
@@ -61,11 +62,11 @@
             <i class="fa-solid fa-chevron-down"></i>
         </button>
         <div class="filter-content tags" data-filter="size">
-            <span data-value="xs">XS</span>
-            <span data-value="s">S</span>
-            <span data-value="m">M</span>
-            <span data-value="l">L</span>
-            <span data-value="xl">XL</span>
+            <span class="talla" data-value="xs">XS</span>
+            <span class="talla" data-value="s">S</span>
+            <span class="talla" data-value="m">M</span>
+            <span class="talla" data-value="l">L</span>
+            <span class="talla" data-value="xl">XL</span>
         </div>
     </div>
 
@@ -150,102 +151,184 @@
     <section class="products">
         <div class="products-grid">
 
-            <div class="product-card"
-                 data-name="sudadera negra"
-                 data-color="black"
-                 data-size="m"
-                 data-type="sudadera">
-                <img src="../../images/sudadera.png">
-                <h3>Marca X</h3>
-                <p>Sudadera negra</p>
-                <span>90,00€</span>
+           <div class="designer-card" data-name="sudadera negra" data-color="black" data-size="m" data-type="sudadera">
+            <a href="../../pages/prenda/prenda.html">
+                <img src="../../images/sudadera.png" alt="">
+            </a>
+            <div class="card-content">
+                <div class="card-info-default">
+                    <h3>Marca X</h3>
+                    <p>Sudadera negra</p>
+                    <span>90,00€</span>
+                </div>
+                <div class="card-info-hover">
+                    <h3>Marca X</h3>
+                    <p class="card-size">M</p>
+                    <div class="card-colors">
+                        <div class="color-circle color-black"></div>
+                    </div>
+                </div>
             </div>
+        </div>
 
-            <div class="product-card"
-                 data-name="camiseta blanca"
-                 data-color="white"
-                 data-size="s"
-                 data-type="camiseta">
-                <img src="../../images/camiseta.png">
-                <h3>Marca Y</h3>
-                <p>Camiseta blanca</p>
-                <span>75,00€</span>
+        <div class="designer-card" data-name="camiseta blanca" data-color="white" data-size="s" data-type="camiseta">
+            <a href="../../pages/prenda/prenda.html">
+                <img src="../../images/camiseta.png" alt="">
+            </a>
+            <div class="card-content">
+                <div class="card-info-default">
+                    <h3>Marca Y</h3>
+                    <p>Camiseta blanca</p>
+                    <span>75,00€</span>
+                </div>
+                <div class="card-info-hover">
+                    <h3>Marca Y</h3>
+                    <p class="card-size">S</p>
+                    <div class="card-colors">
+                        <div class="color-circle" style="background:#fff;border:1px solid #ddd;"></div>
+                    </div>
+                </div>
             </div>
+        </div>
 
-            <div class="product-card"
-                 data-name="pantalon rojo"
-                 data-color="red"
-                 data-size="l"
-                 data-type="pantalon">
-                <img src="../../images/pantalones.png">
-                <h3>Marca Z</h3>
-                <p>Pantalón rojo</p>
-                <span>120,00€</span>
+        <div class="designer-card" data-name="pantalon rojo" data-color="red" data-size="l" data-type="pantalon">
+            <a href="../../pages/prenda/prenda.html">
+                <img src="../../images/pantalones.png" alt="">
+            </a>
+            <div class="card-content">
+                <div class="card-info-default">
+                    <h3>Marca Z</h3>
+                    <p>Pantalón rojo</p>
+                    <span>120,00€</span>
+                </div>
+                <div class="card-info-hover">
+                    <h3>Marca Z</h3>
+                    <p class="card-size">L</p>
+                    <div class="card-colors">
+                        <div class="color-circle color-red"></div>
+                    </div>
+                </div>
             </div>
-            <div class="product-card"
-                 data-name="sudadera negra"
-                 data-color="black"
-                 data-size="m"
-                 data-type="sudadera">
-                <img src="../../images/sudadera.png">
-                <h3>Marca X</h3>
-                <p>Sudadera negra</p>
-                <span>90,00€</span>
-            </div>
+        </div>
 
-            <div class="product-card"
-                 data-name="camiseta blanca"
-                 data-color="white"
-                 data-size="s"
-                 data-type="camiseta">
-                <img src="../../images/camiseta.png">
-                <h3>Marca Y</h3>
-                <p>Camiseta blanca</p>
-                <span>75,00€</span>
+           <div class="designer-card" data-name="sudadera negra" data-color="black" data-size="m" data-type="sudadera">
+            <a href="../../pages/prenda/prenda.html">
+                <img src="../../images/sudadera.png" alt="">
+            </a>
+            <div class="card-content">
+                <div class="card-info-default">
+                    <h3>Marca X</h3>
+                    <p>Sudadera negra</p>
+                    <span>90,00€</span>
+                </div>
+                <div class="card-info-hover">
+                    <h3>Marca X</h3>
+                    <p class="card-size">M</p>
+                    <div class="card-colors">
+                        <div class="color-circle color-black"></div>
+                    </div>
+                </div>
             </div>
+        </div>
 
-            <div class="product-card"
-                 data-name="pantalon rojo"
-                 data-color="red"
-                 data-size="l"
-                 data-type="pantalon">
-                <img src="../../images/pantalones.png">
-                <h3>Marca Z</h3>
-                <p>Pantalón rojo</p>
-                <span>120,00€</span>
+        <div class="designer-card" data-name="camiseta blanca" data-color="white" data-size="s" data-type="camiseta">
+            <a href="../../pages/prenda/prenda.html">
+                <img src="../../images/camiseta.png" alt="">
+            </a>
+            <div class="card-content">
+                <div class="card-info-default">
+                    <h3>Marca Y</h3>
+                    <p>Camiseta blanca</p>
+                    <span>75,00€</span>
+                </div>
+                <div class="card-info-hover">
+                    <h3>Marca Y</h3>
+                    <p class="card-size">S</p>
+                    <div class="card-colors">
+                        <div class="color-circle" style="background:#fff;border:1px solid #ddd;"></div>
+                    </div>
+                </div>
             </div>
-            <div class="product-card"
-                 data-name="sudadera negra"
-                 data-color="black"
-                 data-size="m"
-                 data-type="sudadera">
-                <img src="../../images/sudadera.png">
-                <h3>Marca X</h3>
-                <p>Sudadera negra</p>
-                <span>90,00€</span>
-            </div>
+        </div>
 
-            <div class="product-card"
-                 data-name="camiseta blanca"
-                 data-color="white"
-                 data-size="s"
-                 data-type="camiseta">
-                <img src="../../images/camiseta.png">
-                <h3>Marca Y</h3>
-                <p>Camiseta blanca</p>
-                <span>75,00€</span>
+        <div class="designer-card" data-name="pantalon rojo" data-color="red" data-size="l" data-type="pantalon">
+            <a href="../../pages/prenda/prenda.html">
+                <img src="../../images/pantalones.png" alt="">
+            </a>
+            <div class="card-content">
+                <div class="card-info-default">
+                    <h3>Marca Z</h3>
+                    <p>Pantalón rojo</p>
+                    <span>120,00€</span>
+                </div>
+                <div class="card-info-hover">
+                    <h3>Marca Z</h3>
+                    <p class="card-size">L</p>
+                    <div class="card-colors">
+                        <div class="color-circle color-red"></div>
+                    </div>
+                </div>
             </div>
+        </div>
+            <div class="designer-card" data-name="sudadera negra" data-color="black" data-size="m" data-type="sudadera">
+            <a href="../../pages/prenda/prenda.html">
+                <img src="../../images/sudadera.png" alt="">
+            </a>
+            <div class="card-content">
+                <div class="card-info-default">
+                    <h3>Marca X</h3>
+                    <p>Sudadera negra</p>
+                    <span>90,00€</span>
+                </div>
+                <div class="card-info-hover">
+                    <h3>Marca X</h3>
+                    <p class="card-size">M</p>
+                    <div class="card-colors">
+                        <div class="color-circle color-black"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            <div class="product-card"
-                 data-name="pantalon rojo"
-                 data-color="red"
-                 data-size="l"
-                 data-type="pantalon">
-                <img src="../../images/pantalones.png">
-                <h3>Marca Z</h3>
-                <p>Pantalón rojo</p>
-                <span>120,00€</span>
+        <div class="designer-card" data-name="camiseta blanca" data-color="white" data-size="s" data-type="camiseta">
+            <a href="../../pages/prenda/prenda.html">
+                <img src="../../images/camiseta.png" alt="">
+            </a>
+            <div class="card-content">
+                <div class="card-info-default">
+                    <h3>Marca Y</h3>
+                    <p>Camiseta blanca</p>
+                    <span>75,00€</span>
+                </div>
+                <div class="card-info-hover">
+                    <h3>Marca Y</h3>
+                    <p class="card-size">S</p>
+                    <div class="card-colors">
+                        <div class="color-circle" style="background:#fff;border:1px solid #ddd;"></div>
+                    </div>
+                </div>
             </div>
+        </div>
+
+        <div class="designer-card" data-name="pantalon rojo" data-color="red" data-size="l" data-type="pantalon">
+            <a href="../../pages/prenda/prenda.html">
+                <img src="../../images/pantalones.png" alt="">
+            </a>
+            <div class="card-content">
+                <div class="card-info-default">
+                    <h3>Marca Z</h3>
+                    <p>Pantalón rojo</p>
+                    <span>120,00€</span>
+                </div>
+                <div class="card-info-hover">
+                    <h3>Marca Z</h3>
+                    <p class="card-size">L</p>
+                    <div class="card-colors">
+                        <div class="color-circle color-red"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         </div>
         <p id="noResults" class="no-results">

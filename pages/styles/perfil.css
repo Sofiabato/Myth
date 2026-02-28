@@ -42,7 +42,7 @@ body.coleccion .profile-details {
 body.coleccion .profile-top-row {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 25px;
 }
 
@@ -80,7 +80,6 @@ body.coleccion .profile-actions {
     align-items: center;
     gap: 12px;
 }
-
 /* Botón Cerrar Sesión */
 body.coleccion .btn-logout {
     background-color: transparent;
@@ -90,7 +89,6 @@ body.coleccion .btn-logout {
     border-radius: 15px;
     font-weight: 500;
     cursor: pointer;
-    font-size: 16px;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -279,4 +277,25 @@ body.coleccion .review-date {
     margin-top: 10px;
     font-size: 11px;
     color: #bbb;
+}
+
+a{
+    text-decoration: none;
+}
+
+body.coleccion .btn-upload {
+    background-color: #830007;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+body.coleccion .btn-upload:hover {
+    background-color: #A30008;
 }

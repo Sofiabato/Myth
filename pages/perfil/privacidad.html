@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>MYTH | Privacidad</title>
@@ -18,59 +19,61 @@
 
 <body>
 
-<div id="header"></div>
+    <div id="header"></div>
+        <div id="cart-component"></div>
 
-<main class="profile-page">
+    <main class="profile-page">
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-        <h2>Ajustes</h2>
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h2>Ajustes</h2>
 
-        <nav>
-            <a>Datos de perfil</a>
-            <a>Ajustes de Cuenta</a>
-            <a class="active">Privacidad</a>
-        </nav>
-    </aside>
+            <nav>
+                <a href="datos_perfil.html">Datos de perfil</a>
+                <a href="ajustes_cuenta.html">Ajustes de Cuenta</a>
+                <a class="active">Privacidad</a>
+                <a href="../historial_pedidos/historial_pedidos.html">Historial de pedidos</a>
+            </nav>
+        </aside>
 
-    <!-- PANEL -->
-    <section class="profile-panel">
+        <!-- PANEL -->
+        <section class="profile-panel">
 
-        <div class="toggle-card">
-            <span>Mostrar mis artículos en campañas de marketing</span>
-            <div class="toggle"></div>
-        </div>
+            <div class="toggle-card">
+                <span>Mostrar mis artículos en campañas de marketing</span>
+                <div class="toggle"></div>
+            </div>
 
-        <div class="toggle-card">
-            <span>Notificar al vendedor<br>cuando marque su artículo como favorito</span>
-            <div class="toggle"></div>
-        </div>
+            <div class="toggle-card">
+                <span>Notificar al vendedor<br>cuando marque su artículo como favorito</span>
+                <div class="toggle"></div>
+            </div>
 
-        <div class="toggle-card">
-            <span>Permitir seguimiento de terceros</span>
-            <div class="toggle"></div>
-        </div>
+            <div class="toggle-card">
+                <span>Permitir seguimiento de terceros</span>
+                <div class="toggle"></div>
+            </div>
 
-        <div class="toggle-card">
-            <span>Permitir a Vinted...</span>
-            <div class="toggle"></div>
-        </div>
+            <div class="toggle-card">
+                <span>Permitir a Vinted...</span>
+                <div class="toggle"></div>
+            </div>
 
-        <div class="toggle-card">
-            <span>Permitir a Vinted...</span>
-            <div class="toggle"></div>
-        </div>
+            <div class="toggle-card">
+                <span>Permitir a Vinted...</span>
+                <div class="toggle"></div>
+            </div>
 
-        <div class="thin-row">
-            <span>Gestionar datos de cuenta</span>
-            <i class="fa-solid fa-chevron-down"></i>
-        </div>
+            <div class="thin-row">
+                <span>Gestionar datos de cuenta</span>
+                <span class="chevron-icon"></span>
+            </div>
 
-        <button class="primary-btn">Guardar</button>
+            <button class="primary-btn">Guardar</button>
 
-    </section>
+        </section>
 
-</main>
+    </main>
 
     <script src="../../javascript/cambio_headers.js"></script>
 
@@ -92,7 +95,7 @@
     </script>
 
     <script src="../../javascript/carrito.js"></script>
-<div id="footer"></div>
+    <div id="footer"></div>
     <script>
         fetch("../../componentes/footer/footer.html")
             .then(res => res.text())
@@ -101,5 +104,16 @@
             });
     </script>
 
+        <script>
+        fetch("../../componentes/carrito/carrito.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("cart-component").innerHTML = html;
+            });
+    </script>
+
+    <script src="../../javascript/carrito.js"></script>
+
 </body>
+
 </html>

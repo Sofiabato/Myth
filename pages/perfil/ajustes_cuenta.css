@@ -73,7 +73,7 @@
 /* TEXTO IZQUIERDO */
 
 .thin-row span:first-child {
-    color: #333;
+    color: #444;
 }
 
 /* VALORES DERECHA */
@@ -81,7 +81,8 @@
 .value-text {
     margin-left: auto;
     font-size: 13px;
-    color: #555;
+    color: #444;
+    font-weight: 400;
 }
 
 /* SELECT DERECHA */
@@ -94,6 +95,14 @@
     outline: none;
     cursor: pointer;
     text-align: right;
+    color: #444;
+    font-weight: 400;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24'%3E%3Cpath fill='%238b0000' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0px center;
+    padding-right: 16px;
 }
 
 /* ICONOS DERECHA */

@@ -16,6 +16,7 @@
 
 <body>
     <div id="header"></div>
+        <div id="cart-component"></div>
 
     <div class="page">
         <div class="publication-container">
@@ -237,6 +238,15 @@
                 document.getElementById("footer").innerHTML = html;
             });
     </script>
+        <script>
+        fetch("../../componentes/carrito/carrito.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("cart-component").innerHTML = html;
+            });
+    </script>
+
+    <script src="../../javascript/carrito.js"></script>
 </body>
 
 </html>

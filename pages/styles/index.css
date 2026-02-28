@@ -318,6 +318,7 @@ html {
     display: flex;
     gap: 16px;
     align-items: flex-start;
+    margin-bottom: 15px;
 }
 
 .cart-item img {
@@ -489,6 +490,13 @@ html {
 
 .cart-overlay {
     pointer-events: auto;
+}
+
+
+.cart-delete img {
+    width: 16px;
+    height: 16px;
+        border-radius: 0px !important;
 }
 
 /* ===================== */

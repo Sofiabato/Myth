@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     const filters = {};
-    const products = document.querySelectorAll(".product-card");
+    const products = document.querySelectorAll(".designer-card");
     const searchInput = document.getElementById("searchInput");
     const noResults = document.getElementById("noResults");
 
@@ -28,28 +28,28 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ===================== */
     /* FILTROS TIPO TAG */
     /* ===================== */
- document.querySelectorAll("[data-filter] span").forEach(option => {
+    document.querySelectorAll("[data-filter] span").forEach(option => {
 
-    option.addEventListener("click", () => {
+        option.addEventListener("click", () => {
 
-        const group = option.parentElement.dataset.filter;
-        const value = option.dataset.value;
+            const group = option.parentElement.dataset.filter;
+            const value = option.dataset.value;
 
-        if (!group || !value) return;
+            if (!group || !value) return;
 
-        // Quitar activos del mismo grupo
-        option.parentElement
-            .querySelectorAll("span")
-            .forEach(el => el.classList.remove("active"));
+            // Quitar activos del mismo grupo
+            option.parentElement
+                .querySelectorAll("span")
+                .forEach(el => el.classList.remove("active"));
 
-        option.classList.add("active");
+            option.classList.add("active");
 
-        filters[group] = value;
+            filters[group] = value;
 
-        applyFilters();
+            applyFilters();
+        });
+
     });
-
-});
     /* ===================== */
     /* LIMPIAR COLORES */
     /* ===================== */
@@ -57,9 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (clearColorsBtn) {
         clearColorsBtn.addEventListener("click", () => {
             delete filters.color;
-           document
-    .querySelectorAll(".color-option")
-    .forEach(c => c.classList.remove("active"));
+            document
+                .querySelectorAll(".color-option")
+                .forEach(c => c.classList.remove("active"));
             applyFilters();
         });
     }
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
             let visible = true;
 
             // Texto
-           if (text && !product.dataset.name.toLowerCase().includes(text))  {
+            if (text && !product.dataset.name.toLowerCase().includes(text)) {
                 visible = false;
             }
 

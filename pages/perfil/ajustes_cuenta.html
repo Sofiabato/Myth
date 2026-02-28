@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>MYTH | Ajustes de Cuenta</title>
@@ -18,72 +19,73 @@
 
 <body>
 
-<!-- HEADER DINÁMICO -->
-<div id="header"></div>
+    <!-- HEADER DINÁMICO -->
+    <div id="header"></div>
+        <div id="cart-component"></div>
 
-<main class="profile-page">
+    <main class="profile-page">
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-        <h2>Ajustes</h2>
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h2>Ajustes</h2>
 
-        <nav>
-            <a>Datos de perfil</a>
-            <a class="active">Ajustes de Cuenta</a>
-            <a>Privacidad</a>
-        </nav>
-    </aside>
+            <nav>
+                <a href="datos_perfil.html">Datos de perfil</a>
+                <a class="active">Ajustes de Cuenta</a>
+                <a href="privacidad.html">Privacidad</a>
+                <a href="../historial_pedidos/historial_pedidos.html">Historial de pedidos</a>
+            </nav>
+        </aside>
 
-    <!-- PANEL CENTRAL -->
-    <section class="profile-panel">
+        <!-- PANEL CENTRAL -->
+        <section class="profile-panel">
 
-        <div class="thin-row">
-            <span>Correo electrónico</span>
-            <button class="ghost small">Cambiar</button>
-        </div>
+            <div class="thin-row">
+                <span>Correo electrónico</span>
+                <button class="ghost small">Cambiar</button>
+            </div>
 
-        <div class="thin-row">
-            <span>Número de teléfono</span>
-            <button class="ghost small">Verificar</button>
-        </div>
+            <div class="thin-row">
+                <span>Número de teléfono</span>
+                <button class="ghost small">Verificar</button>
+            </div>
 
-        <div class="thin-row">
-            <span>Contraseña</span>
-            <button class="ghost small">Cambiar contraseña</button>
-        </div>
+            <div class="thin-row">
+                <span>Contraseña</span>
+                <button class="ghost small">Cambiar contraseña</button>
+            </div>
 
-        <div class="thin-row">
-            <span>Nombre y Apellidos</span>
-            <span class="value-text">Nombre y apellidos del usuario</span>
-        </div>
+            <div class="thin-row">
+                <span>Nombre y Apellidos</span>
+                <span class="value-text">Nombre y apellidos del usuario</span>
+            </div>
 
-        <div class="thin-row">
-            <span>Género</span>
-            <select>
-                <option>Elige tu género</option>
-            </select>
-        </div>
+            <div class="thin-row">
+                <span>Género</span>
+                <select>
+                    <option>Elige tu género</option>
+                </select>
+            </div>
 
-        <div class="thin-row">
-            <span>Fecha de nacimiento</span>
-            <span class="value-text">dd/mm/aaaa</span>
-        </div>
+            <div class="thin-row">
+                <span>Fecha de nacimiento</span>
+                <span class="value-text">dd/mm/aaaa</span>
+            </div>
 
-        <div class="thin-row">
-            <span>Eliminar mi cuenta</span>
-            <i class="fa-solid fa-chevron-down"></i>
-        </div>
+            <div class="thin-row">
+                <span>Eliminar mi cuenta</span>
+                <button class="ghost small">Eliminar</button>
+            </div>
+            <button class="primary-btn">Guardar</button>
 
-        <button class="primary-btn">Guardar</button>
+        </section>
 
-    </section>
-
-</main>
-
+    </main>
 
 
-<!-- JS HEADER -->
-<script src="../../javascript/login.js"></script>
+
+    <!-- JS HEADER -->
+    <script src="../../javascript/login.js"></script>
     <script src="../../javascript/cambio_headers.js"></script>
 
     <script>
@@ -105,8 +107,8 @@
 
     <script src="../../javascript/carrito.js"></script>
 
-     <div id="footer"></div>
- <script>
+    <div id="footer"></div>
+    <script>
         fetch("../../componentes/footer/footer.html")
             .then(res => res.text())
             .then(html => {
@@ -114,5 +116,16 @@
             });
     </script>
 
+        <script>
+        fetch("../../componentes/carrito/carrito.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("cart-component").innerHTML = html;
+            });
+    </script>
+
+    <script src="../../javascript/carrito.js"></script>
+
 </body>
+
 </html>

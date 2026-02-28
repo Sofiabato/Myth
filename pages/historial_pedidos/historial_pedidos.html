@@ -1,96 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Myth - Mi historial de pedidos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="historial_pedidos.css">
     <link rel="stylesheet" href="../styles/index.css">
 </head>
-<body class="coleccion"> <div id="header"></div>
 
-    <main class="page">
-        <h1 class="page-title">Mi cuenta</h1>
+<body class="coleccion">
 
-        <div class="layout-container">
-            
-            <aside class="sidebar-menu">
-                <h3 class="sidebar-title">Historial</h3>
-                <nav>
-                    <a href="#" class="menu-item active">Pedidos recibidos</a>
-                    <a href="#" class="menu-item">Enviados</a>
-                    <a href="#" class="menu-item">Devoluciones</a>
-                </nav>
-            </aside>
+    <div id="header"></div>
+    <div id="cart-component"></div>
 
-            <section class="purchases-section">
-                <h2 class="section-title">Mis compras</h2>
-                
-                <div class="purchases-list">
-                    
-                    <article class="purchase-card">
-                        <div class="purchase-info">
-                            <p class="status">Entregado</p>
-                            <p class="delivery-date">Fecha de entrega el 29/11</p>
-                            <p class="total-price">90.00€</p>
-                        </div>
-                        <div class="purchase-items-preview">
-                            <div class="item-thumb"><img src="../../images/sudadera.png" alt="Producto"></div>
-                            <div class="item-thumb"><img src="../../images/pantalones.png" alt="Producto"></div>
-                        </div>
-                    </article>
+    <main class="profile-page">
 
-                    <article class="purchase-card">
-                        <div class="purchase-info">
-                            <p class="status">Entregado</p>
-                            <p class="delivery-date">Fecha de entrega el 12/11</p>
-                            <p class="total-price">122.00€</p>
-                        </div>
-                        <div class="purchase-items-preview">
-                            <div class="item-thumb"><img src="../../images/sudadera2.png" alt="Producto"></div>
-                            <div class="item-thumb"><img src="../../images/sudadera.png" alt="Producto"></div>
-                            <div class="item-thumb"><img src="../../images/camiseta.png" alt="Producto"></div>
-                        </div>
-                    </article>
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h2>Ajustes</h2>
+            <nav>
+                <a href="../perfil/datos_perfil.html">Datos de perfil</a>
+                <a href="../perfil/ajustes_cuenta.html">Ajustes de Cuenta</a>
+                <a href="../perfil/privacidad.html">Privacidad</a>
+                <a class="active">Historial de pedidos</a>
+            </nav>
+        </aside>
 
-                    <article class="purchase-card">
-                        <div class="purchase-info">
-                            <p class="status">Entregado</p>
-                            <p class="delivery-date">Fecha de entrega el 03/10</p>
-                            <p class="total-price">55.99€</p>
-                        </div>
-                        <div class="purchase-items-preview">
-                            <div class="item-thumb"><img src="../../images/pantalones.png" alt="Producto"></div>
-                            <div class="item-thumb"><img src="../../images/sudadera.png" alt="Producto"></div>
-                        </div>
-                        
-                    </article>
+        <!-- PANEL -->
+        <section class="profile-panel">
+            <h2 class="section-title">Mis compras</h2>
 
-                    <article class="purchase-card">
-                        <div class="purchase-info">
-                            <p class="status">Entregado</p>
-                            <p class="delivery-date">Fecha de entrega el 03/10</p>
-                            <p class="total-price">55.99€</p>
-                        </div>
-                        <div class="purchase-items-preview">
-                            <div class="item-thumb"><img src="../../images/camiseta.png" alt="Producto"></div>
-                            <div class="item-thumb"><img src="../../images/pantalones.png" alt="Producto"></div>
-                        </div>
-                        
-                    </article>
-                    <br>    
+            <div class="purchases-list">
 
-                </div>
-            </section>
-        </div>
+                <article class="purchase-card">
+                    <div class="purchase-info">
+                        <p class="status">Entregado</p>
+                        <p class="delivery-date">Fecha de entrega el 29/11</p>
+                        <p class="total-price">90.00€</p>
+                    </div>
+                    <div class="purchase-items-preview">
+                        <div class="item-thumb"><img src="../../images/sudadera.png" alt="Producto"></div>
+                        <div class="item-thumb"><img src="../../images/pantalones.png" alt="Producto"></div>
+                    </div>
+                </article>
+
+                <article class="purchase-card">
+                    <div class="purchase-info">
+                        <p class="status">Entregado</p>
+                        <p class="delivery-date">Fecha de entrega el 12/11</p>
+                        <p class="total-price">122.00€</p>
+                    </div>
+                    <div class="purchase-items-preview">
+                        <div class="item-thumb"><img src="../../images/sudadera2.png" alt="Producto"></div>
+                        <div class="item-thumb"><img src="../../images/sudadera.png" alt="Producto"></div>
+                        <div class="item-thumb"><img src="../../images/camiseta.png" alt="Producto"></div>
+                    </div>
+                </article>
+
+                <article class="purchase-card">
+                    <div class="purchase-info">
+                        <p class="status">Entregado</p>
+                        <p class="delivery-date">Fecha de entrega el 03/10</p>
+                        <p class="total-price">55.99€</p>
+                    </div>
+                    <div class="purchase-items-preview">
+                        <div class="item-thumb"><img src="../../images/pantalones.png" alt="Producto"></div>
+                        <div class="item-thumb"><img src="../../images/sudadera.png" alt="Producto"></div>
+                    </div>
+                </article>
+
+                <article class="purchase-card">
+                    <div class="purchase-info">
+                        <p class="status">Entregado</p>
+                        <p class="delivery-date">Fecha de entrega el 03/10</p>
+                        <p class="total-price">55.99€</p>
+                    </div>
+                    <div class="purchase-items-preview">
+                        <div class="item-thumb"><img src="../../images/camiseta.png" alt="Producto"></div>
+                        <div class="item-thumb"><img src="../../images/pantalones.png" alt="Producto"></div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
     </main>
 
     <div id="footer"></div>
-    
-<script src="../../javascript/cambio_headers.js"></script>
+
+    <script src="../../javascript/cambio_headers.js"></script>
 
     <script>
         fetch("../../componentes/header/header.html")
@@ -118,6 +121,7 @@
                 document.getElementById("footer").innerHTML = html;
             });
     </script>
-    
+
 </body>
+
 </html>

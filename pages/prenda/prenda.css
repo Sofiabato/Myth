@@ -121,6 +121,7 @@
 .preview-size-button {
     padding: 8px 16px;
     border-radius: 25px;
+    width: 60px;
     border: none;
     background: var(--fondo-inputs);
     cursor: pointer;
