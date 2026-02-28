@@ -35,9 +35,11 @@
                         <label class="chip"><input type="checkbox" name="estilos" value="Boho">Boho</label>
                         <label class="chip"><input type="checkbox" name="estilos" value="Techwear">Techwear</label>
                         <label class="chip"><input type="checkbox" name="estilos" value="Casual">Casual</label>
-                        <label class="chip"><input type="checkbox" name="estilos" value="Alta costura">Alta costura</label>
+                        <label class="chip"><input type="checkbox" name="estilos" value="Alta costura">Alta
+                            costura</label>
                         <label class="chip"><input type="checkbox" name="estilos" value="Sporty">Sporty</label>
-                        <label class="chip"><input type="checkbox" name="estilos" value="Minimalista">Minimalista</label>
+                        <label class="chip"><input type="checkbox" name="estilos"
+                                value="Minimalista">Minimalista</label>
                         <label class="chip"><input type="checkbox" name="estilos" value="Original">Original</label>
                     </div>
                 </section>
@@ -173,7 +175,7 @@
     <script src="../../javascript/cambio_headers.js"></script>
     <script src="../../javascript/formulario.js"></script>
     <script>
-        fetch("../componentes/header/header.html")
+        fetch("../../componentes/header/header.html")
             .then(res => res.text())
             .then(html => {
                 document.getElementById("header").innerHTML = html;

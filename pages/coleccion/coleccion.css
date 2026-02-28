@@ -11,7 +11,7 @@ body.coleccion h2.section-title {
     font-size: 22px;
     font-weight: 600;
     color: var(--texto-prim);
-    margin: 100px 0 25px 0;
+    margin: 30px 0 25px 0;
 }
 
 body.coleccion .product-grid {
@@ -78,14 +78,23 @@ body.coleccion .price {
 
 /* Responsive */
 @media (max-width: 1200px) {
-    .page { padding: 0 50px; }
+    .page {
+        padding: 70px 50px 0;
+    }
 }
 
 @media (max-width: 850px) {
-    body.coleccion .product-grid { grid-template-columns: repeat(2, 1fr); }
+    body.coleccion .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 500px) {
-    body.coleccion .product-grid { grid-template-columns: 1fr; }
-    .page { padding: 0 20px; }
+    body.coleccion .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page {
+        padding: 70px 20px 0;
+    }
 }

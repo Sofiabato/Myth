@@ -14,7 +14,7 @@
 /* CONTENEDOR LOGIN */
 /* Derecha + centrado vertical */
 .login {
-    height: calc(100vh - 70px); /* quitamos el alto del header */
+    height: calc(100vh - 100px); /* quitamos el alto del header */
     display: flex;
     justify-content: flex-end; /* derecha */
     align-items: center; /* centro vertical */

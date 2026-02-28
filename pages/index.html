@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>MYTH | Moda Emergente</title>
-    <link rel="stylesheet" href="../styles/landing/landing.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles/landing.css">
     <link rel="stylesheet" href="styles/index.css">
@@ -27,7 +30,7 @@
         </div>
 
         <div class="hero-image">
-            <img src="../../images/ChatGPT Image 7 ene 2026, 18_23_52 1.png" alt="Modelos de moda MYTH">
+            <img src="../images/ChatGPT Image 7 ene 2026, 18_23_52 1.png" alt="Modelos de moda MYTH">
         </div>
     </section>
 
@@ -37,28 +40,28 @@
 
         <div class="products-grid">
             <div class="product-card">
-                <img src="../../images/sudadera2.png" alt="Producto 1">
+                <img src="../images/sudadera2.png" alt="Producto 1">
                 <h3>NOMBREMARCA</h3>
                 <p>Descripción de la prenda</p>
                 <span>90,00€</span>
             </div>
 
             <div class="product-card">
-                <img src="../../images/pantalones.png" alt="Producto 2">
+                <img src="../images/pantalones.png" alt="Producto 2">
                 <h3>NOMBREMARCA</h3>
                 <p>Descripción de la prenda</p>
                 <span>90,00€</span>
             </div>
 
             <div class="product-card">
-                <img src="../../images/camiseta.png" alt="Producto 3">
+                <img src="../images/camiseta.png" alt="Producto 3">
                 <h3>NOMBREMARCA</h3>
                 <p>Descripción de la prenda</p>
                 <span>90,00€</span>
             </div>
 
             <div class="product-card">
-                <img src="../../images/sudadera.png" alt="Producto 4">
+                <img src="../images/sudadera.png" alt="Producto 4">
                 <h3>NOMBREMARCA</h3>
                 <p>Descripción de la prenda</p>
                 <span>90,00€</span>
@@ -81,17 +84,17 @@
     <div id="cart-component"></div>
 
     <script>
-        fetch("../../componentes/carrito/carrito.html")
+        fetch("../componentes/carrito/carrito.html")
             .then(res => res.text())
             .then(html => {
                 document.getElementById("cart-component").innerHTML = html;
             });
     </script>
 
-    <script src="../../javascript/carrito.js"></script>
+    <script src="../javascript/carrito.js"></script>
     <div id="footer"></div>
- <script>
-        fetch("../../componentes/footer/footer.html")
+    <script>
+        fetch("../componentes/footer/footer.html")
             .then(res => res.text())
             .then(html => {
                 document.getElementById("footer").innerHTML = html;

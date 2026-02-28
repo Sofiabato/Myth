@@ -4,7 +4,7 @@
 
 /* Contenedor Perfil */
 body.coleccion .user-info-section {
-    margin-top: 100px;
+    margin-top: 30px;
     margin-bottom: 50px;
 }
 
@@ -20,7 +20,8 @@ body.coleccion .avatar-wrapper {
     width: 160px;
     height: 160px;
     border-radius: 50%;
-    border: 2.5px solid #830007; /* Rojo oscuro de la imagen */
+    border: 2.5px solid #830007;
+    /* Rojo oscuro de la imagen */
     padding: 5px;
     background-color: #fff;
 }
@@ -34,7 +35,9 @@ body.coleccion .profile-pic {
 }
 
 /* Detalles de usuario */
-body.coleccion .profile-details { flex: 1; }
+body.coleccion .profile-details {
+    flex: 1;
+}
 
 body.coleccion .profile-top-row {
     display: flex;
@@ -43,8 +46,15 @@ body.coleccion .profile-top-row {
     margin-bottom: 25px;
 }
 
-body.coleccion .username { font-size: 20px; font-weight: 600; }
-body.coleccion .rating-stars { color: #830007; font-size: 18px; }
+body.coleccion .username {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+body.coleccion .rating-stars {
+    color: #830007;
+    font-size: 18px;
+}
 
 /* Botón Editar Perfil */
 body.coleccion .btn-edit-profile {
@@ -60,15 +70,56 @@ body.coleccion .btn-edit-profile {
     gap: 8px;
 }
 
+body.coleccion .btn-edit-profile:hover {
+    background-color: #A30008;
+}
+
+/* Contenedor botones de perfil */
+body.coleccion .profile-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Botón Cerrar Sesión */
+body.coleccion .btn-logout {
+    background-color: transparent;
+    color: #830007;
+    border: 1.5px solid #830007;
+    padding: 10px 24px;
+    border-radius: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+body.coleccion .btn-logout:hover {
+    background-color: #830007;
+    color: white;
+}
+
+
 /* Grid de información (Bio/Verificado) */
 body.coleccion .profile-stats-grid {
     display: flex;
     gap: 80px;
 }
 
-body.coleccion .stat-col p { margin-bottom: 4px; font-size: 14px; }
-body.coleccion .low-opacity { color: var(--texto-inputs); opacity: 0.8; }
-body.coleccion .check-icon { color: #830007; font-weight: bold; }
+body.coleccion .stat-col p {
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+body.coleccion .low-opacity {
+    color: var(--texto-inputs);
+    opacity: 0.8;
+}
+
+body.coleccion .check-icon {
+    color: #830007;
+    font-weight: bold;
+}
 
 /* Tabs */
 body.coleccion .profile-tabs {
@@ -126,16 +177,44 @@ body.coleccion .product-edit-trigger {
     color: #333;
 }
 
-body.coleccion .brand-name { font-size: 14px; font-weight: 800; text-transform: uppercase; }
-body.coleccion .item-desc { font-size: 13px; color: var(--texto-inputs); margin: 2px 0; }
-body.coleccion .item-price { font-size: 14px; font-weight: 600; }
+body.coleccion .brand-name {
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+body.coleccion .item-desc {
+    font-size: 13px;
+    color: var(--texto-inputs);
+    margin: 2px 0;
+}
+
+body.coleccion .item-price {
+    font-size: 14px;
+    font-weight: 600;
+}
 
 /* Responsive */
 @media (max-width: 1000px) {
-    body.coleccion .profile-container { flex-direction: column; align-items: center; text-align: center; }
-    body.coleccion .profile-top-row { flex-direction: column; gap: 15px; }
-    body.coleccion .profile-stats-grid { gap: 30px; justify-content: center; }
-    body.coleccion .product-grid { grid-template-columns: repeat(2, 1fr); }
+    body.coleccion .profile-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    body.coleccion .profile-top-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    body.coleccion .profile-stats-grid {
+        gap: 30px;
+        justify-content: center;
+    }
+
+    body.coleccion .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* --- APARTADO RESEÑAS --- */
@@ -150,7 +229,8 @@ body.coleccion .reviews-container {
 }
 
 body.coleccion .review-card {
-    background-color: #F9F9F9; /* Un gris muy sutil */
+    background-color: #F9F9F9;
+    /* Un gris muy sutil */
     border-radius: 15px;
     padding: 20px;
     border: 1px solid #eee;
@@ -182,7 +262,8 @@ body.coleccion .review-username {
 }
 
 body.coleccion .review-rating {
-    color: #830007; /* Rojo Myth */
+    color: #830007;
+    /* Rojo Myth */
     font-size: 14px;
 }
 
